@@ -1,0 +1,18 @@
+==2595== Use of uninitialised value of size 8
+==2595==    at 0x5694417: ____strtol_l_internal (strtol_l.c:298)
+==2595==    by 0x402B59: getVariableAddress(std::string, std::string) (opcodegeneration.cpp:366)
+==2595==    by 0x4048DD: generateINITinstructions(char*) (opcodegeneration.cpp:1537)
+==2595==    by 0x40724A: main (opcodegeneration.cpp:2095)
+==2595== 
+
+
+gdb 
+
+Program received signal SIGTRAP, Trace/breakpoint trap.
+0x0000000005694417 in __GI_____strtol_l_internal (
+    nptr=0xffeffe9e0 "\034\352\377\376\017", endptr=0x0, base=16, 
+    group=<optimized out>, loc=0x5a17060 <_nl_global_locale>)
+    at ../stdlib/strtol_l.c:298
+298	../stdlib/strtol_l.c: No such file or directory.
+
+

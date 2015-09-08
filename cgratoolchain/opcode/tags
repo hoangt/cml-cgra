@@ -1,0 +1,260 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AND	CGRAdefinitions.h	/^	AND,	\/\/3$/;"	e	enum:OPCode
+Add	CGRAdefinitions.h	/^	Add=0,	$/;"	e	enum:OPCode
+CGRAEXCEPTION_H_	CGRAException.h	9;"	d
+CGRAException	CGRAException.cpp	/^CGRAException::CGRAException(string message):exception() {$/;"	f	class:CGRAException
+CGRAException	CGRAException.h	/^class CGRAException:public std::exception {$/;"	c
+CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::CGRA_Instruction()$/;"	f	class:CGRA_Instruction
+CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::CGRA_Instruction(OPCode opc,int predic,PEInputMux LMuxSel,  PEInputMux RMuxSel, int RRegAdd1,int RRegAdd2, int WAdd, bool WE, int ImmVal, bool EDMAdd, bool DMData)$/;"	f	class:CGRA_Instruction
+CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::CGRA_Instruction(unsigned int Instructionword){$/;"	f	class:CGRA_Instruction
+CGRA_Instruction	CGRAInstruction.h	/^class CGRA_Instruction$/;"	c
+CGRA_MEMORY_READ	CGRAdefinitions.h	20;"	d
+CGRA_MEMORY_WRITE	CGRAdefinitions.h	21;"	d
+CGRA_XDim	CGRAdefinitions.h	17;"	d
+CGRA_YDim	CGRAdefinitions.h	18;"	d
+DEFINITIONS_H_	CGRAdefinitions.h	9;"	d
+DMEMSIZE	CGRAdefinitions.h	14;"	d
+DataBus	CGRAdefinitions.h	/^	DataBus,$/;"	e	enum:PEInputMux
+DecodeInstruction	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::DecodeInstruction(CGRA_Instruction* Ins)$/;"	f	class:CGRA_Instruction
+Down	CGRAdefinitions.h	/^	Down,$/;"	e	enum:PEInputMux
+ENCODE_instruction	CGRAInstruction.cpp	/^void CGRA_Instruction::ENCODE_instruction()$/;"	f	class:CGRA_Instruction
+EQ	CGRAdefinitions.h	/^    EQ, \/\/==	\/\/c$/;"	e	enum:OPCode
+GT	CGRAdefinitions.h	/^    GT, \/\/>	\/\/e$/;"	e	enum:OPCode
+II	opcodegeneration.cpp	/^int II;$/;"	v
+IMEMSIZE	CGRAdefinitions.h	13;"	d
+INSTRUCTION_H_	CGRAInstruction.h	9;"	d
+INS_AB	CGRAdefinitions.h	55;"	d
+INS_DB	CGRAdefinitions.h	56;"	d
+INS_IMMEDIATE	CGRAdefinitions.h	57;"	d
+INS_LMUX	CGRAdefinitions.h	49;"	d
+INS_OPCODE	CGRAdefinitions.h	47;"	d
+INS_PREDICT	CGRAdefinitions.h	48;"	d
+INS_R1	CGRAdefinitions.h	51;"	d
+INS_R2	CGRAdefinitions.h	52;"	d
+INS_RMUX	CGRAdefinitions.h	50;"	d
+INS_RW	CGRAdefinitions.h	53;"	d
+INS_WE	CGRAdefinitions.h	54;"	d
+Immediate	CGRAdefinitions.h	/^	Immediate,$/;"	e	enum:PEInputMux
+ImmediateValue	CGRAInstruction.h	/^	int ImmediateValue;$/;"	m	class:CGRA_Instruction
+InsWord	CGRAInstruction.h	/^	unsigned int InsWord;$/;"	m	class:CGRA_Instruction
+Instruction_Operation	CGRAdefinitions.h	/^enum Instruction_Operation$/;"	g
+Instruction_Operation	cgradef.h	/^enum Instruction_Operation$/;"	g
+LDMi	CGRAdefinitions.h	/^    LDMi,	\/\/a$/;"	e	enum:OPCode
+LDUi	CGRAdefinitions.h	/^    LDUi,	\/\/b$/;"	e	enum:OPCode
+LDi	CGRAdefinitions.h	/^    LDi,	\/\/9$/;"	e	enum:OPCode
+LT	CGRAdefinitions.h	/^    LT \/\/<	\/\/f$/;"	e	enum:OPCode
+Left	CGRAdefinitions.h	/^	Left,$/;"	e	enum:PEInputMux
+LeftMuxSelector	CGRAInstruction.h	/^	PEInputMux LeftMuxSelector;$/;"	m	class:CGRA_Instruction
+Mult	CGRAdefinitions.h	/^	Mult,	\/\/2$/;"	e	enum:OPCode
+NEQ	CGRAdefinitions.h	/^    NEQ, \/\/ !=	\/\/d$/;"	e	enum:OPCode
+NOOP	CGRAdefinitions.h	/^	NOOP,	\/\/7$/;"	e	enum:OPCode
+OPCode	CGRAdefinitions.h	/^enum OPCode$/;"	g
+OR	CGRAdefinitions.h	/^	OR,	\/\/4$/;"	e	enum:OPCode
+PEInputMux	CGRAdefinitions.h	/^enum PEInputMux$/;"	g
+Predicator	CGRAInstruction.h	/^	int Predicator;$/;"	m	class:CGRA_Instruction
+REGFILESIZE	CGRAdefinitions.h	15;"	d
+ReadRegAddress1	CGRAInstruction.h	/^	int ReadRegAddress1;$/;"	m	class:CGRA_Instruction
+ReadRegAddress2	CGRAInstruction.h	/^	int ReadRegAddress2;$/;"	m	class:CGRA_Instruction
+Register	CGRAdefinitions.h	/^	Register=0,$/;"	e	enum:PEInputMux
+Right	CGRAdefinitions.h	/^	Right,$/;"	e	enum:PEInputMux
+RightMuxSelector	CGRAInstruction.h	/^	PEInputMux RightMuxSelector;$/;"	m	class:CGRA_Instruction
+SHIFT_ABUS	CGRAdefinitions.h	43;"	d
+SHIFT_DBUS	CGRAdefinitions.h	44;"	d
+SHIFT_IMMEDIATE	CGRAdefinitions.h	45;"	d
+SHIFT_LMUX	CGRAdefinitions.h	37;"	d
+SHIFT_OPCODE	CGRAdefinitions.h	35;"	d
+SHIFT_PREDICT	CGRAdefinitions.h	36;"	d
+SHIFT_R1	CGRAdefinitions.h	39;"	d
+SHIFT_R2	CGRAdefinitions.h	40;"	d
+SHIFT_RMUX	CGRAdefinitions.h	38;"	d
+SHIFT_RW	CGRAdefinitions.h	41;"	d
+SHIFT_WE	CGRAdefinitions.h	42;"	d
+SelectDataMemoryAddressBus	CGRAInstruction.h	/^	bool SelectDataMemoryAddressBus;$/;"	m	class:CGRA_Instruction
+SelectDataMemoryDataBus	CGRAInstruction.h	/^	bool SelectDataMemoryDataBus;$/;"	m	class:CGRA_Instruction
+Self	CGRAdefinitions.h	/^	Self$/;"	e	enum:PEInputMux
+Sub	CGRAdefinitions.h	/^	Sub,	\/\/1$/;"	e	enum:OPCode
+Up	CGRAdefinitions.h	/^	Up,$/;"	e	enum:PEInputMux
+WIDTH_ENABLE	CGRAdefinitions.h	32;"	d
+WIDTH_IMMEDIATE	CGRAdefinitions.h	33;"	d
+WIDTH_MUX	CGRAdefinitions.h	30;"	d
+WIDTH_OPCODE	CGRAdefinitions.h	28;"	d
+WIDTH_PREDICT	CGRAdefinitions.h	29;"	d
+WIDTH_REGISTER	CGRAdefinitions.h	31;"	d
+WriteRegAddress	CGRAInstruction.h	/^	int WriteRegAddress;$/;"	m	class:CGRA_Instruction
+WriteRegisterEnable	CGRAInstruction.h	/^	bool WriteRegisterEnable;$/;"	m	class:CGRA_Instruction
+X	opcodegeneration.cpp	/^int X,Y;$/;"	v
+XOR	CGRAdefinitions.h	/^	XOR,	\/\/5$/;"	e	enum:OPCode
+Y	opcodegeneration.cpp	/^int X,Y;$/;"	v
+add	CGRAdefinitions.h	/^	add,$/;"	e	enum:Instruction_Operation
+add	cgradef.h	/^		add,$/;"	e	enum:Instruction_Operation
+andop	CGRAdefinitions.h	/^	andop,$/;"	e	enum:Instruction_Operation
+andop	cgradef.h	/^		andop,$/;"	e	enum:Instruction_Operation
+cgraASL	CGRAdefinitions.h	/^	cgraASL,	\/\/8$/;"	e	enum:OPCode
+cgraASR	CGRAdefinitions.h	/^	cgraASR,	\/\/6	$/;"	e	enum:OPCode
+cgra_select	CGRAdefinitions.h	/^	cgra_select,$/;"	e	enum:Instruction_Operation
+cgra_select	cgradef.h	/^		cgra_select,$/;"	e	enum:Instruction_Operation
+cmpEQ	CGRAdefinitions.h	/^	cmpEQ,$/;"	e	enum:Instruction_Operation
+cmpEQ	cgradef.h	/^		cmpEQ,$/;"	e	enum:Instruction_Operation
+cmpNEQ	CGRAdefinitions.h	/^	cmpNEQ,$/;"	e	enum:Instruction_Operation
+cmpNEQ	cgradef.h	/^		cmpNEQ,$/;"	e	enum:Instruction_Operation
+cmpSGEQ	CGRAdefinitions.h	/^	cmpSGEQ,$/;"	e	enum:Instruction_Operation
+cmpSGEQ	cgradef.h	/^		cmpSGEQ,$/;"	e	enum:Instruction_Operation
+cmpSGT	CGRAdefinitions.h	/^	cmpSGT,$/;"	e	enum:Instruction_Operation
+cmpSGT	cgradef.h	/^		cmpSGT,$/;"	e	enum:Instruction_Operation
+cmpSLEQ	CGRAdefinitions.h	/^	cmpSLEQ,$/;"	e	enum:Instruction_Operation
+cmpSLEQ	cgradef.h	/^		cmpSLEQ,$/;"	e	enum:Instruction_Operation
+cmpSLT	CGRAdefinitions.h	/^	cmpSLT,$/;"	e	enum:Instruction_Operation
+cmpSLT	cgradef.h	/^		cmpSLT,$/;"	e	enum:Instruction_Operation
+cmpUGEQ	CGRAdefinitions.h	/^	cmpUGEQ,$/;"	e	enum:Instruction_Operation
+cmpUGEQ	cgradef.h	/^		cmpUGEQ,$/;"	e	enum:Instruction_Operation
+cmpUGT	CGRAdefinitions.h	/^	cmpUGT,$/;"	e	enum:Instruction_Operation
+cmpUGT	cgradef.h	/^		cmpUGT,$/;"	e	enum:Instruction_Operation
+cmpULEQ	CGRAdefinitions.h	/^	cmpULEQ,$/;"	e	enum:Instruction_Operation
+cmpULEQ	cgradef.h	/^		cmpULEQ,$/;"	e	enum:Instruction_Operation
+cmpULT	CGRAdefinitions.h	/^	cmpULT,$/;"	e	enum:Instruction_Operation
+cmpULT	cgradef.h	/^		cmpULT,$/;"	e	enum:Instruction_Operation
+constant	CGRAdefinitions.h	/^	constant,$/;"	e	enum:Instruction_Operation
+constant	cgradef.h	/^		constant,$/;"	e	enum:Instruction_Operation
+destructInstructions	opcodegeneration.cpp	/^void destructInstructions()$/;"	f
+epilog	opcodegeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog_map	opcodegeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_size	opcodegeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+exec_state	opcodegeneration.cpp	/^enum exec_state{$/;"	g	file:
+extractNumber	opcodegeneration.cpp	/^int extractNumber(string name)$/;"	f
+generateINITinstructions	opcodegeneration.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateNOOP	opcodegeneration.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+getFreeRegister	opcodegeneration.cpp	/^int getFreeRegister(int pe)$/;"	f
+getImmediate	opcodegeneration.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediateValue	CGRAInstruction.cpp	/^int CGRA_Instruction::getImmediateValue()$/;"	f	class:CGRA_Instruction
+getImmediateValue_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getImmediateValue_DECODE()$/;"	f	class:CGRA_Instruction
+getLMuxSelector	opcodegeneration.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLeftMuxSelector	CGRAInstruction.cpp	/^PEInputMux CGRA_Instruction::getLeftMuxSelector()$/;"	f	class:CGRA_Instruction
+getLeftMuxSelector_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getLeftMuxSelector_DECODE()$/;"	f	class:CGRA_Instruction
+getMappedPE	opcodegeneration.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedTime	opcodegeneration.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMemoryNodes	opcodegeneration.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getNodeType	opcodegeneration.cpp	/^int getNodeType(int id)$/;"	f
+getOpCode	CGRAInstruction.cpp	/^OPCode CGRA_Instruction::getOpCode()$/;"	f	class:CGRA_Instruction
+getOpCode	opcodegeneration.cpp	/^OPCode getOpCode(int type)$/;"	f
+getOpCode_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getOpCode_DECODE()$/;"	f	class:CGRA_Instruction
+getOperands	opcodegeneration.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOutputRegisterNumber	opcodegeneration.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getPE	opcodegeneration.cpp	/^int getPE(int i)$/;"	f
+getPredic	opcodegeneration.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredicator	CGRAInstruction.cpp	/^int CGRA_Instruction::getPredicator()$/;"	f	class:CGRA_Instruction
+getPredicator_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getPredicator_DECODE()$/;"	f	class:CGRA_Instruction
+getRMuxSelector	opcodegeneration.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getReadRegAddress1	CGRAInstruction.cpp	/^int CGRA_Instruction::getReadRegAddress1()$/;"	f	class:CGRA_Instruction
+getReadRegAddress1_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getReadRegAddress1_DECODE()$/;"	f	class:CGRA_Instruction
+getReadRegAddress2	CGRAInstruction.cpp	/^int CGRA_Instruction::getReadRegAddress2()$/;"	f	class:CGRA_Instruction
+getReadRegAddress2_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getReadRegAddress2_DECODE()$/;"	f	class:CGRA_Instruction
+getReg1Address	opcodegeneration.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg2Address	opcodegeneration.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getRelativePosition	opcodegeneration.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRightMuxSelector	CGRAInstruction.cpp	/^PEInputMux CGRA_Instruction::getRightMuxSelector()$/;"	f	class:CGRA_Instruction
+getRightMuxSelector_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getRightMuxSelector_DECODE()$/;"	f	class:CGRA_Instruction
+getRotatingRegNum	opcodegeneration.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRouteSrc	opcodegeneration.cpp	/^int getRouteSrc(int id)$/;"	f
+getScheduledTime	opcodegeneration.cpp	/^int getScheduledTime(int id)$/;"	f
+getSelectDataMemoryAddressBus	CGRAInstruction.cpp	/^bool CGRA_Instruction::getSelectDataMemoryAddressBus()$/;"	f	class:CGRA_Instruction
+getSelectDataMemoryAddressBus_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getSelectDataMemoryAddressBus_DECODE()$/;"	f	class:CGRA_Instruction
+getSelectDataMemoryDataBus	CGRAInstruction.cpp	/^bool CGRA_Instruction::getSelectDataMemoryDataBus()$/;"	f	class:CGRA_Instruction
+getSelectDataMemoryDataBus_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getSelectDataMemoryDataBus_DECODE()$/;"	f	class:CGRA_Instruction
+getTime	opcodegeneration.cpp	/^int getTime(int i)$/;"	f
+getVariableAddress	opcodegeneration.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getWriteRegAddress	CGRAInstruction.cpp	/^int CGRA_Instruction::getWriteRegAddress()$/;"	f	class:CGRA_Instruction
+getWriteRegAddress	opcodegeneration.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getWriteRegAddress_DECODE()$/;"	f	class:CGRA_Instruction
+getWriteRegisterEnable	CGRAInstruction.cpp	/^bool CGRA_Instruction::getWriteRegisterEnable()$/;"	f	class:CGRA_Instruction
+getWriteRegisterEnable_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getWriteRegisterEnable_DECODE()$/;"	f	class:CGRA_Instruction
+getloadvarname	opcodegeneration.cpp	/^string getloadvarname(int id)$/;"	f
+getstorevarname	opcodegeneration.cpp	/^string getstorevarname(int id)$/;"	f
+in_edge	opcodegeneration.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+initInstructions	opcodegeneration.cpp	/^std::map<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+isAddressBusAssert	opcodegeneration.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isDataBusAssert	opcodegeneration.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isMappedMoreThanACycleApart	opcodegeneration.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isScheduledMoreThanACycleApart	opcodegeneration.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isWriteEnabled	opcodegeneration.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+kernel	opcodegeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel_map	opcodegeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_size	opcodegeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+ld_add	CGRAdefinitions.h	/^	ld_add,$/;"	e	enum:Instruction_Operation
+ld_add	cgradef.h	/^		ld_add,$/;"	e	enum:Instruction_Operation
+ld_add_cond	CGRAdefinitions.h	/^	ld_add_cond,$/;"	e	enum:Instruction_Operation
+ld_add_cond	cgradef.h	/^		ld_add_cond,$/;"	e	enum:Instruction_Operation
+ld_data	CGRAdefinitions.h	/^	ld_data,$/;"	e	enum:Instruction_Operation
+ld_data	cgradef.h	/^		ld_data,$/;"	e	enum:Instruction_Operation
+ld_data_cond	CGRAdefinitions.h	/^	ld_data_cond,$/;"	e	enum:Instruction_Operation
+ld_data_cond	cgradef.h	/^		ld_data_cond,$/;"	e	enum:Instruction_Operation
+llvm_route	CGRAdefinitions.h	/^	llvm_route,$/;"	e	enum:Instruction_Operation
+llvm_route	cgradef.h	/^		llvm_route,$/;"	e	enum:Instruction_Operation
+loopctrl	CGRAdefinitions.h	/^	loopctrl,$/;"	e	enum:Instruction_Operation
+loopctrl	cgradef.h	/^		loopctrl,$/;"	e	enum:Instruction_Operation
+main	opcodegeneration.cpp	/^int main(int argc, char* argv[])$/;"	f
+maxMemoryOperations	opcodegeneration.cpp	/^int maxMemoryOperations = 0;$/;"	v
+mem_node_regNum	opcodegeneration.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mult	CGRAdefinitions.h	/^	mult,$/;"	e	enum:Instruction_Operation
+mult	cgradef.h	/^		mult,$/;"	e	enum:Instruction_Operation
+node_regNum_epilog	opcodegeneration.cpp	/^std::map<int, int> node_regNum_prolog,node_regNum_kernel,node_regNum_epilog;$/;"	v
+node_regNum_kernel	opcodegeneration.cpp	/^std::map<int, int> node_regNum_prolog,node_regNum_kernel,node_regNum_epilog;$/;"	v
+node_regNum_prolog	opcodegeneration.cpp	/^std::map<int, int> node_regNum_prolog,node_regNum_kernel,node_regNum_epilog;$/;"	v
+node_schedule_time	opcodegeneration.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_time_map_epilog	opcodegeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	opcodegeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	opcodegeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+nodeid_instruction	opcodegeneration.cpp	/^std::map<int,CGRA_Instruction*> nodeid_instruction;$/;"	v
+nodeid_names	opcodegeneration.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodesThatReadRotatingRF	opcodegeneration.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+opCode	CGRAInstruction.h	/^	OPCode opCode;$/;"	m	class:CGRA_Instruction
+operand_order_map	opcodegeneration.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+orop	CGRAdefinitions.h	/^	orop,$/;"	e	enum:Instruction_Operation
+orop	cgradef.h	/^		orop,$/;"	e	enum:Instruction_Operation
+out_edge	opcodegeneration.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+pe_free_registers	opcodegeneration.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_mem_op_map	opcodegeneration.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_time_Registers_map	opcodegeneration.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_node_map_epilog	opcodegeneration.cpp	/^std::map< std::pair<int,int>, int> pe_time_node_map_prolog,pe_time_node_map_kernel,pe_time_node_map_epilog;$/;"	v
+pe_time_node_map_kernel	opcodegeneration.cpp	/^std::map< std::pair<int,int>, int> pe_time_node_map_prolog,pe_time_node_map_kernel,pe_time_node_map_epilog;$/;"	v
+pe_time_node_map_prolog	opcodegeneration.cpp	/^std::map< std::pair<int,int>, int> pe_time_node_map_prolog,pe_time_node_map_kernel,pe_time_node_map_epilog;$/;"	v
+printSet	opcodegeneration.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printvalue	opcodegeneration.cpp	/^void printvalue(string var,string obj)$/;"	f
+prolog	opcodegeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog_map	opcodegeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_size	opcodegeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+regi_div	CGRAdefinitions.h	/^	regi_div,$/;"	e	enum:Instruction_Operation
+regi_div	cgradef.h	/^		regi_div,$/;"	e	enum:Instruction_Operation
+releaseRegisters	opcodegeneration.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+rest	CGRAdefinitions.h	/^	rest$/;"	e	enum:Instruction_Operation
+rest	cgradef.h	/^		rest$/;"	e	enum:Instruction_Operation
+route	CGRAdefinitions.h	/^	route,$/;"	e	enum:Instruction_Operation
+route	cgradef.h	/^		route,$/;"	e	enum:Instruction_Operation
+routingNodes	opcodegeneration.cpp	/^std::vector<int> routingNodes;$/;"	v
+schedule_time_nodes	opcodegeneration.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+shiftl	CGRAdefinitions.h	/^	shiftl,$/;"	e	enum:Instruction_Operation
+shiftl	cgradef.h	/^		shiftl,$/;"	e	enum:Instruction_Operation
+shiftr	CGRAdefinitions.h	/^	shiftr,$/;"	e	enum:Instruction_Operation
+shiftr	cgradef.h	/^		shiftr,$/;"	e	enum:Instruction_Operation
+st_add	CGRAdefinitions.h	/^	st_add,$/;"	e	enum:Instruction_Operation
+st_add	cgradef.h	/^		st_add,$/;"	e	enum:Instruction_Operation
+st_add_cond	CGRAdefinitions.h	/^	st_add_cond,$/;"	e	enum:Instruction_Operation
+st_add_cond	cgradef.h	/^		st_add_cond,$/;"	e	enum:Instruction_Operation
+st_data	CGRAdefinitions.h	/^	st_data,$/;"	e	enum:Instruction_Operation
+st_data	cgradef.h	/^		st_data,$/;"	e	enum:Instruction_Operation
+st_data_cond	CGRAdefinitions.h	/^	st_data_cond,$/;"	e	enum:Instruction_Operation
+st_data_cond	cgradef.h	/^		st_data_cond,$/;"	e	enum:Instruction_Operation
+state_epilog	opcodegeneration.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog_start	opcodegeneration.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_kernel	opcodegeneration.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_prolog	opcodegeneration.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+sub	CGRAdefinitions.h	/^	sub,$/;"	e	enum:Instruction_Operation
+sub	cgradef.h	/^		sub,$/;"	e	enum:Instruction_Operation
+updateOperandOrder	opcodegeneration.cpp	/^void updateOperandOrder()$/;"	f
+xorop	CGRAdefinitions.h	/^	xorop,$/;"	e	enum:Instruction_Operation
+xorop	cgradef.h	/^		xorop,$/;"	e	enum:Instruction_Operation
+~CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::~CGRA_Instruction()$/;"	f	class:CGRA_Instruction

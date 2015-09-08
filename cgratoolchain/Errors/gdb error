@@ -1,0 +1,6 @@
+#1  0x0000000000404548 in getloadvarname (id=7) at opcodegeneration.cpp:1437
+#2  0x000000000040486a in generateINITinstructions (
+    objfile=0x7fffffffe2f8 "vector_obj") at opcodegeneration.cpp:1536
+#3  0x000000000040724b in main (argc=11, argv=0x7fffffffded8)
+    at opcodegeneration.cpp:2095
+

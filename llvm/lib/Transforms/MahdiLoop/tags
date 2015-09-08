@@ -1,0 +1,265 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALAP	REGIDFG.h	/^			int ALAP;$/;"	m	class:llvm::REGI_Scheduling_Info
+ALAP_initiated	REGIDFG.h	/^			bool ALAP_initiated;$/;"	m	class:llvm::REGI_Scheduling_Info
+ARC_Max_Index	REGIDFG.h	/^			int ARC_Max_Index;$/;"	m	class:llvm::REGI_DFG
+ASAP	REGIDFG.h	/^			int ASAP;$/;"	m	class:llvm::REGI_Scheduling_Info
+ASAP_initiated	REGIDFG.h	/^			bool ASAP_initiated;$/;"	m	class:llvm::REGI_Scheduling_Info
+Add_Node	MahdiLoop.cpp	/^    bool Add_Node(Instruction *BI, REGI_DFG* myDFG)$/;"	f	struct:llvm::MahdiLoop
+AntiDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+BranchDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+CGRA_Y_Dim	REGIDFG.h	/^			int CGRA_Y_Dim;$/;"	m	class:llvm::REGI_DFG
+CURRENT	REGIDFG.h	/^			int CURRENT;$/;"	m	class:llvm::REGI_Scheduling_Info
+CURRENT_initiated	REGIDFG.h	/^			bool CURRENT_initiated;$/;"	m	class:llvm::REGI_Scheduling_Info
+Copy	REGIDFG.cpp	/^REGI_ARC* REGI_ARC::Copy()$/;"	f	class:REGI_ARC
+Copy	REGIDFG.cpp	/^REGI_DFG::Copy()$/;"	f	class:REGI_DFG
+DEBUG_1	REGIDFG.h	20;"	d
+DEBUG_TYPE	MahdiLoop.cpp	15;"	d	file:
+DataDepType	REGIDFG.h	/^	enum DataDepType$/;"	g	namespace:llvm
+Dot_Print_DFG	REGIDFG.cpp	/^void REGI_DFG::Dot_Print_DFG(std::string filename)$/;"	f	class:REGI_DFG
+Dot_Print_DFG_With_Modulo_Schedule	REGIDFG.cpp	/^void REGI_DFG::Dot_Print_DFG_With_Modulo_Schedule(std::string filename, int II)$/;"	f	class:REGI_DFG
+Dot_Print_DFG_With_Schedule	REGIDFG.cpp	/^void REGI_DFG::Dot_Print_DFG_With_Schedule(std::string filename)$/;"	f	class:REGI_DFG
+Dump_Loop	REGIDFG.cpp	/^void REGI_DFG::Dump_Loop(std::string filename)$/;"	f	class:REGI_DFG
+Feasible_ALAP	REGIDFG.h	/^			int Feasible_ALAP;$/;"	m	class:llvm::REGI_Scheduling_Info
+Feasible_ALAP_initiated	REGIDFG.h	/^			bool Feasible_ALAP_initiated;$/;"	m	class:llvm::REGI_Scheduling_Info
+Feasible_ASAP	REGIDFG.h	/^			int Feasible_ASAP;$/;"	m	class:llvm::REGI_Scheduling_Info
+Feasible_ASAP_initiated	REGIDFG.h	/^			bool Feasible_ASAP_initiated;$/;"	m	class:llvm::REGI_Scheduling_Info
+Find_Common_Parent	MahdiLoop.cpp	/^    BasicBlock* Find_Common_Parent(BasicBlock* bb1, BasicBlock* bb2)$/;"	f	struct:llvm::MahdiLoop
+Find_Last_CMP_Instruction	MahdiLoop.cpp	/^    Instruction* Find_Last_CMP_Instruction(BasicBlock* bb)$/;"	f	struct:llvm::MahdiLoop
+Fix_Phi_Nodes	REGIDFG.cpp	/^void REGI_DFG::Fix_Phi_Nodes()$/;"	f	class:REGI_DFG
+GetOperandOrder	REGIDFG.cpp	/^int REGI_ARC::GetOperandOrder()$/;"	f	class:REGI_ARC
+Get_Dependency_Type	REGIDFG.cpp	/^DataDepType REGI_ARC::Get_Dependency_Type()$/;"	f	class:REGI_ARC
+Get_Inter_Iteration_Distance	REGIDFG.cpp	/^int REGI_ARC::Get_Inter_Iteration_Distance()$/;"	f	class:REGI_ARC
+Get_Next_Nodes	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_NODE::Get_Next_Nodes()$/;"	f	class:REGI_NODE
+Get_Next_Nodes_Same_Iteration	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_NODE::Get_Next_Nodes_Same_Iteration()$/;"	f	class:REGI_NODE
+Get_Prev_Nodes	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_NODE::Get_Prev_Nodes()$/;"	f	class:REGI_NODE
+Get_Prev_Nodes_Same_Iteration	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_NODE::Get_Prev_Nodes_Same_Iteration()$/;"	f	class:REGI_NODE
+Get_Unique_Index	REGIDFG.cpp	/^int REGI_DFG::Get_Unique_Index()$/;"	f	class:REGI_DFG
+Has_conditional_clause	REGIDFG.cpp	/^bool REGI_DFG::Has_conditional_clause()$/;"	f	class:REGI_DFG
+Height	REGIDFG.h	/^			int Height;$/;"	m	class:llvm::REGI_Scheduling_Info
+Height_initiated	REGIDFG.h	/^			bool Height_initiated;$/;"	m	class:llvm::REGI_Scheduling_Info
+ID	MahdiLoop.cpp	/^    static char ID;        \/\/ Pass identification, replacement for typeid$/;"	m	struct:llvm::MahdiLoop	file:
+ID	MahdiLoop.cpp	/^char MahdiLoop::ID = 0;$/;"	m	class:MahdiLoop	file:
+ID	REGIDFG.h	/^			int ID;$/;"	m	class:llvm::REGI_ARC
+Increase_ID_Index	REGIDFG.cpp	/^int REGI_DFG::Increase_ID_Index()$/;"	f	class:REGI_DFG
+Instruction_Operation	REGIDFG.h	/^	enum Instruction_Operation$/;"	g	namespace:llvm
+Inter_Iteration_Distance	REGIDFG.h	/^			int Inter_Iteration_Distance;$/;"	m	class:llvm::REGI_ARC
+Intersect	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::Intersect(std::vector<REGI_NODE*> &nodeset1, std::vector<REGI_NODE*> &nodeset2)$/;"	f	class:REGI_DFG
+Is_Index_Defined_Cycle	REGIDFG.cpp	/^bool REGI_NODE::Is_Index_Defined_Cycle()$/;"	f	class:REGI_NODE
+LEVEL	Makefile	/^LEVEL = ..\/..\/..$/;"	m
+LIBRARYNAME	Makefile	/^LIBRARYNAME = LLVMMahdiLoop$/;"	m
+LOADABLE_MODULE	Makefile	/^LOADABLE_MODULE = 1$/;"	m
+MAXINT	REGIDFG.h	19;"	d
+MAX_SCHEDULE_LEN	REGIDFG.h	/^			int MAX_SCHEDULE_LEN;$/;"	m	class:llvm::REGI_DFG
+MahdiLoop	MahdiLoop.cpp	/^    MahdiLoop() :$/;"	f	struct:llvm::MahdiLoop
+MahdiLoop	MahdiLoop.cpp	/^  struct MahdiLoop: public LoopPass$/;"	s	namespace:llvm	file:
+MemoryDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+Modulo_Current	REGIDFG.h	/^			int Modulo_Current;$/;"	m	class:llvm::REGI_Scheduling_Info
+Node_Ins	REGIDFG.h	/^			Value* Node_Ins;$/;"	m	class:llvm::REGI_NODE
+Node_Max_Index	REGIDFG.h	/^			int Node_Max_Index;$/;"	m	class:llvm::REGI_DFG
+NonDataDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+Not_Empty_Intersect	REGIDFG.cpp	/^bool REGI_DFG::Not_Empty_Intersect(std::vector<REGI_NODE*> &nodeset1, std::vector<REGI_NODE*> &nodeset2)$/;"	f	class:REGI_DFG
+Operation	REGIDFG.h	/^			Instruction_Operation Operation;$/;"	m	class:llvm::REGI_NODE
+OutputDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+PredDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+PrintSet	REGIDFG.cpp	/^void REGI_DFG::PrintSet(std::vector<REGI_NODE*> &set)$/;"	f	class:REGI_DFG
+PrintSets	REGIDFG.cpp	/^void REGI_DFG::PrintSets(std::vector<std::vector<REGI_NODE*> > &sets)$/;"	f	class:REGI_DFG
+REGIDFG_H_	REGIDFG.h	23;"	d
+REGI_ARC	REGIDFG.cpp	/^REGI_ARC::REGI_ARC(int ID, int Inter_Iteration_Distance,int operandOrder)$/;"	f	class:REGI_ARC
+REGI_ARC	REGIDFG.h	/^	class REGI_ARC$/;"	c	namespace:llvm
+REGI_DFG	REGIDFG.cpp	/^REGI_DFG::REGI_DFG()$/;"	f	class:REGI_DFG
+REGI_DFG	REGIDFG.h	/^	class REGI_DFG$/;"	c	namespace:llvm
+REGI_NODE	REGIDFG.cpp	/^REGI_NODE::REGI_NODE(Instruction_Operation ins, int laten, int id, std::string name, Value* Node_Ins)$/;"	f	class:REGI_NODE
+REGI_NODE	REGIDFG.h	/^	class REGI_NODE$/;"	c	namespace:llvm
+REGI_Scheduling_Info	REGIDFG.cpp	/^REGI_Scheduling_Info::REGI_Scheduling_Info()$/;"	f	class:REGI_Scheduling_Info
+REGI_Scheduling_Info	REGIDFG.h	/^	class REGI_Scheduling_Info$/;"	c	namespace:llvm
+Remove	REGIDFG.cpp	/^void REGI_DFG::Remove(std::vector<REGI_NODE*> &nodeset, REGI_NODE* node)$/;"	f	class:REGI_DFG
+Remove	REGIDFG.cpp	/^void REGI_DFG::Remove(std::vector<REGI_NODE*> &nodeset, std::vector<REGI_NODE*> &toRemoveNodes)$/;"	f	class:REGI_DFG
+Remove_Arc	REGIDFG.cpp	/^void REGI_DFG::Remove_Arc(REGI_ARC* arc)$/;"	f	class:REGI_DFG
+Remove_Arc	REGIDFG.cpp	/^void REGI_DFG::Remove_Arc(REGI_NODE *pNode, REGI_NODE *nNode)$/;"	f	class:REGI_DFG
+Remove_Arcs	REGIDFG.cpp	/^void REGI_DFG::Remove_Arcs(std::vector<REGI_ARC*> &arcs)$/;"	f	class:REGI_DFG
+Remove_Block_From_Set	MahdiLoop.cpp	/^    void Remove_Block_From_Set(BasicBlock* current, std::vector<BasicBlock*> set)$/;"	f	struct:llvm::MahdiLoop
+Reset_Cycle_Index	REGIDFG.cpp	/^void REGI_NODE::Reset_Cycle_Index()$/;"	f	class:REGI_NODE
+SCC_Delay	REGIDFG.h	/^			int SCC_Delay;$/;"	m	class:llvm::REGI_Scheduling_Info
+Set_Dependency_Type	REGIDFG.cpp	/^void REGI_ARC::Set_Dependency_Type(DataDepType dep)$/;"	f	class:REGI_ARC
+Set_From_Node	REGIDFG.cpp	/^void REGI_ARC::Set_From_Node(REGI_NODE* from)$/;"	f	class:REGI_ARC
+Set_Index_Cycle	REGIDFG.cpp	/^void REGI_NODE::Set_Index_Cycle(int index)$/;"	f	class:REGI_NODE
+Set_Inter_Iteration_Distance	REGIDFG.cpp	/^void REGI_ARC::Set_Inter_Iteration_Distance(int Inter_Iteration_Distance)$/;"	f	class:REGI_ARC
+Set_Low_Index_Cycle	REGIDFG.cpp	/^void REGI_NODE::Set_Low_Index_Cycle(int index)$/;"	f	class:REGI_NODE
+Set_To_Node	REGIDFG.cpp	/^void REGI_ARC::Set_To_Node(REGI_NODE* to)$/;"	f	class:REGI_ARC
+Strongly_Connected	REGIDFG.cpp	/^void REGI_DFG::Strongly_Connected(REGI_NODE* currentNode, std::stack<REGI_NODE*> &S, std::vector<REGI_NODE*> &SCopy, int &index,$/;"	f	class:REGI_DFG
+Strongly_Connected	REGIDFG.cpp	/^void REGI_DFG::Strongly_Connected(std::vector<std::vector<REGI_NODE*> > &results)$/;"	f	class:REGI_DFG
+Subtract	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::Subtract(std::vector<REGI_NODE*> &set1, std::vector<REGI_NODE*> &set2)$/;"	f	class:REGI_DFG
+Subtract_set	MahdiLoop.cpp	/^    std::vector<BasicBlock*> Subtract_set(std::vector<BasicBlock*> set1, std::vector<BasicBlock*> set2)$/;"	f	struct:llvm::MahdiLoop
+Topological_Sort	REGIDFG.cpp	/^std::queue<REGI_NODE*> REGI_DFG::Topological_Sort()$/;"	f	class:REGI_DFG
+TrueDep	REGIDFG.h	/^		TrueDep, AntiDep, OutputDep, NonDataDep, MemoryDep, BranchDep, PredDep$/;"	e	enum:llvm::DataDepType
+USEDLIBS	Makefile	/^USEDLIBS =$/;"	m
+Union	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::Union(std::vector<REGI_NODE*> &nodeset1, std::vector<REGI_NODE*> &nodeset2)$/;"	f	class:REGI_DFG
+Update_Data_Dependencies	MahdiLoop.cpp	/^    bool Update_Data_Dependencies(Instruction *BI, REGI_DFG* myDFG, std::vector<BasicBlock *> bbs, BasicBlock* loopLatch)$/;"	f	struct:llvm::MahdiLoop
+_ARC_Set	REGIDFG.h	/^			std::vector<REGI_ARC*> _ARC_Set;$/;"	m	class:llvm::REGI_DFG
+_Back_ARC_Set	REGIDFG.h	/^			std::vector<REGI_ARC*> _Back_ARC_Set;$/;"	m	class:llvm::REGI_DFG
+_node_Set	REGIDFG.h	/^			std::vector<REGI_NODE*> _node_Set;$/;"	m	class:llvm::REGI_DFG
+_node_Set_Ordered	REGIDFG.h	/^			std::vector<REGI_NODE*> _node_Set_Ordered;$/;"	m	class:llvm::REGI_DFG
+add	REGIDFG.h	/^		add,$/;"	e	enum:llvm::Instruction_Operation
+add_Pred_Arc	REGIDFG.cpp	/^void REGI_NODE::add_Pred_Arc(REGI_ARC* pred_Arc)$/;"	f	class:REGI_NODE
+add_Succ_Arc	REGIDFG.cpp	/^void REGI_NODE::add_Succ_Arc(REGI_ARC* succ_Arc)$/;"	f	class:REGI_NODE
+andop	REGIDFG.h	/^		andop,$/;"	e	enum:llvm::Instruction_Operation
+cmpEQ	REGIDFG.h	/^		cmpEQ,$/;"	e	enum:llvm::Instruction_Operation
+cmpNEQ	REGIDFG.h	/^		cmpNEQ,$/;"	e	enum:llvm::Instruction_Operation
+cmpSGEQ	REGIDFG.h	/^		cmpSGEQ,$/;"	e	enum:llvm::Instruction_Operation
+cmpSGT	REGIDFG.h	/^		cmpSGT,$/;"	e	enum:llvm::Instruction_Operation
+cmpSLEQ	REGIDFG.h	/^		cmpSLEQ,$/;"	e	enum:llvm::Instruction_Operation
+cmpSLT	REGIDFG.h	/^		cmpSLT,$/;"	e	enum:llvm::Instruction_Operation
+cmpUGEQ	REGIDFG.h	/^		cmpUGEQ,$/;"	e	enum:llvm::Instruction_Operation
+cmpUGT	REGIDFG.h	/^		cmpUGT,$/;"	e	enum:llvm::Instruction_Operation
+cmpULEQ	REGIDFG.h	/^		cmpULEQ,$/;"	e	enum:llvm::Instruction_Operation
+cmpULT	REGIDFG.h	/^		cmpULT,$/;"	e	enum:llvm::Instruction_Operation
+constant	REGIDFG.h	/^		constant,$/;"	e	enum:llvm::Instruction_Operation
+constrains_multiple_modulo_backward_at_time	REGIDFG.cpp	/^bool REGI_NODE::constrains_multiple_modulo_backward_at_time(int time, std::vector<REGI_NODE*> &constrainers)$/;"	f	class:REGI_NODE
+contains	MahdiLoop.cpp	/^    bool contains(BasicBlock* current, std::vector<BasicBlock*> set)$/;"	f	struct:llvm::MahdiLoop
+contains	REGIDFG.cpp	/^bool REGI_DFG::contains(std::vector<REGI_NODE*> &nodeset, REGI_NODE* node)$/;"	f	class:REGI_DFG
+cuid	REGIDFG.h	/^			int cuid;$/;"	m	class:llvm::REGI_NODE
+delete_Node	REGIDFG.cpp	/^int REGI_DFG::delete_Node(REGI_NODE *pNode)$/;"	f	class:REGI_DFG
+dependency	REGIDFG.h	/^			DataDepType dependency;$/;"	m	class:llvm::REGI_ARC
+div	REGIDFG.h	/^		div,$/;"	e	enum:llvm::Instruction_Operation
+from	REGIDFG.h	/^			REGI_NODE* from;$/;"	m	class:llvm::REGI_ARC
+getDistance	MahdiLoop.cpp	/^    int getDistance(Instruction *ins1, BasicBlock* bb1, Instruction *ins2, BasicBlock* bb2, std::vector<BasicBlock *> bbs, BasicBlock* loopLatch)$/;"	f	struct:llvm::MahdiLoop
+getSetOfArcs	REGIDFG.cpp	/^std::vector<REGI_ARC*> REGI_DFG::getSetOfArcs()$/;"	f	class:REGI_DFG
+getSetOfOperations	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::getSetOfOperations()$/;"	f	class:REGI_DFG
+getSetOfVertices	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::getSetOfVertices()$/;"	f	class:REGI_DFG
+get_ALAP	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_ALAP()$/;"	f	class:REGI_Scheduling_Info
+get_ASAP	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_ASAP()$/;"	f	class:REGI_Scheduling_Info
+get_Arc	REGIDFG.cpp	/^REGI_DFG::get_Arc(REGI_NODE *pNode, REGI_NODE *nNode)$/;"	f	class:REGI_DFG
+get_Current	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_Current()$/;"	f	class:REGI_Scheduling_Info
+get_Feasible_ALAP	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_Feasible_ALAP()$/;"	f	class:REGI_Scheduling_Info
+get_Feasible_ASAP	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_Feasible_ASAP()$/;"	f	class:REGI_Scheduling_Info
+get_From_Node	REGIDFG.cpp	/^REGI_NODE* REGI_ARC::get_From_Node()$/;"	f	class:REGI_ARC
+get_Height	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_Height()$/;"	f	class:REGI_Scheduling_Info
+get_ID	REGIDFG.cpp	/^int REGI_ARC::get_ID()$/;"	f	class:REGI_ARC
+get_ID	REGIDFG.cpp	/^int REGI_NODE::get_ID()$/;"	f	class:REGI_NODE
+get_Index_Cycle	REGIDFG.cpp	/^int REGI_NODE::get_Index_Cycle()$/;"	f	class:REGI_NODE
+get_Instruction	REGIDFG.cpp	/^Instruction_Operation REGI_NODE::get_Instruction()$/;"	f	class:REGI_NODE
+get_LLVM_Instruction	REGIDFG.cpp	/^Value* REGI_NODE::get_LLVM_Instruction()$/;"	f	class:REGI_NODE
+get_Latency	REGIDFG.cpp	/^int REGI_NODE::get_Latency()$/;"	f	class:REGI_NODE
+get_Low_Index_Cycle	REGIDFG.cpp	/^int REGI_NODE::get_Low_Index_Cycle()$/;"	f	class:REGI_NODE
+get_Modulo_Current	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_Modulo_Current()$/;"	f	class:REGI_Scheduling_Info
+get_Name	REGIDFG.cpp	/^std::string REGI_NODE::get_Name()$/;"	f	class:REGI_NODE
+get_Node	REGIDFG.cpp	/^REGI_DFG::get_Node(int number)$/;"	f	class:REGI_DFG
+get_Node	REGIDFG.cpp	/^REGI_NODE* REGI_DFG::get_Node(Value* ins)$/;"	f	class:REGI_DFG
+get_Node_Mem_Add	REGIDFG.cpp	/^REGI_NODE* REGI_DFG::get_Node_Mem_Add(Value* ins)$/;"	f	class:REGI_DFG
+get_Node_Mem_Data	REGIDFG.cpp	/^REGI_NODE* REGI_DFG::get_Node_Mem_Data(Value* ins)$/;"	f	class:REGI_DFG
+get_Number_of_Pred	REGIDFG.cpp	/^int REGI_NODE::get_Number_of_Pred()$/;"	f	class:REGI_NODE
+get_Number_of_Succ	REGIDFG.cpp	/^int REGI_NODE::get_Number_of_Succ()$/;"	f	class:REGI_NODE
+get_Pred_Arc	REGIDFG.cpp	/^REGI_ARC* REGI_NODE::get_Pred_Arc(int i)$/;"	f	class:REGI_NODE
+get_Related_Node	REGIDFG.cpp	/^REGI_NODE* REGI_NODE::get_Related_Node()$/;"	f	class:REGI_NODE
+get_SCC_Delay	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_SCC_Delay()$/;"	f	class:REGI_Scheduling_Info
+get_Sched_Info	REGIDFG.cpp	/^REGI_Scheduling_Info* REGI_NODE::get_Sched_Info()$/;"	f	class:REGI_NODE
+get_Succ_Arc	REGIDFG.cpp	/^REGI_ARC* REGI_NODE::get_Succ_Arc(int i)$/;"	f	class:REGI_NODE
+get_To_Node	REGIDFG.cpp	/^REGI_NODE* REGI_ARC::get_To_Node()$/;"	f	class:REGI_ARC
+get_next_nodes_same_iteration	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::get_next_nodes_same_iteration(std::vector<REGI_NODE*> &nodes)$/;"	f	class:REGI_DFG
+get_next_nodes_same_iteration_update_latency	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::get_next_nodes_same_iteration_update_latency(std::vector<REGI_NODE*> &nodes, bool &change)$/;"	f	class:REGI_DFG
+get_number_of_nodes	REGIDFG.cpp	/^int REGI_DFG::get_number_of_nodes()$/;"	f	class:REGI_DFG
+get_self_loop	REGIDFG.cpp	/^REGI_ARC* REGI_NODE::get_self_loop()$/;"	f	class:REGI_NODE
+get_set_of_end_nodes	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::get_set_of_end_nodes()$/;"	f	class:REGI_DFG
+get_set_of_start_nodes	REGIDFG.cpp	/^std::vector<REGI_NODE*> REGI_DFG::get_set_of_start_nodes()$/;"	f	class:REGI_DFG
+get_slack	REGIDFG.cpp	/^int REGI_Scheduling_Info::get_slack()$/;"	f	class:REGI_Scheduling_Info
+has_multiple_constrains_modulo_at_time	REGIDFG.cpp	/^bool REGI_NODE::has_multiple_constrains_modulo_at_time(int time, std::vector<REGI_NODE*> &constrainers)$/;"	f	class:REGI_NODE
+has_multiple_constrains_modulo_backward_at_time	REGIDFG.cpp	/^bool REGI_NODE::has_multiple_constrains_modulo_backward_at_time(int time, std::vector<REGI_NODE*> &constrainers)$/;"	f	class:REGI_NODE
+has_self_loop	REGIDFG.cpp	/^bool REGI_NODE::has_self_loop()$/;"	f	class:REGI_NODE
+inCommingArcs	REGIDFG.h	/^			std::vector<REGI_ARC*> inCommingArcs;$/;"	m	class:llvm::REGI_NODE
+index_cycle	REGIDFG.h	/^			int index_cycle;$/;"	m	class:llvm::REGI_NODE
+index_defined_cycle	REGIDFG.h	/^			bool index_defined_cycle;$/;"	m	class:llvm::REGI_NODE
+insert_Node	REGIDFG.cpp	/^void REGI_DFG::insert_Node(REGI_NODE *pNode)$/;"	f	class:REGI_DFG
+insert_Node_in_between_input	REGIDFG.cpp	/^bool REGI_DFG::insert_Node_in_between_input(REGI_NODE* pNode, REGI_NODE* nNode, REGI_NODE* newNode)$/;"	f	class:REGI_DFG
+insert_Node_in_between_output	REGIDFG.cpp	/^int REGI_DFG::insert_Node_in_between_output(REGI_NODE* pNode, REGI_NODE* nNode, REGI_NODE* newNode)$/;"	f	class:REGI_DFG
+isBranch	MahdiLoop.cpp	/^    bool isBranch(llvm::BasicBlock::const_iterator ins)$/;"	f	struct:llvm::MahdiLoop
+isConditionalBranch	MahdiLoop.cpp	/^    bool isConditionalBranch(llvm::BasicBlock::const_iterator ins)$/;"	f	struct:llvm::MahdiLoop
+is_ALAP_Initiated	REGIDFG.cpp	/^bool REGI_Scheduling_Info::is_ALAP_Initiated()$/;"	f	class:REGI_Scheduling_Info
+is_ASAP_Initiated	REGIDFG.cpp	/^bool REGI_Scheduling_Info::is_ASAP_Initiated()$/;"	f	class:REGI_Scheduling_Info
+is_CURRENT_Initiated	REGIDFG.cpp	/^bool REGI_Scheduling_Info::is_CURRENT_Initiated()$/;"	f	class:REGI_Scheduling_Info
+is_Connected_To	REGIDFG.cpp	/^bool REGI_NODE::is_Connected_To(REGI_NODE* nextNode)$/;"	f	class:REGI_NODE
+is_Feasible_ALAP_Initiated	REGIDFG.cpp	/^bool REGI_Scheduling_Info::is_Feasible_ALAP_Initiated()$/;"	f	class:REGI_Scheduling_Info
+is_Feasible_ASAP_Initiated	REGIDFG.cpp	/^bool REGI_Scheduling_Info::is_Feasible_ASAP_Initiated()$/;"	f	class:REGI_Scheduling_Info
+is_Height_Initiated	REGIDFG.cpp	/^bool REGI_Scheduling_Info::is_Height_Initiated()$/;"	f	class:REGI_Scheduling_Info
+is_Load_Address_Generator	REGIDFG.cpp	/^bool REGI_NODE::is_Load_Address_Generator()$/;"	f	class:REGI_NODE
+is_Load_Data_Bus_Read	REGIDFG.cpp	/^bool REGI_NODE::is_Load_Data_Bus_Read()$/;"	f	class:REGI_NODE
+is_Mem_Operation	REGIDFG.cpp	/^bool REGI_NODE::is_Mem_Operation()$/;"	f	class:REGI_NODE
+is_Routing_Operation	REGIDFG.cpp	/^bool REGI_NODE::is_Routing_Operation()$/;"	f	class:REGI_NODE
+is_Store_Address_Generator	REGIDFG.cpp	/^bool REGI_NODE::is_Store_Address_Generator()$/;"	f	class:REGI_NODE
+is_Store_Data_Bus_Write	REGIDFG.cpp	/^bool REGI_NODE::is_Store_Data_Bus_Write()$/;"	f	class:REGI_NODE
+is_ready_to_schedule_ALAP	REGIDFG.cpp	/^bool REGI_NODE::is_ready_to_schedule_ALAP(int &time)$/;"	f	class:REGI_NODE
+is_ready_to_schedule_ASAP	REGIDFG.cpp	/^bool REGI_NODE::is_ready_to_schedule_ASAP(int &time)$/;"	f	class:REGI_NODE
+is_ready_to_schedule_Feasible_ALAP	REGIDFG.cpp	/^bool REGI_NODE::is_ready_to_schedule_Feasible_ALAP(int &time)$/;"	f	class:REGI_NODE
+is_ready_to_schedule_Feasible_ASAP	REGIDFG.cpp	/^bool REGI_NODE::is_ready_to_schedule_Feasible_ASAP(int &time)$/;"	f	class:REGI_NODE
+is_ready_to_schedule_modulo	REGIDFG.cpp	/^bool REGI_NODE::is_ready_to_schedule_modulo(int &time)$/;"	f	class:REGI_NODE
+is_ready_to_schedule_modulo_backward	REGIDFG.cpp	/^bool REGI_NODE::is_ready_to_schedule_modulo_backward(int &time)$/;"	f	class:REGI_NODE
+latency	REGIDFG.h	/^			int latency;$/;"	m	class:llvm::REGI_NODE
+ld_add	REGIDFG.h	/^		ld_add,$/;"	e	enum:llvm::Instruction_Operation
+ld_add_cond	REGIDFG.h	/^		ld_add_cond,$/;"	e	enum:llvm::Instruction_Operation
+ld_data	REGIDFG.h	/^		ld_data,$/;"	e	enum:llvm::Instruction_Operation
+ld_data_cond	REGIDFG.h	/^		ld_data_cond,$/;"	e	enum:llvm::Instruction_Operation
+llvm	MahdiLoop.cpp	/^namespace llvm$/;"	n	file:
+llvm	REGIDFG.h	/^namespace llvm$/;"	n
+llvm_route	REGIDFG.h	/^		llvm_route,$/;"	e	enum:llvm::Instruction_Operation
+loop	REGIDFG.h	/^			REGI_ARC* loop;$/;"	m	class:llvm::REGI_NODE
+loopctrl	REGIDFG.h	/^		loopctrl,$/;"	e	enum:llvm::Instruction_Operation
+low_index_cycle	REGIDFG.h	/^			int low_index_cycle;$/;"	m	class:llvm::REGI_NODE
+make_Arc	REGIDFG.cpp	/^void REGI_DFG::make_Arc(REGI_NODE* pNin, REGI_NODE* pNout, int ID, int Distance,$/;"	f	class:REGI_DFG
+mult	REGIDFG.h	/^		mult,$/;"	e	enum:llvm::Instruction_Operation
+name	REGIDFG.h	/^			std::string name;$/;"	m	class:llvm::REGI_NODE
+operandOrder	REGIDFG.h	/^            int operandOrder;$/;"	m	class:llvm::REGI_ARC
+orop	REGIDFG.h	/^		orop,$/;"	e	enum:llvm::Instruction_Operation
+outGoingArcs	REGIDFG.h	/^			std::vector<REGI_ARC*> outGoingArcs;$/;"	m	class:llvm::REGI_NODE
+phiCounter	MahdiLoop.cpp	/^    int phiCounter;$/;"	m	struct:llvm::MahdiLoop	file:
+print_Loop_stats	REGIDFG.cpp	/^void REGI_DFG::print_Loop_stats(int total, int total_dumped, int with_cond)$/;"	f	class:REGI_DFG
+related	REGIDFG.h	/^			REGI_NODE* related;$/;"	m	class:llvm::REGI_NODE
+remove_Pred_Arc	REGIDFG.cpp	/^int REGI_NODE::remove_Pred_Arc(REGI_ARC* predArc)$/;"	f	class:REGI_NODE
+remove_Succ_Arc	REGIDFG.cpp	/^int REGI_NODE::remove_Succ_Arc(REGI_ARC* succArc)$/;"	f	class:REGI_NODE
+reset_ALAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::reset_ALAP()$/;"	f	class:REGI_Scheduling_Info
+reset_ASAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::reset_ASAP()$/;"	f	class:REGI_Scheduling_Info
+reset_Current	REGIDFG.cpp	/^void REGI_Scheduling_Info::reset_Current()$/;"	f	class:REGI_Scheduling_Info
+reset_Feasible_ALAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::reset_Feasible_ALAP()$/;"	f	class:REGI_Scheduling_Info
+reset_Feasible_ASAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::reset_Feasible_ASAP()$/;"	f	class:REGI_Scheduling_Info
+reset_latency_to_nodes	REGIDFG.cpp	/^void REGI_DFG::reset_latency_to_nodes(std::vector<REGI_NODE*> &nodes)$/;"	f	class:REGI_DFG
+rest	REGIDFG.h	/^		rest$/;"	e	enum:llvm::Instruction_Operation
+route	REGIDFG.h	/^		route,$/;"	e	enum:llvm::Instruction_Operation
+runOnLoop	MahdiLoop.cpp	/^    virtual bool runOnLoop(Loop *L, LPPassManager &LPM)$/;"	f	struct:llvm::MahdiLoop
+sched_info	REGIDFG.h	/^			REGI_Scheduling_Info* sched_info;$/;"	m	class:llvm::REGI_NODE
+schedule_len	REGIDFG.h	/^			int schedule_len;$/;"	m	class:llvm::REGI_DFG
+select	REGIDFG.h	/^		select,$/;"	e	enum:llvm::Instruction_Operation
+self_loop	REGIDFG.h	/^			bool self_loop;$/;"	m	class:llvm::REGI_NODE
+set_ALAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_ALAP(int time)$/;"	f	class:REGI_Scheduling_Info
+set_ASAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_ASAP(int time)$/;"	f	class:REGI_Scheduling_Info
+set_Current	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_Current(int time, int II)$/;"	f	class:REGI_Scheduling_Info
+set_Feasible_ALAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_Feasible_ALAP(int time)$/;"	f	class:REGI_Scheduling_Info
+set_Feasible_ASAP	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_Feasible_ASAP(int time)$/;"	f	class:REGI_Scheduling_Info
+set_Height	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_Height(int time)$/;"	f	class:REGI_Scheduling_Info
+set_Instruction	REGIDFG.cpp	/^void REGI_NODE::set_Instruction(Instruction_Operation ins, int laten, int id, std::string name, Value* Node_Ins)$/;"	f	class:REGI_NODE
+set_Latency	REGIDFG.cpp	/^void REGI_NODE::set_Latency(int laten)$/;"	f	class:REGI_NODE
+set_Load_Address_Generator	REGIDFG.cpp	/^void REGI_NODE::set_Load_Address_Generator(REGI_NODE* next)$/;"	f	class:REGI_NODE
+set_Load_Data_Bus_Read	REGIDFG.cpp	/^void REGI_NODE::set_Load_Data_Bus_Read(REGI_NODE* next)$/;"	f	class:REGI_NODE
+set_SCC_Delay	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_SCC_Delay(int delay)$/;"	f	class:REGI_Scheduling_Info
+set_Store_Address_Generator	REGIDFG.cpp	/^void REGI_NODE::set_Store_Address_Generator(REGI_NODE* next)$/;"	f	class:REGI_NODE
+set_Store_Data_Bus_Write	REGIDFG.cpp	/^void REGI_NODE::set_Store_Data_Bus_Write(REGI_NODE* next)$/;"	f	class:REGI_NODE
+set_self_loop	REGIDFG.cpp	/^void REGI_NODE::set_self_loop(REGI_ARC* s_loop)$/;"	f	class:REGI_NODE
+set_slack	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_slack()$/;"	f	class:REGI_Scheduling_Info
+set_slack	REGIDFG.cpp	/^void REGI_Scheduling_Info::set_slack(int time)$/;"	f	class:REGI_Scheduling_Info
+shiftl	REGIDFG.h	/^		shiftl,$/;"	e	enum:llvm::Instruction_Operation
+shiftr	REGIDFG.h	/^		shiftr,$/;"	e	enum:llvm::Instruction_Operation
+slack	REGIDFG.h	/^			int slack;$/;"	m	class:llvm::REGI_Scheduling_Info
+st_add	REGIDFG.h	/^		st_add,$/;"	e	enum:llvm::Instruction_Operation
+st_add_cond	REGIDFG.h	/^		st_add_cond,$/;"	e	enum:llvm::Instruction_Operation
+st_data	REGIDFG.h	/^		st_data,$/;"	e	enum:llvm::Instruction_Operation
+st_data_cond	REGIDFG.h	/^		st_data_cond,$/;"	e	enum:llvm::Instruction_Operation
+sub	REGIDFG.h	/^		sub,$/;"	e	enum:llvm::Instruction_Operation
+to	REGIDFG.h	/^			REGI_NODE* to;$/;"	m	class:llvm::REGI_ARC
+update_slack	REGIDFG.cpp	/^void REGI_Scheduling_Info::update_slack(int time)$/;"	f	class:REGI_Scheduling_Info
+xorop	REGIDFG.h	/^		xorop,$/;"	e	enum:llvm::Instruction_Operation
+~REGI_ARC	REGIDFG.cpp	/^REGI_ARC::~REGI_ARC()$/;"	f	class:REGI_ARC
+~REGI_DFG	REGIDFG.cpp	/^REGI_DFG::~REGI_DFG()$/;"	f	class:REGI_DFG
+~REGI_NODE	REGIDFG.cpp	/^REGI_NODE::~REGI_NODE()$/;"	f	class:REGI_NODE
+~REGI_Scheduling_Info	REGIDFG.cpp	/^REGI_Scheduling_Info::~REGI_Scheduling_Info()$/;"	f	class:REGI_Scheduling_Info
