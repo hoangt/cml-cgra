@@ -35,7 +35,4 @@ This Version Does Not Support
 
 6. Floating Point Implementation
 
-7. Function Calls 
-8. a
-8. 
-7. 
+7. Function Calls
