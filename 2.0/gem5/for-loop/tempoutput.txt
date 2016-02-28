@@ -1,0 +1,169 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Feb  1 2014 18:07:14
+gem5 started Feb  1 2014 18:07:36
+gem5 executing on deimos
+command line: build/ARM/gem5.opt configs/example/se_hetro.py -n 2 --cpu-type timing -c tests/test-progs/hello/bin/arm/linux/cgra_simple_loop
+Global frequency set at 1000000000000 ticks per second
+CGRA instantiated
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+
+**********DIPAL 1*********
+
+**********DIPAL 64*********
+
+**********DIPAL 192*********
+
+**********DIPAL 48*********
+
+**********DIPAL 3*********
+
+**********DIPAL 2011168768*********
+
+**********DIPAL 70a10*********
+
+**********DIPAL 3*********
+Main thread initialized. TID=0
+Main thread called pthread_attr_init
+Main thread called pthread_attr_setscope
+Main thread creating 1st thread...
+
+before C= 12Main thread creating 2nd thread...
+
+before C= 12HELLO FROM CGRA_MAIN THREAD THE ARRAY IS :
+************************Setting UP the CGRA************
+CGRA: OLD PC: 8cfc
+CGRA!!! PROLOG
+CGRA PARAMETERS: PROLOG= 12, EPILOG=4, II=3, KernelCounter=10
+CGRA PARAMETERS: PROLOGPC= 70a10, EPILOGPC=709c8,  KernelPC=70ad8
+CGRA PC : 70a10
+**********************CGRA Execution is started**************************** 
+size of data is 64
+0 1 
+************** WE *****************
+2 
+************** WE *****************
+3 4 
+************** WE *****************
+5 6 7 8 
+************** WE *****************
+9 10 11 12 
+************** WE *****************
+13 14 15 size of data is 64
+0 1 
+************** WE *****************
+2 
+************** WE *****************
+3 4 
+************** WE *****************
+5 6 7 8 
+************** WE *****************
+9 10 11 12 
+************** WE *****************
+13 14 15 size of data is 64
+0 1 
+************** WE *****************
+2 
+************** WE *****************
+3 4 
+************** WE *****************
+5 6 7 8 
+************** WE *****************
+9 10 11 12 
+************** WE *****************
+13 14 15 size of data is 64
+0 1 2 3 4 5 6 7 
+************** WE *****************
+8 9 10 11 
+******** DB OP 0************
+12 13 14 15 
+******** DB OP 0************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70ad0
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70b10
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,825,PC:70b50
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,825,PC:70b90
+size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70c10
+size of data is 64
+0 1 2 3 4 5 
+************** WE *****************
+6 7 8 9 10 11 12 13 14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70c50
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70c90
+size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70cd0
+size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1540,PC:70dd0
+size of data is 64
+0 1 2 3 4 5 
+************** WE *****************
+6 7 8 9 
+******** DB OP 0************
+10 11 12 13 
+******** DB OP 0************
+14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70ad8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70b18
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,825,PC:70b58
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,825,PC:70b98
+size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 size of data is 64
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70c18
+HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:709c8
+size of data is 64
+0 1 2 3 
+************** WE *****************
+4 
+************** WE *****************
+5 6 
+************** WE *****************
+7 8 9 10 
+************** WE *****************
+11 12 13 14 
+************** WE *****************
+15 size of data is 64
+0 1 2 3 
+************** WE *****************
+4 
+************** WE *****************
+5 6 
+************** WE *****************
+7 8 9 10 
+************** WE *****************
+11 12 13 14 
+************** WE *****************
+15 size of data is 64
+0 1 2 3 
+************** WE *****************
+4 
+************** WE *****************
+5 6 
+************** WE *****************
+7 8 9 10 
+************** WE *****************
+11 12 13 14 
+************** WE *****************
+15 size of data is 64
+0 1 2 3 4 5 6 7 8 9 
+************** WE *****************
+10 11 12 13 
+******** DB OP 0************
+14 15 build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeIfetch,818,PC:70ac8
+************************PREPARING TO MOVE TO CPU************
+PE 15 contents are
+R0:     0	R1:     0	R2:     0	R3:     0	Output:     0
+PE 14 contents are
+R0:     0	R1:     0	R2:     0	R3:     0	Output:    24
+PE 1 contents are
+R0:     0	R1:     0	R2:     0	R3:     0	Output:     0
+PE 0 contents are
+R0:     0	R1:     0	R2:     0	R3:     0	Output:     1
+newPC=461512, II=3, EPILog=4, Prolog=12, Len=0
+**********************CGRA Execution is over**********************
+******REG R11= 16*********
+AFTER COMPLETETION PC: 8d00

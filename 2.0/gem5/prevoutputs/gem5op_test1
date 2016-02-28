@@ -1,0 +1,1558 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 11 2014 20:58:01
+gem5 started Nov 11 2014 21:38:11
+gem5 executing on mahesh-MacBookPro
+command line: build/ARM/gem5.opt configs/example/se_hetro.py -n 2 --cpu-type timing -c ../../mypro/Test/test1
+Global frequency set at 1000000000000 ticks per second
+CGRA instantiated
+
+MASTER system_port binds to SLAVE system.membus.slave[0]
+
+MASTER system.membus.master[0] binds to SLAVE system.mem_ctrls.port
+
+MASTER system.cpu0.icache_port binds to SLAVE system.membus.slave[1]
+
+MASTER system.cpu0.dcache_port binds to SLAVE system.membus.slave[2]
+
+MASTER system.cpu0.dtb.walker.dma binds to SLAVE system.membus.slave[4]
+
+MASTER system.cpu0.itb.walker.dma binds to SLAVE system.membus.slave[3]
+
+MASTER system.cpu1.icache_port binds to SLAVE system.membus.slave[5]
+
+MASTER system.cpu1.dcache_port1 binds to SLAVE system.membus.slave[9]
+
+MASTER system.cpu1.dcache_port2 binds to SLAVE system.membus.slave[10]
+
+MASTER system.cpu1.dcache_port3 binds to SLAVE system.membus.slave[11]
+
+MASTER system.cpu1.dcache_port4 binds to SLAVE system.membus.slave[12]
+
+MASTER system.cpu1.dcache_port binds to SLAVE system.membus.slave[6]
+
+MASTER system.cpu1.dtb.walker.dma binds to SLAVE system.membus.slave[8]
+
+MASTER system.cpu1.itb.walker.dma binds to SLAVE system.membus.slave[7]
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+
+**********DIPAL 1*********
+
+**********EPISIZE 80*********
+
+**********PROSIZE 192*********
+
+**********KERNSIZE 32*********
+
+******SIZE OF UNISGNED INT 4*****
+
+**********II 2*********
+
+**********PROLOG PC 99dc0]*********
+
+**********PROLOG[1]  77e00000*********
+
+**********PROLOG[2]  77e00000*********
+
+**********KERNEL PC 9a0c8*********
+
+**********EPILOG PC 0x99c78*********
+Main thread initialized. TID=622592
+Main thread called pthread_attr_init
+Main thread called pthread_attr_setscope
+Main thread creating 1st thread...
+
+before C= 12Main thread creating 2nd thread...
+
+HELLO FROM CGRA_MAIN THREAD THE ARRAY IS :
+************************Setting UP the CGRA************
+CGRA: OLD PC: 990c
+CGRA!!! PROLOG
+CGRA PARAMETERS: PROLOG= 12, EPILOG=5, II=2, KernelCounter=10
+CGRA PARAMETERS: PROLOGPC= 99dc0, EPILOGPC=99c78,  KernelPC=9a0c8
+CGRA PC : 99dc0
+**********************CGRA Execution is started**************************** 
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99dc0
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99e00
+size of data is 64
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99e40
+size of data is 64
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99e80
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99ec0
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99f00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99f40
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99f80
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99f80
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 0
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99fc0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99fc0
+size of data is 64
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 0************
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a000
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a000
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a000
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 1
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a040
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a040
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a040
+size of data is 64
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a080
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a080
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a080
+
+PROLOG->KERNEL
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 2
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 1************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 1************
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 1************
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 1************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 1************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 1************
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 0
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 2************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 2************
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 2************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 1
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 2************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 2************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 2************
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 2
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 3************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 3************
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 3************
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 3************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 3************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 3************
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 0
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 4************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 4************
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 4************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 1
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 4************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 4************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 4************
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 2
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 5************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 5************
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 5************
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 5************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 5************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 5************
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 0
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 6************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 6************
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 6************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 1
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 6************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 6************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 6************
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 2
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 7************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 7************
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 7************
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 7************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 7************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 7************
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 0
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 8************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 8************
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 8************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 1
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 8************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 8************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 8************
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 2
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 9************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 9************
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 9************
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 9************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 9************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 9************
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 0
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 1
+
+******** DB Output 10************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 10************
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 10************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 1
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 0
+
+******** DB Output 10************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a0c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0c8
+size of data is 64
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 10************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 9f0e8 ******
+
+*********Setting Address 9ffc8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9a108
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a108
+
+KERNEL->EPILOG
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+******** DB INPUT1 10************
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9f0ec ******
+
+WRITE PHYS REG NUMBER: 2
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 0
+
+******** DB Output 11************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99c78
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99c78
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99c78
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99c78
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99c78
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 11************
+
+******** DB INPUT1 0************
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+*********Setting Address 9f0e8 ******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99cb8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99cb8
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 0************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 9ffc8 ******
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 0
+
+******** DB Output 11************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99cf8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99cf8
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99cf8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99cf8
+size of data is 64
+
+******** DB INPUT1 11************
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99d38
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 9f0f0 ******
+
+******** DB Output 0************
+
+*********Setting Address 9ffc8 ******
+
+COMPARE INSTRUCTION OUTPUT = 0
+
+******** DB Output 10************
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99d78
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99d78
+advanceInst CGRA MODE
+************************PREPARING TO MOVE TO CPU************
+newPC=630136, II=2, EPILog=5, Prolog=12, Len=0
+**********************CGRA Execution is over**********************
+******REG R11= 16*********
+AFTER COMPLETETION PC: 9910

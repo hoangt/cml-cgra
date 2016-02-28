@@ -1,0 +1,42 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 11 2014 20:58:01
+gem5 started Jan 26 2015 10:55:18
+gem5 executing on mahesh-MacBookPro
+command line: build/ARM/gem5.opt configs/example/se_hetro.py -n 2 --cpu-type timing -c ../../mypro/Test_Loops/test/obj3
+Global frequency set at 1000000000000 ticks per second
+CGRA instantiated
+
+MASTER system_port binds to SLAVE system.membus.slave[0]
+
+MASTER system.membus.master[0] binds to SLAVE system.mem_ctrls.port
+
+MASTER system.cpu0.icache_port binds to SLAVE system.membus.slave[1]
+
+MASTER system.cpu0.dcache_port binds to SLAVE system.membus.slave[2]
+
+MASTER system.cpu0.dtb.walker.dma binds to SLAVE system.membus.slave[4]
+
+MASTER system.cpu0.itb.walker.dma binds to SLAVE system.membus.slave[3]
+
+MASTER system.cpu1.icache_port binds to SLAVE system.membus.slave[5]
+
+MASTER system.cpu1.dcache_port1 binds to SLAVE system.membus.slave[9]
+
+MASTER system.cpu1.dcache_port2 binds to SLAVE system.membus.slave[10]
+
+MASTER system.cpu1.dcache_port3 binds to SLAVE system.membus.slave[11]
+
+MASTER system.cpu1.dcache_port4 binds to SLAVE system.membus.slave[12]
+
+MASTER system.cpu1.dcache_port binds to SLAVE system.membus.slave[6]
+
+MASTER system.cpu1.dtb.walker.dma binds to SLAVE system.membus.slave[8]
+
+MASTER system.cpu1.itb.walker.dma binds to SLAVE system.membus.slave[7]
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+
+**********DIPAL 1*********

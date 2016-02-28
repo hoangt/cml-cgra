@@ -1,0 +1,3237 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Nov 11 2014 20:58:01
+gem5 started Feb  1 2015 22:12:37
+gem5 executing on mahesh-MacBookPro
+command line: build/ARM/gem5.opt configs/example/se_hetro.py -n 2 --cpu-type timing -c ../../mypro/whileloops/loop4/obj4
+Global frequency set at 1000000000000 ticks per second
+CGRA instantiated
+
+MASTER system_port binds to SLAVE system.membus.slave[0]
+
+MASTER system.membus.master[0] binds to SLAVE system.mem_ctrls.port
+
+MASTER system.cpu0.icache_port binds to SLAVE system.membus.slave[1]
+
+MASTER system.cpu0.dcache_port binds to SLAVE system.membus.slave[2]
+
+MASTER system.cpu0.dtb.walker.dma binds to SLAVE system.membus.slave[4]
+
+MASTER system.cpu0.itb.walker.dma binds to SLAVE system.membus.slave[3]
+
+MASTER system.cpu1.icache_port binds to SLAVE system.membus.slave[5]
+
+MASTER system.cpu1.dcache_port1 binds to SLAVE system.membus.slave[9]
+
+MASTER system.cpu1.dcache_port2 binds to SLAVE system.membus.slave[10]
+
+MASTER system.cpu1.dcache_port3 binds to SLAVE system.membus.slave[11]
+
+MASTER system.cpu1.dcache_port4 binds to SLAVE system.membus.slave[12]
+
+MASTER system.cpu1.dcache_port binds to SLAVE system.membus.slave[6]
+
+MASTER system.cpu1.dtb.walker.dma binds to SLAVE system.membus.slave[8]
+
+MASTER system.cpu1.itb.walker.dma binds to SLAVE system.membus.slave[7]
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+
+**********DIPAL 1*********
+
+**********EPISIZE 480*********
+
+**********PROSIZE 1152*********
+
+**********KERNSIZE 144*********
+
+******SIZE OF UNISGNED INT 4*****
+
+**********II 9*********
+
+**********PROLOG PC 9a400*********
+
+**********PROLOG[1]  96004000*********
+
+**********PROLOG[2]  96004000*********
+
+**********KERNEL PC 9b608*********
+
+**********EPILOG PC 99c78*********
+Main thread initialized. TID=622592
+Main thread called pthread_attr_init
+Main thread called pthread_attr_setscope
+Main thread creating 1st thread...
+
+before C= 618344Main thread creating 2nd thread...
+
+HELLO FROM CGRA_MAIN THREAD THE ARRAY IS :
+************************Setting UP the CGRA************
+CGRA: OLD PC: 9ad4
+CGRA!!! PROLOG
+CGRA PARAMETERS: PROLOG= 72, EPILOG=30, II=9, KernelCounter=10
+CGRA PARAMETERS: PROLOGPC= 9a400, EPILOGPC=99c78,  KernelPC=9b608
+CGRA PC : 9a400
+**********************CGRA Execution is started**************************** 
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a400
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a440
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a480
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a4c0
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a500
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+REG NUMBER: 5 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a540
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a580
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a5c0
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+
+REG NUMBER: 6 dist: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a600
+size of data is 64
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a640
+size of data is 64
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 7 dist: 1
+
+REG NUMBER: 7 dist: 1
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a680
+size of data is 64
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 0 dist: 1
+
+READ PHYS REG NUMBER: 1
+
+REG NUMBER: 7 dist: 1
+
+REG NUMBER: 7 dist: 1
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a6c0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a700
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a740
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a780
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a7c0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a800
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a840
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a880
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a8c0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a900
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a940
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a980
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a9c0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9aa00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9aa40
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9aa80
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9aac0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ab00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ab40
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ab80
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9abc0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ac00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ac40
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ac80
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9acc0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ad00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ad40
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ad80
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9adc0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ae00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ae40
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9ae80
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9aec0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9af00
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9af40
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9af80
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9afc0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b000
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b040
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b080
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b0c0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b100
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b140
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b180
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b1c0
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b200
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b240
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b280
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b2c0
+size of data is 64
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b300
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b340
+size of data is 64
+
+REG NUMBER: 5 dist: 2
+
+******** DB INPUT1 549888************
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b380
+size of data is 64
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b3c0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b400
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 1912603243************
+
+*********Setting Address 5 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 86400 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b440
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b480
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9b4c0
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 41702144************
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 8126719************
+
+REG NUMBER: 4 dist: 3
+
+*********Setting Address 0 ******
+
+*********Setting Address 86400 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b4c0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b500
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b540
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9b580
+size of data is 64
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 41702144************
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 6 dist: 3
+
+******** DB INPUT1 8126719************
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b580
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b5c0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b600
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b640
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 8126719************
+
+REG NUMBER: 7 dist: 3
+
+REG NUMBER: 2 dist: 3
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 86404 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 9a6c026b ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b680
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b6c0
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:9b700
+size of data is 64
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 549888************
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 4 dist: 3
+
+******** DB INPUT1 8126719************
+
+*********Setting Address 286c0000 ******
+
+*********Setting Address 9a6c026b ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b700
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b740
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b780
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 5 dist: 3
+
+******** DB INPUT1 41702144************
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+******** DB INPUT1 8126719************
+
+REG NUMBER: 6 dist: 3
+
+*********Setting Address 286c0000 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+WRITE PHYS REG NUMBER: 3
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b7c0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b800
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b840
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b880
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 4 dist: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 0 ******
+
+WRITE PHYS REG NUMBER: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b8c0
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b900
+
+PROLOG->KERNEL
+size of data is 64
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 3 dist: 0
+
+READ PHYS REG NUMBER: 3
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b608
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b648
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b688
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 6 dist: 0
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 0
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b6c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b708
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b748
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 0
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 5 dist: 0
+
+******** DB INPUT1 8126719************
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b788
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b7c8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b808
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b848
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b888
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 4 dist: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 0 ******
+
+WRITE PHYS REG NUMBER: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b8c8
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b908
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b948
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b988
+size of data is 64
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+
+REG NUMBER: 0 dist: 0
+
+READ PHYS REG NUMBER: 0
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9b9c8
+
+KERNEL->EPILOG
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 3 dist: 1
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99c78
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99cb8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99cf8
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 6 dist: 1
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99d38
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99d78
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99db8
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 8126719************
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99df8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99e38
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99e78
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99eb8
+size of data is 64
+
+REG NUMBER: 6 dist: 1
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 6 dist: 1
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 0 ******
+
+*********Setting Address 86400 ******
+
+*********Setting Address 0 ******
+
+******** DB Output 8126719************
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99ef8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99f38
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99f78
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_completeDataAccess,1226,PC:99fb8
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 41702144************
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 8126719************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99fb8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:99ff8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a038
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a078
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 5 dist: 1
+
+******** DB INPUT1 549888************
+
+******** DB INPUT1 1912603243************
+
+******** DB INPUT1 8126719************
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0b8
+size of data is 64
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 4 dist: 1
+
+REG NUMBER: 3 dist: 1
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a0f8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a138
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a178
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 549888************
+
+REG NUMBER: 6 dist: 1
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 1
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+
+*********Setting Address 27c5300 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a1b8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a1f8
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a238
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 1912603243************
+
+REG NUMBER: 4 dist: 1
+
+******** DB INPUT1 8126719************
+
+*********Setting Address 0 ******
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a278
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a2b8
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+******** DB INPUT1 1912603243************
+
+******** DB INPUT1 8126719************
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a2f8
+size of data is 64
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 3 dist: 2
+
+READ PHYS REG NUMBER: 1
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a338
+size of data is 64
+
+******** DB INPUT1 41702144************
+
+REG NUMBER: 4 dist: 2
+
+******** DB Output 1912603244************
+
+*********Setting Address 0 ******
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a378
+size of data is 64
+
+REG NUMBER: 7 dist: 2
+
+REG NUMBER: 2 dist: 2
+
+READ PHYS REG NUMBER: 0
+
+*********Setting Address 0 ******
+
+COMPARE INSTRUCTION OUTPUT = 0
+
+******** DB Output 41702144************
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a3b8
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+******** DB Output 0************
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a3f8
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a438
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a478
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 4 dist: 2
+
+REG NUMBER: 4 dist: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a4b8
+size of data is 64
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 0 dist: 2
+
+READ PHYS REG NUMBER: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+
+REG NUMBER: 5 dist: 2
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a4f8
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+
+REG NUMBER: 5 dist: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a538
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a578
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a5b8
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+
+REG NUMBER: 6 dist: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a5f8
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a638
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 7 dist: 3
+
+REG NUMBER: 7 dist: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a678
+size of data is 64
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 0 dist: 3
+
+READ PHYS REG NUMBER: 3
+
+REG NUMBER: 7 dist: 3
+
+REG NUMBER: 7 dist: 3
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a6b8
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a6f8
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a738
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a778
+size of data is 64
+advanceInst CGRA MODE
+*******IN ADVANCE PC******
+build/ARM/cpu/timingcgra/timingcgra.cc,CGRA_advancePC,1688,PC:9a7b8
+size of data is 64
+advanceInst CGRA MODE
+************************PREPARING TO MOVE TO CPU************
+newPC=632824, II=9, EPILog=30, Prolog=72, Len=0
+**********************CGRA Execution is over**********************
+******REG R11= 16*********
+AFTER COMPLETETION PC: 9ad8
