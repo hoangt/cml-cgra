@@ -6,11 +6,11 @@ llfile="$name.ll"
 dfgfile="$name.dfg"
 schfile="$name.sch"
 
-toolchain="$HOME/CGRA/toolchain"
+toolchain="$HOME/CGRA"
 
 regiver="REGIMap_2.8"
 regimap="$toolchain/REGIMap/$regiver/Release"
-nodefile="$HOME/CGRA/cgratoolchain"
+nodefile="$toolchain/REGIMap/$regiver/DFGFiles"
 
 LIST1="$(ls *edge*)"
 edge=${LIST1[0]}

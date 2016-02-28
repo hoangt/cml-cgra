@@ -18,6 +18,7 @@ rm *latency*
 
 #Delete Files Generated For Supporting Gem5 Implementation
 #rm prolog_cnt.txt epilog_cnt.txt
+rm livevar_st_ins_count.txt
 
 #Delete Verification Files
 rm c_output.txt cgra_output.txt
