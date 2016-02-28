@@ -132,12 +132,13 @@ std::map< std::pair<int,int>,int> operand_order_map;
 std::map<int,CGRA_Instruction> nodeid_instruction;
 
 //array of prolog,kernel and epilog operation (in terms of node id from ddg)
-int *prolog,*kernel,*epilog;
+int *prolog,*kernel,*epilog, *livevar_store;
 
 //array of final decoded prolog,kernel and epilog instructions
-unsigned int *final_prolog,*final_kernel,*final_epilog;
+unsigned int *final_prolog,*final_kernel,*final_epilog, *final_livevar_store;
 
-int final_prolog_size,final_kernel_size,final_epilog_size;
+
+int final_prolog_size,final_kernel_size,final_epilog_size, final_livevar_store_size;
 
 //the load instructions for initializing the registers with ld/st address,
 //<pe,set<instructions> >
@@ -172,11 +173,33 @@ std::map<int, int> node_Output_Register;
 //a set of nodes that have any of the operands from the Rotating RF
 std::set<int> nodesThatReadRotatingRF;
 
+//map for ddgs to_node id in the edge file (only if it is phi node) and dependency distance of edge
+std::map<int,int> to_node_dependency_distance;
+
+//map for ddgs phi/select node in the node file and its condition variable
+std::map<int,bool> select_node_condition;
+
+//map for ddgs phi/select node in the node file and its local counter
+std::map<int,int> select_node_counter;
+
+//map for ddgs phi/select node in the node file and its corresponding result (finally selected node's ID)
+std::map<int,int> select_constant_node_result;
+std::map<int,int> select_phi_node_result;
+
+std::map<int,PEInputMux> lmux_phi;
+std::map<int,PEInputMux> rmux_phi;
+std::map<int,int> immediate_phi;
+
+//The final generated instruction for a node for prolog
+std::map<int,CGRA_Instruction> nodeid_instruction_prolog;
+
 //CGRA configuration
 int X,Y;
 
 //Initiation Interval
 int II;
+
+int kernel_II;
 
 //max number of memory operations mapped to a PE
 int maxMemoryOperations = 0;
@@ -190,6 +213,37 @@ int ArrayOperations = 0;
 //a map of nodeID, regNum for ld_add and st_add nodes. The register will hold
 //the base address
 std::map<int,int> mem_node_regNum;
+
+//data for live variables
+//map for livevariables' node index and id
+std::map<int,int> livevar_node_list;
+
+//map for livevariables' node id and type
+std::map<int,int> livevar_nodeid_type;
+
+//map for livevariables' node id and name
+std::map<int,string> livevar_nodeid_names;
+
+//map for livevariables' node id and incoming edge's source node ids
+std::multimap<int,int> livevar_in_edge;
+
+//map for livevariables' node id and outgoing edge's destination node ids
+std::multimap<int,int> livevar_out_edge;
+
+//map for livevariables' edge, operand order
+std::map< std::pair<int,int>,int> livevar_operand_order_map;
+
+//The final generated instruction for a livevariable store node
+std::map<int,CGRA_Instruction> livevar_nodeid_instruction;
+
+//a map for livevariable's node_id, schedule time
+std::map<int,int> livevar_node_schedule_time;
+
+//map for livevariables' node id and mapped pe
+std::map<int,int> livevar_pe_map;
+
+//a map of nodes scheduled at time
+std::map<int, std::set<int> > time_pe_map_livevar;
 
 //execution state of cgra
 enum exec_state{
@@ -220,28 +274,125 @@ int getNodeType(int id)
   return it->second;
 }
 
-
-//get the mapped time of this node depending on the execution state
-int getMappedTime(int id, exec_state state)
+string getNodeName(int id)
 {
-  int t=0;
-  switch(state){
-    case state_prolog:
-      t = (node_time_map_prolog.find(id))->second;
-      break;
-    case state_kernel:
-      t = (node_time_map_kernel.find(id))->second;
-      break;
-    case state_epilog_start:
-      t = (node_time_map_kernel.find(id))->second;
-      break;
-    case state_epilog: 
-      t = (node_time_map_epilog.find(id))->second;
-      break;
-    default: break;
-  }
+  std::map<int, string>::iterator it = nodeid_names.find(id);
+  return it->second;
+}
 
-  return t;
+int getDepenDistance(int id)
+{
+  std::map<int, int>::iterator it = to_node_dependency_distance.find(id);
+  return it->second;
+}
+
+int getSelCondition(int id)
+{
+  std::map<int, bool>::iterator it = select_node_condition.find(id);
+  return it->second;
+}
+
+int getSelCounter(int id)
+{
+  std::map<int, int>::iterator it = select_node_counter.find(id);
+  return it->second;
+}
+
+int getSelectedConstantNode(int id)
+{
+  std::map<int, int>::iterator it = select_constant_node_result.find(id);
+  return it->second;
+}
+
+int getSelectedPhiNode(int id)
+{
+  std::map<int, int>::iterator it = select_phi_node_result.find(id);
+  return it->second;
+}
+
+int getPhiNode(int id)
+{
+  int ret = -1;
+  std::map<int, int>::iterator it;
+  for(it = select_phi_node_result.begin(); it != select_phi_node_result.end(); ++it)
+  {
+ 	if(it->second == id) 
+	{
+		ret = it->first;	//select_phi_node_result.find(id);
+		return ret;
+		break;
+	}
+  }	
+  return ret;
+}
+
+void setlmuxphi(int id, PEInputMux result)
+{
+    std::map<int, PEInputMux>::iterator it = lmux_phi.find(id);
+    it->second = result; 
+}
+
+void setrmuxphi(int id, PEInputMux result)
+{
+    std::map<int, PEInputMux>::iterator it = rmux_phi.find(id);
+    it->second = result; 
+}
+
+void setimmediatephi(int id, int result)
+{
+    std::map<int, int>::iterator it = immediate_phi.find(id);
+    it->second = result; 
+}
+
+PEInputMux getlmuxphi(int id)
+{
+    std::map<int, PEInputMux>::iterator it = lmux_phi.find(id);
+    return it->second; 
+}
+
+PEInputMux getrmuxphi(int id)
+{
+    std::map<int, PEInputMux>::iterator it = rmux_phi.find(id);
+    return it->second; 
+}
+
+int getimmediatephi(int id)
+{
+    std::map<int, int>::iterator it = immediate_phi.find(id);
+    return it->second; 
+}
+
+int getLiveNodeType(int id)
+{
+  std::map<int, int>::iterator it = livevar_nodeid_type.find(id);
+  return it->second;
+}
+
+string getLiveNodeName(int id)
+{
+  std::map<int, string>::iterator it = livevar_nodeid_names.find(id);
+  return it->second;
+}
+
+int getLiveNode(int id)
+{
+  std::map<int, int>::iterator it = livevar_node_list.find(id);
+  return it->second;
+}
+
+int getLiveVarMappedPE(int id)
+{
+  std::map<int, int>::iterator it = livevar_pe_map.find(id);
+  return it->second;
+}
+
+int isLiveStoreNode(int id)
+{
+  string nodename = getNodeName(id);
+  if((nodename.find("st_add") != string::npos) || (nodename.find("st_data") != string::npos))
+    return 1;
+  else 
+    return 0;
 }
 
 //get the scheduled time of a node
@@ -255,19 +406,6 @@ bool isScheduledMoreThanACycleApart(int node1,int node2)
 {
   int t1 = getScheduledTime(node1);
   int t2 = getScheduledTime(node2);
-  return (abs(t1-t2) > 1);
-}
-
-//returns whether the operations are mapped more than a cycle apart or not
-bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)
-{
-  int t1 = getMappedTime(node1,state);
-  int t2 = getMappedTime(node2,state);
-  if(state == state_kernel)
-  {
-    if((abs(t1-t2)+1) == II)
-      return false;
-  } 
   return (abs(t1-t2) > 1);
 }
 
@@ -367,7 +505,7 @@ int getVariableAddress(string var,string obj)
   int i=0; 
 
 
-  command = "/home/shail/CGRA/toolchain/othertools/scripts/getaddress.sh ";
+  command = "/home/shail/CGRA/scripts/getaddress.sh ";
   command += obj + " " + var;
 
   if (( pipe = popen(command.c_str(), "r")) == NULL)
@@ -453,18 +591,21 @@ std::vector<int> getOperands(int nodeID)
     std::pair <std::multimap<int,int>::iterator, std::multimap<int,int>::iterator> ret;
     ret = in_edge.equal_range(nodeID);
     int ctr = 0;
+
     for (std::multimap<int,int>::iterator it=ret.first; it!=ret.second; ++it)
     {
       std::pair<int,int> edge(it->second,nodeID);
+
       if(operand_order_map.count(edge) > 0)
       {
-        temp[operand_order_map[edge]] = it->second;
+        //temp[operand_order_map[edge]] = it->second;
+        temp[ctr] = it->second;
         ctr++;
       }
     }
 
-    for(int j =0;j<ctr;j++)
-      result.push_back(temp[j]);
+    for(int j =0;j<ctr;j++) 
+      result.push_back(temp[j]); 
   }
   else
   {
@@ -480,9 +621,112 @@ std::vector<int> getOperands(int nodeID)
 
 }
 
-void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)
+
+//get the mapped time of this node depending on the execution state
+int getMappedTime(int id, exec_state state)
 {
+  int t=0;
   
+  if(isLiveStoreNode(id))
+  {
+    //Currently We Assume That This Function Will Be Required To Be Called By Store_Data; Possibility of Store_Add is To Be Checked
+    int node_sched_time = node_schedule_time[id];
+    string nodename = getNodeName(id);
+    if((nodename.find("st_data") != string::npos))
+    {
+      int op;
+      vector<int> operands = getOperands(id);
+      for(int i=0;i<operands.size();++i)
+      {
+        int type = getNodeType(operands[i]);
+        if(type!=constant && type!=st_add)
+        {
+          op = operands[i];
+          break;
+        }    
+      }
+      int op_sched_time = node_schedule_time[op];
+      int op_map_time = getMappedTime(op,state);
+      t = op_map_time + (node_sched_time - op_sched_time); 	 
+    } 
+  }
+  else
+  {
+    switch(state){
+      case state_prolog:
+        t = (node_time_map_prolog.find(id))->second;
+        break;
+      case state_kernel:
+        t = (node_time_map_kernel.find(id))->second;
+        break;
+      case state_epilog_start:
+        t = (node_time_map_kernel.find(id))->second;
+        break;
+      case state_epilog: 
+        t = (node_time_map_epilog.find(id))->second;
+        break;
+      default: break;
+   }
+  }
+
+  return t;
+}
+
+//returns whether the operations are mapped more than a cycle apart or not
+bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)
+{
+  int t1 = getMappedTime(node1,state);
+  int t2 = getMappedTime(node2,state);
+  if(state == state_kernel)
+  {
+ //   printf("\nII = %d\tMappedCycleApart\n",II); 
+ //   printf("\nDifference is %d\n",abs(t1-t2));  
+    /*
+     * We dont need this now as we use only phi nodes. 
+     * Else it should check whether node 1 and node 2 are phi nodes or not. If not then return false for diff + 1 == II
+     */      
+    /*if((abs(t1-t2)+1) == II)	
+      return false;*/
+  } 
+  return (abs(t1-t2) > 1);
+}
+
+int getLiveVarData(int nodeID)
+{
+  std::vector<int> operands = getOperands(nodeID);	//get Operands of LiveVar St_Data Node
+  int st_add = nodeID - 1; 
+  int livevar_data;
+  /*
+   * We first search that whether the st_add has any operands. 
+   * If yes, then st_data should have one operand has st_add and other as node providing live data value
+   * Else, We see that which operand is either constant/phi node and choose it as address node and choose remaining operand as data node providing live var.
+   */
+/*
+  std::vector<int> add_operands = getOperands(nodeID);
+  if(add_operands.size() > 0)
+  {
+	if(operands[0] == st_add)
+		livevar_data = operands[1];
+        else
+		livevar_data = operands[0];
+	return livevar_data;
+  }
+  else
+  {
+	for(int i=0; i < operands.size(); i++)
+	
+  }
+*/
+  for(std::vector<int>::iterator it = operands.begin(); it!= operands.end(); ++it)
+  {
+        string nodename = getNodeName(*it);
+        if(((getNodeType(*it) != st_add) && (getNodeType(*it) != constant)) || (nodename.find("Const") != string::npos)) //|| (getNodeType(*it) != cgra_select)))
+          livevar_data = *it;
+  }
+
+  return livevar_data;	
+}
+
 
 /* getArrayAddress(pe, addr, id) 
 1. checks whether a given id (id = getNodeType(node)) is a llvm_route node. 
@@ -490,12 +734,17 @@ void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOpera
 3. else it is accessing only one address say a[2]. Then we need to get the value 2 by iterating through the nodes and finding the constant value and generate its address. 
 4. By reading through this file it will be more clear as to what is being done to generate array address. */
 
- //int limit = extractnumber_from_const(2,30);  
 
+void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)
+{
+
+ //int limit = extractnumber_from_const(2,30);  
   //ArrayOperations++;  
  
   int LDi_imm, LDMi_imm, LDUi_imm;
   int id; 
+  string nodename;
+
 //update size_array
 //  int size_array = extractlimit_from_node(2); 
  
@@ -506,9 +755,10 @@ void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOpera
    for (std::multimap<int,int>::iterator it2=ret.first; it2!=ret.second; ++it2)
   {
      id = getNodeType(it2->second);
+     nodename = getNodeName(it2->second);
     break; 
   }  
-    if( id == llvm_route)   //getArrayAddress
+    if( (id == Mult) & (nodename.find("idxprom") != string::npos) )   //getArrayAddress
     {    
      //   int operand1 = operands[2]; 
 
@@ -541,9 +791,9 @@ void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOpera
 	// update maxmemory operation count
         //maxArrayMem++;
         
-       } 
-
-   else {
+    } 
+    else 
+    {
 	printf("\n%x\t",addr);
 	int value; 
          cout<<node<<"\t"<<pe<<"\t"<<addr<<"\t"<<reg_num<<endl;
@@ -772,7 +1022,9 @@ OPCode getOpCode(int nodeID)
     case route:
       opcode = Add;
       break;
-
+    case cgra_select:
+      opcode = Add;
+      break;
     default: opcode=NOOP;
              break;
 
@@ -871,8 +1123,15 @@ PEInputMux getLMuxSelector(int nodeID, exec_state state)
       int operandID;
       for(std::vector<int>::iterator it = operands.begin(); it!= operands.end(); ++it)
       {
-        if((getNodeType(*it) != st_add) && (getNodeType(*it) != constant))
+	string nodename = getNodeName(*it);
+        if(((getNodeType(*it) != st_add) && (getNodeType(*it) != constant)) || (nodename.find("Const") != string::npos))
           operandID = *it;
+      }
+      if(getNodeType(operandID) == constant)
+      {
+    	      result = Register;
+      	      return result;
+	      break;
       }
       if(isScheduledMoreThanACycleApart(nodeID,operandID))
       {
@@ -881,7 +1140,11 @@ PEInputMux getLMuxSelector(int nodeID, exec_state state)
       }
       else
       {
-        pe1 = getMappedPE(nodeID,state);	
+        if(isLiveStoreNode(nodeID))
+	  pe1 = getLiveVarMappedPE(nodeID);
+        else
+          pe1 = getMappedPE(nodeID,state);	
+
         pe2 = getMappedPE(operandID,state);
         result = getRelativePosition(pe1,pe2);	
       }
@@ -903,6 +1166,144 @@ PEInputMux getLMuxSelector(int nodeID, exec_state state)
       }
       return result;
       break;
+case cgra_select:
+      /*
+       * Currently Phi Nodes Are Only Implemented As Selct Nodes.
+       * For Control Flow Implementation, We Will have 3 operands - 1. Condition 2. Op1 3. Op2
+       * In that case, we will assign condition value to operand 0. And current operand 2 and 3 for phi nodes
+       * Will be used correspondingly. So, additional conditions to imply for if-then-else implementation
+       */
+    {
+      	int operand1, operand2, selected;
+        int dependence_distance = getDepenDistance(nodeID);
+//        int sel_counter = getSelCounter(nodeID);
+//        bool condition;
+
+	/*
+	 * There can be case where both operands are involved to mapped node with recurrence edge of some weight
+  	 * Usually, One of the operand should be regular true dependency with dependence weight 0. 
+ 	 * Only that case is targeted here for following code. 
+	 * Otherwise, dependence_distance and operands should be selected correspondingly.
+	 */
+
+//        if(dependence_distance > 0)
+  //      {
+
+/*            if(sel_counter >= dependence_distance)
+            {
+                std::map<int,bool>::iterator it = select_node_condition.find(nodeID);
+                it->second = 0;
+            }
+            else
+            {
+                std::map<int,int>::iterator it = select_node_counter.find(nodeID);
+                it->second = sel_counter + 1;
+            }
+*/
+	    if(operands.size() > 1)
+	    {
+	    	if(getNodeType(operands[0]) == constant)
+	    	{
+		    	operand1 = operands[0]; //Initial Value
+		    	operand2 = operands[1]; //Loop-carried value
+		}
+		else
+		{
+			operand1 = operands[1]; //Initial Value
+		    	operand2 = operands[0]; //Loop-carried value
+		}
+	    }
+	    else
+			operand2 = operands[0];
+
+            //cout << "Operands: " << operands[0] << "\t" << operands[1] << endl;
+	    if(operands.size() > 1) {
+        	std::map<int,int>::iterator it1 = select_constant_node_result.find(nodeID);
+            it1->second = operand1; }
+
+//        	std::map<int,int>::iterator it2 = select_phi_node_result.find(nodeID);
+//            it2->second = operand2;
+
+  //          condition = getSelCondition(nodeID);
+
+    //    }
+    /*    else
+        {
+            condition = operands[0];
+            operand1 = operands[1];
+            operand2 = operands[2];
+        }
+*/
+/*    	if(condition == 1) 
+        {
+	      selected = operand1;
+        }
+        else
+        {
+	      selected = operand2;
+        } 
+*/
+//	std::map<int,int>::iterator it = select_node_result.find(nodeID);
+//    it->second = selected;
+
+  //      cout << "\n Node: " << nodeID << "\tCondition = " << condition << "\tOperand1: " << operand1 << "\tOperand2: " << operand2 << "\tCounter: " << sel_counter << "\tDepen_Distance: " << dependence_distance << "\tResult: " << selected << "\n";
+
+	/* Now treat like other cases - add/route etc.
+	 * If operand is constant, result is immediate
+	 * Otherwise, check whether it is scheduled more than a cycle apart or not and give relevant position of PE or return register
+	 */
+
+	//operand = selected;
+
+	int opType_initial = getNodeType(operand1);
+    PEInputMux initial_result = Register;
+
+ //   if(opType_initial == constant)  //It will be constant mostly for phi nodes
+   //     {
+    	      initial_result = Immediate;
+    //	}
+    /*                                                         
+    if(isScheduledMoreThanACycleApart(nodeID,operand1))     
+    {                                                       
+          nodesThatReadRotatingRF.insert(nodeID);           
+          initial_result = Register;                                                                  
+    }                                                       
+    else                                                    
+    {                                                       
+      	      pe1 = getMappedPE(nodeID,state);	        
+              pe2 = getMappedPE(operand1,state);            
+              initial_result = getRelativePosition(pe1,pe2);	                                    
+    }                                                       		                                      
+   */ 
+    setlmuxphi(nodeID, initial_result);
+        
+    int opType = getNodeType(operand2);
+    
+	if(opType == constant)
+        {
+    	      result = Immediate;
+      	      return result;
+    	}
+
+ 
+	if(isMappedMoreThanACycleApart(nodeID, operand2, state_kernel)) //If operand2 is mapped a cycle apart than phi node
+	{
+              //cout << nodeID << "is mapeped more than a cycle apart." << endl;  
+	      nodesThatReadRotatingRF.insert(nodeID);
+	      result = Register;
+	      return result;
+  	}
+	else
+	{
+      	      pe1 = getMappedPE(nodeID,state);	
+              pe2 = getMappedPE(operand2,state);
+              result = getRelativePosition(pe1,pe2);	
+              return result;
+	}
+
+    	return result;
+        break;		
+    }
     default:
       break;						
 
@@ -918,7 +1319,7 @@ PEInputMux getLMuxSelector(int nodeID, exec_state state)
       result = Immediate;
       return result;
     }
-
+	
     if(isScheduledMoreThanACycleApart(nodeID,operand1))
     {
       nodesThatReadRotatingRF.insert(nodeID);
@@ -994,7 +1395,7 @@ PEInputMux getRMuxSelector(int nodeID,exec_state state)
       return result;
       break;
     case ld_add:
-    //case st_add:
+    case st_add:
       if(operands.size() == 0)
       {
         result = Immediate;
@@ -1004,7 +1405,7 @@ PEInputMux getRMuxSelector(int nodeID,exec_state state)
       {
         int operand1 = operands[0];
         int opType = getNodeType(operand1);
-        if(opType == constant)
+        if((opType == constant))  //|| (opType == cgra_select))
         {
           result = Immediate;
           return result;
@@ -1017,7 +1418,16 @@ PEInputMux getRMuxSelector(int nodeID,exec_state state)
         }
         else
         {
-          pe1 = getMappedPE(nodeID,state);	
+          if(isLiveStoreNode(nodeID))
+            pe1 = getLiveVarMappedPE(nodeID);	
+          else
+            pe1 = getMappedPE(nodeID,state);
+
+	  //FixMe: Make Provision For Operand Providing Store Address, Which Is Not Mapped As Part Of Kernel
+          /*if(isLiveNode(operand1))
+            pe2 = getLiveVarMappedPE(operand1);	
+          else*/
+
           pe2 = getMappedPE(operand1,state);
           result = getRelativePosition(pe1,pe2);	
           return result;
@@ -1025,7 +1435,7 @@ PEInputMux getRMuxSelector(int nodeID,exec_state state)
       }
 
       break;
-
+/*
     case st_add: 
 	if(operands.size() == 0)
       {
@@ -1062,18 +1472,25 @@ PEInputMux getRMuxSelector(int nodeID,exec_state state)
         }
       }
 
-      break;
-
+      break;*/
+    case cgra_select:	//Immediate Value For Select Will Be Provided Through Left Mux Only If Selected Node Is Constant
+      setrmuxphi(nodeID, Register); //For Initial Values This Should Be zero, So register 0 which will be zero initially
+      result = Immediate;   //For loop-carried value, Lmux = loop carried value, rumx = 0
+	return result;  //It will be register 0
+	break;
     default:
       break;						
 
   }
 
+  //cout << operands.size() << "\n";
+  //cout << "Operand1: " << operands[0] << "\tOperand2: " << operands[1] << "\n";
   //ALU Operations 
   if(operands.size() > 1)
   {
     int operand2 = operands[1];
     int opType = getNodeType(operand2);
+    //cout << "NodeID: " << nodeID << "\tOperand2: " << operand2 << "\n";	
     if(opType == constant)
     {
       result = Immediate;
@@ -1130,7 +1547,9 @@ int getRotatingRegNum(int regNum,int src,int dest, exec_state state)
   int diff = abs(Tsrc - Tdest);
   int srcMappedTime = getMappedTime(src,state);
   int destMappedTime = getMappedTime(dest,state);
-  int distance;
+  cout << src << "\t" << srcMappedTime << "\t" << dest << "\t" << destMappedTime << endl;
+  int distance; //Distance To be fixed and checked
+
   /*
      1. diff <II
      src mapped b4 dest
@@ -1145,9 +1564,11 @@ int getRotatingRegNum(int regNum,int src,int dest, exec_state state)
      return number corresponding to dist+11 rotation
 
 */
-
+  if(diff >= kernel_II)
+      II = kernel_II;
+  
   if(diff < II)
-  {
+  { 
     if(srcMappedTime < destMappedTime)
     {
       return regNum;
@@ -1216,6 +1637,11 @@ int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)
    else
    result =0
 
+   *****************Select Operation************
+   Follow Like Routing As We will Have Selected Node As Operand Part of Input Edge
+   We will come here only if we require loop-carried value from register in case of phi
+   We will come here if selected source node has value in register in case of if-then-else
+ 	
 */
   int result = 0;
   if(LMux == Register)
@@ -1232,7 +1658,7 @@ int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)
       case st_add:
         result = mem_node_regNum[nodeID];
         return result;
-        break;
+        break; 
       case ld_data:
         result = 0;
         return result;
@@ -1242,25 +1668,35 @@ int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)
         for(int i=0;i<operands.size();++i)
         {
           int type = getNodeType(operands[i]);
-          if(type!=constant && type!=st_add)
+	  string nodename = getNodeName(operands[i]);
+          if((type!=constant && type!=st_add) || (nodename.find("Const") != string::npos))
           {
             op = operands[i];
             break;
           }    
         }
+	if(getNodeType(op) == constant)
+        {
+	  result = 0;
+	  return result;
+	  break;
+        }	
         if(isScheduledMoreThanACycleApart(nodeID,op))
         {
           int srcReg = getOutputRegisterNumber(op);
           result = getRotatingRegNum(srcReg,op,nodeID,state);
           return result;
+  	  break;
         }
         else
         {
           result = 0;	
           return result;
+   	  break;
         } 
         //ROUTING NODE        
       case route:
+      case llvm_route:
         if(isScheduledMoreThanACycleApart(nodeID,it_inedge->second))
         {
           int srcReg = getOutputRegisterNumber(it_inedge->second);
@@ -1272,6 +1708,22 @@ int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)
         }
         return result;
         break;
+      case cgra_select:
+      {
+	int srcoperand = getSelectedPhiNode(nodeID);
+	//cout << "\nNode: " << nodeID << "\tSelected Phi Node is: " << srcoperand;
+        if(isMappedMoreThanACycleApart(nodeID,srcoperand, state_kernel))
+        {
+          int srcReg = getOutputRegisterNumber(srcoperand);
+          result = getRotatingRegNum(srcReg,srcoperand,nodeID,state);
+        }
+        else
+        {
+          result = 0;
+        }
+        return result;
+        break;
+      }
 
     }
     /*   ***************Alu Operations**************
@@ -1372,6 +1824,7 @@ int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)
       //ROUTING NODE
       case route:
       case llvm_route:
+      case cgra_select:		//RMux Is Not Used In Case Of Phi/Select Nodes
         //MEMORY OPERATIONS
       case ld_data:
       case st_data:
@@ -1394,7 +1847,7 @@ int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)
             result = 0;
             return result;
           }
-          if(isScheduledMoreThanACycleApart(nodeID,operand1))
+          /*if(isScheduledMoreThanACycleApart(nodeID,operand1))
           {
             int srcreg = getOutputRegisterNumber(operand1);
             result = getRotatingRegNum(srcreg,operand1,nodeID,state);
@@ -1407,7 +1860,31 @@ int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)
           }
         }
 
+        break;*/
+            //result = mem_node_regNum[nodeID];
+            //printf("\nNodeID: %d\tRegNum: %d\n",nodeID,result);
+            //int op = it_inedge->second; //operands[0];
+            int t1 = getScheduledTime(nodeID); 
+            int t2 = getScheduledTime(operand1);
+            int diff = abs(t1-t2);
+            //printf("\nt1 = %d\tt2 = %d\tdiff = %d\n",t1,t2,abs(t1-t2));
+            int II_distance = floor(diff/kernel_II);
+            //printf("\nII = %d\tdiff = %d\tII_distance = %d\n",kernel_II,diff,II_distance);
+        
+            if(II_distance > 0) //isScheduledMoreThanIICycleApart(nodeID,op))
+            {
+                //printf("\nScheduled %d II cycles apart.\n",II_distance);  
+                int srcReg = getOutputRegisterNumber(operand1);
+                result = getRotatingRegNum(srcReg,operand1,nodeID,state);
+                return result;
+            }
+            else
+            {
+                result = 0; //mem_node_regNum[nodeID];
+                return result;
+            }
         break;
+          }
       default:
         break;						
 
@@ -1549,6 +2026,17 @@ bool isWriteEnabled(int nodeID)
       result = true;
       break;
     }
+
+    int phinode = getPhiNode(nodeID);
+    if(phinode != -1) 
+    {
+    	if(isMappedMoreThanACycleApart(nodeID,getPhiNode(nodeID), state_kernel))
+    	{
+	        //cout << "\nNode: " << nodeID << "\tPhi Node: " << phinode << "\n";
+		result = true;
+		break;
+    	}
+    }
   }
   return result;
 }
@@ -1588,17 +2076,44 @@ int getImmediate(int nodeID)
   switch(nodetype){
     //MEMORY OPERATIONS
     case ld_data:
-    case st_data:
       //ROUTING NODE
     case route:
       return result;
       break;	
+    case st_data:
+      {
+      if(isLiveStoreNode(nodeID))
+      {
+      	if(operands.size() == 0)
+      	{
+          result = 0;
+          return result;
+	  break;
+      	}
+      	else
+      	{
+          for(int i=0;i<operands.size();++i)
+          {
+            string nodename = getNodeName(operands[i]);
+            if((getNodeType(operands[i]) == constant) && (nodename.find("Const") != string::npos))
+            {
+              result = extractNumber(nodeid_names.find(operands[i])->second);
+              return result;
+       	      break;
+            }
+          }
+        }
+      }
+      return result; 	
+      break;
+      }
     case ld_add:
     case st_add:
       if(operands.size() == 0)
       {
         result = 0;
         return result;
+	break;
       }
       else
       {
@@ -1608,9 +2123,39 @@ int getImmediate(int nodeID)
           {
             result = extractNumber(nodeid_names.find(operands[i])->second);
             return result;
+       	    break;
           }
         }
       }
+	break;
+    case cgra_select:
+      {
+      /*
+       * Probably implementing if-then-else will not require any immediate value as input on right bus.
+       * As all operands for if-then-else will be value from some PE. 
+       * Anyways, if selected operand is constant then it is value of that constant. else 0.
+       * For phi nodes, it is again, if operand is constant immediate is that value. Else 0.
+       * So, Left Mux which is doing this selection between operands should get value of that operand and provide here.
+       */
+
+	int selected_node = getSelectedConstantNode(nodeID);    //Selected constant node
+
+//	if(getNodeType(selected_node) == constant) 
+//	{
+		if(operands.size() < 2)	result = 0;
+		else
+		{
+			std::map<int, string>::iterator it = nodeid_names.find(selected_node);
+			string node_name = it->second;
+			result = extractNumber(node_name);
+		}
+        setimmediatephi(nodeID, result);
+//	}
+//	else
+		result = 0; //Result = 0 for loop carried nodes
+	return result;	
+	break;
+	}
     default:
       break;
   }
@@ -1740,7 +2285,7 @@ string getstorevarname(int id)
   ret = in_edge.equal_range(it->second);
   for (std::multimap<int,int>::iterator it2=ret.first; it2!=ret.second; ++it2)
   {
-    if( getNodeType(it2->second) == constant )
+    if( (getNodeType(it2->second) == constant) ) // || (getNodeType(it2->second) == cgra_select) )	//read-only or recurring variables
     {
       loadid=it2->second;     
     } 
@@ -1776,11 +2321,165 @@ vector<int> getMemoryNodes()
   vector<int> result;
   for(std::map<int, int>::iterator it = nodeid_type.begin(); it != nodeid_type.end(); ++it)
   {
+    int id = it->first;
+    string nodename;
+
+    if(it->second != route)
+    	nodename = getNodeName(id);
+
     if(it->second == ld_add || it->second == st_add)
-      result.push_back(it->first);
+    {
+//      if(nodename.find("st_add") == string::npos)	//Ignore Store Nodes For Live Variables
+      	result.push_back(it->first);
+    }
   }
   return result;
 }
+
+int getLeftPE(int pe)
+{
+ int leftpe;
+
+ if(pe%Y == 0)
+   leftpe = pe + (Y-1);
+ else
+   leftpe = (pe - 1);
+
+ return leftpe;
+}
+
+/* Fix Me:
+   Currently current_time obtained is the time where regular epilog ends
+   And Before storing of Live variables start.
+   It can be made efficient by many ways such that it starts from 
+   last sched time for corresponding PE.
+  */
+int insert_livevar_store_nodes(int id, int pe, int current_time)
+{
+  int inserted = 0;
+  int row_no = pe/Y;
+  int time = current_time;
+  while(!inserted)
+  {
+	if(time_pe_map_livevar.count(time) > 0)
+          {
+            std::set<int> rows = time_pe_map_livevar[time];
+
+	    if(rows.count(row_no))
+            {
+	 	time++;
+            }  
+	    else
+	    {	
+            	rows.insert(row_no);
+                time_pe_map_livevar[time] = rows;
+      	        node_schedule_time[id] = time;
+                node_schedule_time[id-1] = time;
+		inserted=1;
+	    } 
+          }
+          else
+          {
+ 	    node_schedule_time[id] = time;
+            node_schedule_time[id-1] = time;
+            std::set<int> rows;
+            rows.insert(row_no);
+            time_pe_map_livevar[time] = rows;
+            inserted = 1;
+          }
+  }
+
+  if(schedule_time_nodes.count(time) > 0)
+  {
+    std::set<int> operations = schedule_time_nodes[time];
+    operations.insert(id);
+    operations.insert(id-1);
+    schedule_time_nodes[time] = operations;
+  }
+  else
+  {
+    std::set<int> operations;
+    operations.insert(id);
+    operations.insert(id-1);
+    schedule_time_nodes[time] = operations;
+  }
+
+  return time;
+
+}
+
+int generateLiveVarStoreSchedule(int max_schedule_time, int livenodes)
+{
+  int sched_time = max_schedule_time+1;
+  int store_nodes_per_cgra_cycle = 2*X;
+  int max_time = sched_time;
+  int max_sched_time = sched_time;
+
+  //Just two nodes store_add and store_data to be scheduled in a row 
+  //We map total of store_nodes_per_cgra_cycle nodes per cgra cycle
+  for(int i=0; i<livenodes; ++i)
+  {
+      std::set<int>::iterator it;
+      int opID = getLiveNode(i);
+      string nodename = getNodeName(opID);
+      int livevar_st_add, livevar_data, livevar_data_pe, livevar_add_pe;
+            
+      node_schedule_time[opID] = sched_time;
+
+      //We should place first store_data node for live-variable
+      //It should be placed at same PE where corresponding data is mapped
+      //After, we should map st_load node for the same live-variable to PE left to the PE on which st_data node is mapped
+      
+      if(getNodeType(opID) != st_data)   
+	continue;
+
+      livevar_data = getLiveVarData(opID);
+      livevar_st_add = opID - 1;	//As we know, store_add and store_data comes in pair, we get nodeid of corresponding store_add node
+
+      if(getNodeType(livevar_data) != constant)	
+        livevar_data_pe = getMappedPE(livevar_data, state_kernel); //Node providing live variable data may or may not be in the epilog
+      else
+	livevar_data_pe = (X*Y/2);	//Randomly Selected PE
+
+      livevar_add_pe = getLeftPE(livevar_data_pe);
+      max_time = insert_livevar_store_nodes(opID, livevar_data_pe, sched_time);
+      livevar_pe_map.insert(std::pair<int,int>(opID,livevar_data_pe));
+      livevar_pe_map.insert(std::pair<int,int>(opID-1,livevar_add_pe));
+      max_sched_time = (max_time > max_sched_time) ? max_time : max_sched_time;
+  }
+
+  final_livevar_store_size = ((max_sched_time - max_schedule_time) * X * Y);
+  livevar_store = new int[final_livevar_store_size];
+
+  //Firstly, initialize each as no-op
+  for(int i = 0; i < final_livevar_store_size; i++)
+    livevar_store[i] = -1;
+
+  for(int i = sched_time; i <= max_sched_time; i++)
+  {
+ 	//Get Nodes At Current Time And Schedule Them On Their Corresponding PEs
+ 	if(schedule_time_nodes.count(i) > 0)
+        {
+            std::set<int> operations = schedule_time_nodes[i];
+	    std::set<int>::iterator it;
+      	    for(it=operations.begin(); it != operations.end(); ++it)
+      	    {
+		int nodeID = *it;
+		int pe = getLiveVarMappedPE(nodeID);
+		int pe_index = ((i-sched_time)*X*Y) + pe;
+		livevar_store[pe_index] = nodeID;
+	    }
+	}
+  }
+
+  /* We Do Not Print Mapping of Live Variables 
+  cout << "Printing LiveVar Mapping\n";
+  for(int i = 0; i < final_livevar_store_size; i++)
+    cout << i << ": " << livevar_store[i] << "\n"; */
+
+  return max_time;
+}
+
 
 //TODO
 void generateINITinstructions(char* objfile)
@@ -1821,19 +2520,20 @@ addr = get address of varname from the symbol table
   */
 
 vector<int> mem_nodes = getMemoryNodes();
+
 if(mem_nodes.size() > 0)
 {
   for(int i=0;i<mem_nodes.size();++i)
   {
     int node = mem_nodes[i];
-    int pe = getMappedPE(node, state_kernel);
-    cout<<"\n\nFor i: "<<i<<"\tnode: "<<node<<"\tPE: "<<pe<<"\n";
-    if(pe_mem_op_map.count(pe))
-	cout<<"pe_mem_op_map[pe]++\n";
+    int pe;
+    cout << "Memory Node: " << node << endl;
+    if(isLiveStoreNode(node))
+	pe = getLiveVarMappedPE(node);
     else
-	cout<<"pe_mem_op_map.insert(pe,1)\n";
+    	pe = getMappedPE(node, state_kernel);
+
     int num_mem_ops = (pe_mem_op_map.count(pe) == 0)?0: pe_mem_op_map[pe];
-    cout<<"pe_mem_op_map.count(pe): "<<pe_mem_op_map.count(pe)<<"\tpe_mem_op_map[pe]: "<<pe_mem_op_map[pe]<<"\n";
     int reg_num = num_mem_ops;
 
     mem_node_regNum[node] = reg_num;
@@ -1842,9 +2542,9 @@ if(mem_nodes.size() > 0)
 
     //update maxmemory operation count
     maxMemoryOperations = ((num_mem_ops+1) > maxMemoryOperations)? (num_mem_ops+1):maxMemoryOperations;
-    cout<<"Reg Num: "<<reg_num<<"\tnum_mem_ops+1: "<<(num_mem_ops+1)<<"\tmaxMemoryOperations: "<<maxMemoryOperations<<"\n";
+
     string var = (getNodeType(node) == ld_add)? getloadvarname(node):getstorevarname(node);
-    cout<<"Var: "<<var<<"\n";
+
   int addr = getVariableAddress(var,objfile);
 
    int id = getNodeType(node); 
@@ -1919,6 +2619,7 @@ void generateProlog()
   //int init_cycles_array = ArrayOperations*maxArrayMem*3;
   //int init_cycles = init_cycles_scalar + init_cycles_array; 
   int noop_cycles=0;
+//  printf("\nII = %d\tgenerateProlog\n",II);
   if(init_cycles%II != 0)
   {
     noop_cycles = II - (init_cycles%II);
@@ -1931,7 +2632,7 @@ void generateProlog()
 
   CGRA_Instruction noop_ins = generateNOOP();
   unsigned int noop_decoded = noop_ins.DecodeInstruction(&noop_ins);
-  cout<<"Regi Prolog Cycles: "<<regi_prolog_cycles<<"\tinit cycles: "<<init_cycles<<"\tnoop cycles: "<<noop_cycles<<"\n";
+
   //populate the final_prolog array with init instructions
 
   //FOR EACH PE
@@ -1999,7 +2700,24 @@ void generateProlog()
     }
     else
     {
-      CGRA_Instruction temp = nodeid_instruction[prolog[i]];
+      CGRA_Instruction temp;
+      if(getNodeType(prolog[i]) == cgra_select)
+      {
+        float prolog_cycle = (int) ceil(i/(X*Y));
+        float prolog_counter_division = (prolog_cycle/kernel_II);
+	int prolog_counter = (int) ceil(prolog_counter_division);
+
+	int distance = getDepenDistance(prolog[i]);
+        
+	if(prolog_counter <= distance)
+	        temp = nodeid_instruction_prolog[prolog[i]];
+	else
+		temp = nodeid_instruction[prolog[i]];
+      }
+      else
+      {
+        temp = nodeid_instruction[prolog[i]];
+      }
       final_prolog[prolog_start++] = temp.DecodeInstruction(&temp);
     }
   }
@@ -2041,7 +2759,13 @@ void generateKernel()
 
 void generateEpilog()
 {
-  final_epilog_size = epilog_size;
+  //Print LiveVar Store Size To livevar_st_ins_count.txt
+  ofstream myfile;
+  myfile.open("livevar_st_ins_count.txt");
+  myfile << final_livevar_store_size;
+  myfile.close();
+
+  final_epilog_size = epilog_size + final_livevar_store_size;
   final_epilog = new unsigned int[final_epilog_size];
 
   CGRA_Instruction noop_ins = generateNOOP();
@@ -2060,11 +2784,27 @@ void generateEpilog()
     }
   }
 
+
+  //Now We Generate LiveVariable Store Instructions
+  final_livevar_store = new unsigned int[final_livevar_store_size];
+
+  for(int i =0; i<final_livevar_store_size; ++i)
+  {
+    if(livevar_store[i] == -1)
+    {   
+      final_epilog[i+epilog_size] = noop_decoded;
+    }
+    else
+    {
+      CGRA_Instruction temp = nodeid_instruction[livevar_store[i]];
+      final_epilog[i+epilog_size] = temp.DecodeInstruction(&temp);
+    }
+  }
+
   cout<<"*******EPILOG*********\n";
 
   for(int i =0; i<final_epilog_size; ++i)
     printf("%d: %x\n",i,final_epilog[i]);
-
 
 }
 
@@ -2074,6 +2814,8 @@ void printSet(std::set<int> &arg)
     cout << *it << "\t";
   cout << "\n";
 } 
+
+/* Function Below Generates Instructions For Non-Phi Nodes */
 
 void generateInstructions(std::set<int> &nodes)
 {
@@ -2088,16 +2830,22 @@ void generateInstructions(std::set<int> &nodes)
   //	CGRA_Instruction(OPCode opc,int predic,PEInputMux LMuxSel,PEInputMux RMuxSel,\
   int RRegAdd1,int RRegAdd2, int WAdd, bool WE, int ImmVal, bool EDMAdd, bool DMData);
 
-
+  //Generate Instructions For All Nodes, Except Phi Nodes
   for(std::set<int>::iterator it = nodes.begin(); it!=nodes.end(); ++it)
   {
     int node = *it;
     opc = getOpCode(node);
+
+    //if(getNodeType(node) == cgra_select) 
+    	//continue;
+
     lmux = getLMuxSelector(node, state_kernel);
     rmux = getRMuxSelector(node, state_kernel);
 
     if(lmux == Register)
+    {
       reg1 = getReg1Address(node,lmux,state_kernel);
+    }
     else
       reg1 = 0;
 
@@ -2110,11 +2858,18 @@ void generateInstructions(std::set<int> &nodes)
 
     we = isWriteEnabled(node);
     if(we)
+    {
       wreg =getWriteRegAddress(node,state_kernel);
+    }
     else
       wreg = 0;
+
+    
+
     node_Output_Register[node] = wreg;
     immediate = getImmediate(node);
+
+    if(getNodeType(node) == cgra_select) immediate = 0;   //For loop-carried phi operand, immediate = 0
 
     abAssert = isAddressBusAssert(node);
     dbAssert = isDataBusAssert(node);
@@ -2127,10 +2882,136 @@ void generateInstructions(std::set<int> &nodes)
 
     unsigned int decoded = node_ins.DecodeInstruction(&node_ins);
     printf("Decoded %x\n",decoded);
+  
+  }  
+}
 
+void generatePhiInstructions(std::set<int> &nodes)
+{
+  OPCode opc;
+  int predic = 0;
+  PEInputMux lmux,rmux;
+  int reg1=0,reg2=0,wreg=0;
+  bool we,abAssert,dbAssert;
+  int immediate=0;
+
+  //Now generate instruction for phi nodes
+  //We need to do this later here as now all predessessor nodes are placed 
+
+ for(std::set<int>::iterator it = nodes.begin(); it!=nodes.end(); ++it)
+ {
+   int node = *it;
+   opc = getOpCode(node); 
+   int node_type = getNodeType(node);
+
+   if(node_type != cgra_select)
+   	continue;
+
+   lmux = getLMuxSelector(node, state_kernel);
+   rmux = getRMuxSelector(node, state_kernel);
+                                                                                                                                                                        
+   if(lmux == Register)
+     reg1 = getReg1Address(node,lmux,state_kernel);
+   else
+     reg1 = 0;
+                                                                                                                                                                          
+   if(rmux == Register)
+     reg2 = getReg2Address(node,rmux,state_kernel);
+   else
+     reg2 = 0;
+                                                                                                                                                                          
+   releaseRegisters(node,state_kernel);
+                                                                                                                                                                          
+   we = isWriteEnabled(node);
+   if(we)
+     wreg =getWriteRegAddress(node,state_kernel);
+   else
+     wreg = 0;
+   node_Output_Register[node] = wreg;
+   immediate = getImmediate(node);
+                                                                                                                                                                          
+   if(getNodeType(node) == cgra_select) immediate = 0;   //For loop-carried phi operand, immediate = 0
+                                                                                                                                                                          
+   abAssert = isAddressBusAssert(node);
+   dbAssert = isDataBusAssert(node);
+                                                                                                                                                                          
+   lmux = getlmuxphi(node);
+   rmux = getrmuxphi(node);
+   immediate = getimmediatephi(node);
+
+   reg1 = 0; 
+   reg2 = 0;
+
+   printf("\nPhi! Prolog! FOR NODE %d:opcode:%d lmux:%d rmux:%d reg1:%d reg2:%d we:%d wreg:%d imm:%d ab:%d db:%d\n",node,opc,lmux,rmux,reg1,reg2,we,wreg,immediate,abAssert,dbAssert);
+                                                                                                             
+   CGRA_Instruction node_ins_prolog(opc,predic,lmux,rmux,reg1,reg2,wreg,we,immediate,abAssert,dbAssert);
+                                                                                                                                      
+   nodeid_instruction_prolog[node] = node_ins_prolog;
+                                                                                                                                          
+   unsigned int decoded = node_ins_prolog.DecodeInstruction(&node_ins_prolog);
+   
+   printf("Decoded %x\n",decoded);
 
   }
+}
 
+
+void generateStoreInstructions(std::set<int> &nodes)
+{
+  OPCode opc;
+  int predic = 0;
+  PEInputMux lmux,rmux;
+  int reg1=0,reg2=0,wreg=0;
+  bool we,abAssert,dbAssert;
+  int immediate=0;
+
+  //Now generate instruction for live variable nodes
+  //We need to do this later here as now all predessessor nodes are placed 
+
+ for(std::set<int>::iterator it = nodes.begin(); it!=nodes.end(); ++it)
+ {
+   int node = *it;
+   opc = getOpCode(node); 
+   int node_type = getNodeType(node);
+
+   lmux = getLMuxSelector(node, state_kernel); 
+   rmux = getRMuxSelector(node, state_kernel); 
+                                                                                                                                                                        
+   if(lmux == Register)
+     reg1 = getReg1Address(node,lmux,state_kernel);
+   else
+     reg1 = 0;
+                                                                                                                                                                          
+   if(rmux == Register)
+     reg2 = getReg2Address(node,rmux,state_kernel);
+   else
+     reg2 = 0;
+                                                                                                                                                                          
+   releaseRegisters(node,state_kernel); 
+
+   //if(node == 123) reg1 = 3;                            
+                                                                                                                                              
+   we = isWriteEnabled(node);
+   if(we)
+     wreg =getWriteRegAddress(node,state_kernel);
+   else
+     wreg = 0;
+   node_Output_Register[node] = wreg; 
+   immediate = getImmediate(node); 
+                                                                                                                                                                                                                                                                                                                                                   
+   abAssert = isAddressBusAssert(node);
+   dbAssert = isDataBusAssert(node);
+        
+   printf("\nFOR NODE %d:opcode:%d lmux:%d rmux:%d reg1:%d reg2:%d we:%d wreg:%d imm:%d ab:%d db:%d\n",node,opc,lmux,rmux,reg1,reg2,we,wreg,immediate,abAssert,dbAssert);
+
+   CGRA_Instruction node_ins(opc,predic,lmux,rmux,reg1,reg2,wreg,we,immediate,abAssert,dbAssert);
+
+   nodeid_instruction[node] = node_ins;
+
+   unsigned int decoded = node_ins.DecodeInstruction(&node_ins);
+   printf("Decoded %x\n",decoded);
+   
+  }
 }
 
 void dumpProlog()
@@ -2161,9 +3042,9 @@ void dumpEpilog()
 //driver function
 int main(int argc, char* argv[])
 {
-  if(argc<11)
+  if(argc<13)
   {
-    cout << "Usage opcodegen FINALNODEFILE REGI_EDGEFILE LLVMNODEFILE LLVMEDGEFILE OBJFILE PrologFile KernelFile EpilogFile X Y";
+    cout << "Usage opcodegen FINALNODEFILE REGI_EDGEFILE LLVMNODEFILE LLVMEDGEFILE OBJFILE PrologFile KernelFile EpilogFile X Y LIVENODEFILE LIVEEDGEFILE";
     return -1;
   }
 
@@ -2173,7 +3054,7 @@ int main(int argc, char* argv[])
 
   string line, nodename;
   int nodeID,node_type,other_nodeID;
-
+  int livenodes=0;
   //Read the final node file
   ifstream finalnodefile (argv[1]);
   if(finalnodefile.is_open())
@@ -2214,6 +3095,7 @@ int main(int argc, char* argv[])
     {
       istringstream strout(line);
       strout >> nodeID >> node_type >> nodename ;
+      //cout << nodeID << "\t" << node_type << "\t" << nodename  << endl;
       nodeid_names.insert(std::pair<int,string>(nodeID,nodename));
     }
   }
@@ -2244,9 +3126,80 @@ int main(int argc, char* argv[])
         out_edge.insert(std::pair<int,int>(nodeID,other_nodeID));
         in_edge.insert(std::pair<int,int>(other_nodeID,nodeID));
       }
+
+      if(getNodeType(other_nodeID) == cgra_select) 	//In case of Phi or Select Node
+      {
+	if(distance > 0)
+	{        
+		cout<<"\nUPDATING DEPENDENCY EDGES FOR NODE  " << other_nodeID <<":"<< distance << endl;
+		to_node_dependency_distance.insert(std::pair<int,int>(other_nodeID,distance));
+        	select_node_condition.insert(std::pair<int,bool>(other_nodeID,1));
+		select_node_counter.insert(std::pair<int,int>(other_nodeID,0));
+		select_phi_node_result.insert(std::pair<int,int>(other_nodeID,nodeID));
+	}
+      }
+
     }
   }
   llvmEdgeFile.close();
+
+  //read the live-node file dumped by llvm (dfg generator) to get the information about live nodes and corresponding store nodes
+  //(used for live nodes only, to store data back into the memory for future use of main processor)
+  ifstream LiveNodeFile (argv[11]);
+  if(LiveNodeFile.is_open())
+  {
+    while ( getline(LiveNodeFile,line) )
+    {
+      istringstream strout(line);
+      strout >> nodeID >> node_type >> nodename ;
+//      if( (nodename.find("st_add") != string::npos) | (nodename.find("st_data") != string::npos) )
+//	nodeid_type.insert(std::pair<int,int>(nodeID,node_type));
+
+      //Add Only If It Is Not Available Previously - Applicable to store_add and store_data nodes for live variables
+      std::map<int, int>::iterator it;
+      int livenode_present=0;
+      for(it = nodeid_type.begin(); it != nodeid_type.end(); ++it)
+      {
+ 	if(it->first == nodeID) 
+	{
+	  livenode_present=1;
+	  break;
+	}
+      }
+      if(livenode_present == 0)
+      {
+	nodeid_names.insert(std::pair<int,string>(nodeID,nodename));
+        nodeid_type.insert(std::pair<int,int>(nodeID,node_type));
+        livevar_node_list.insert(std::pair<int,int>(livenodes,nodeID));
+	livenodes++;
+      }
+    }
+  }
+  LiveNodeFile.close();
+
+  //read the llvm generated live-variable's edge file
+  //populate the edges for live variable
+  //populate the operand orders
+  //All edges are required and new so should be added
+
+  ifstream LiveEdgeFile (argv[12]);
+  if(LiveEdgeFile.is_open())
+  {
+    while ( getline(LiveEdgeFile,line) )
+    {
+      int operandOrder,distance;
+      string dependencyType;
+      istringstream strout(line);
+      strout >> nodeID >> other_nodeID >> distance >> dependencyType >> operandOrder;
+      std::pair<int,int> outGoingEdge(nodeID,other_nodeID);
+
+      operand_order_map.insert(std::pair< std::pair<int,int>,int >(outGoingEdge,operandOrder));
+      cout<<"\nUPDATING EDGES " <<other_nodeID<<":"<<nodeID<<endl;
+      out_edge.insert(std::pair<int,int>(nodeID,other_nodeID));
+      in_edge.insert(std::pair<int,int>(other_nodeID,nodeID));
+    }
+  }
+  LiveEdgeFile.close();
 
   //update the operand orders to incorporate routing nodes from the dfg
   //generated by RegiMAP
@@ -2266,7 +3219,7 @@ int main(int argc, char* argv[])
   }
   prologFile.close();
   II = prolog_size/(X*Y);
-
+//  printf("\nII = %d\tprolog_size\n",II);
   prologFile.open(argv[6], ifstream::in);
   cout << "file ptr:"<<prologFile.tellg()<<"\topen:"<<prologFile.is_open() <<"\t prolog_size:"<< prolog_size<<"\n"<<endl;
   if(prologFile.is_open())
@@ -2294,6 +3247,7 @@ int main(int argc, char* argv[])
     }
     kernel = new int[kernel_size];  	    
   }
+  kernel_II = kernel_size/(X*Y);
   kernelFile.close();
   int numRegisters,sched_t,max_schedule_time=0;
   kernelFile.open(argv[7], ifstream::in);
@@ -2423,16 +3377,77 @@ int main(int argc, char* argv[])
     pe_free_registers[i] = freeRegs;
   } 
 
+  int max_time = generateLiveVarStoreSchedule(max_schedule_time, livenodes);
+
   generateINITinstructions(argv[5]);
 
+  //Generate Instruction For Nodes Other Than Phi Nodes
+  cout << "\n****** Generating Instructions For Non-Phi Nodes *****\n";
   for(int i=0; i<=max_schedule_time; ++i)
   {
     if(schedule_time_nodes.count(i) > 0)
     {
       std::set<int> nodesAtTime = schedule_time_nodes.find(i)->second;
+      std::set<int>::iterator it;
+      std::set<int> OtherThanPhiAtTime;
+      for(it=nodesAtTime.begin(); it != nodesAtTime.end(); ++it)
+      {	
+      	if(getNodeType(*it) != cgra_select)
+        	OtherThanPhiAtTime.insert(*it);
+      }
       cout<<"\nNODES SCHEDULED AT "<<i<<"\n";
-      printSet(nodesAtTime);
-      generateInstructions(nodesAtTime);
+      printSet(OtherThanPhiAtTime);
+      generateInstructions(OtherThanPhiAtTime);
+    }
+  }
+
+  cout << "\n****** Generating Instructions For Phi Nodes *****\n";
+  //Generate Instruction For Nodes Other Than Phi Nodes
+  for(int i=0; i<=max_schedule_time; ++i)
+  {
+    if(schedule_time_nodes.count(i) > 0)
+    {
+      std::set<int> nodesAtTime = schedule_time_nodes.find(i)->second;
+      std::set<int>::iterator it;
+      std::set<int> PhiAtTime;
+      int phi_node_available = 0;
+      for(it=nodesAtTime.begin(); it != nodesAtTime.end(); ++it)
+      {	
+      	if(getNodeType(*it) == cgra_select) 
+	{
+        	PhiAtTime.insert(*it);
+		phi_node_available++;
+	}
+      }
+
+      if(phi_node_available > 0)
+      {
+      	cout<<"\nNODES SCHEDULED AT "<<i<<"\n";
+      	printSet(PhiAtTime);
+      	cout << "Phi Instructions" << endl;
+      	generatePhiInstructions(PhiAtTime);
+      	cout << "\nKernel Instructions" << endl;
+      	generateInstructions(PhiAtTime);
+      }
+    }
+  }
+
+  cout << "\n****** Generating Instructions For Store Nodes For Live Variables*****\n";
+  int sched_time = max_schedule_time+1;
+  //int store_nodes_per_cgra_cycle = 2*X;
+  //int remaining=1;
+  
+  for(i = sched_time; i<= max_time; i++)
+  {
+    if(schedule_time_nodes.count(i) > 0)
+    {
+      std::set<int> LiveNodesAtTime = schedule_time_nodes.find(i)->second;
+      std::set<int>::iterator it;
+
+      cout<<"\nNODES SCHEDULED AT "<<i<<"\n";
+      cout<<"\nNODES SCHEDULED AT STORE CYCLE "<< (i-sched_time) <<"\n";
+      printSet(LiveNodesAtTime);
+      generateStoreInstructions(LiveNodesAtTime);
     }
   }
 
@@ -2443,6 +3458,6 @@ int main(int argc, char* argv[])
   dumpProlog();
   dumpKernel();
   dumpEpilog();
-
+  
   return 0;
 }
