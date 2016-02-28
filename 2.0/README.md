@@ -3,6 +3,7 @@
 Version 2 of CML's CGRA
 
 This Version Supports -
+
 1. Works Well With -O3 Compiler Optimizations (Clang)
 
 2. Data Dependencies
