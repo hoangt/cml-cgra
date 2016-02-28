@@ -27,8 +27,15 @@ This Version Does Not Support
 
 2. Codes Other Than Loop (For example structure of non-loop, loop, non-loop, loop,.. etc. kind of code)
 
-3. Control Flow (if-then-else)
+3. Control Flow (if-then-else, unconditional jumps)
 
 4. Nested Loops
 
-5. Floating Point Implementation
+5. Working with other than FOR Loops 
+
+6. Floating Point Implementation
+
+7. Function Calls 
+8. a
+8. 
+7. 
