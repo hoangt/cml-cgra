@@ -1,5 +1,16 @@
 #!/bin/bash
 
+############################################
+############################################
+## Author : Shail Dave              	  ##
+##          Arizona State University	  ##
+##				          ##
+## Notes  : Single Script File To Run     ##
+##	    MP + CGRA Execution.	  ##
+##					  ##
+############################################
+############################################
+
 
 #Processing Files
 cfile="$1"
@@ -11,10 +22,9 @@ exec=exec_$name
 
 #Setting Paths
 LEVEL=../..
-toolchain=$LEVEL/toolchain
-script=$toolchain/othertools/scripts
+script=$LEVEL/scripts
 gem5=$HOME/gem5
-opcodegen=$LEVEL/cgratoolchain/opcode/milestone6
+opcodegen=$LEVEL/InstructionGenerator/insgen
 
 
 #Front End Scripting For Loop Detection And Integrating With CGRA TemplateFile
@@ -23,7 +33,7 @@ $script/modify_template.sh $cfile $templatefile
 
 
 #Compiler Pass - Clang + Opt
-$script/clang.sh ./cgra_run_loop.c 
+$script/clang.sh ./loop.c 
 llfile="$(find ./ -name "*.ll")"
 $script/opt.sh $llfile 
 llvmedge="$(find ./ -name "*.txt" | grep -i loop | grep -i edge)"
@@ -45,7 +55,12 @@ arm-linux-gnueabi-readelf -s $obj > elf
 
 
 #Instruction Generator
-$opcodegen $finalnode $Regiedge $llvmnode $llvmedge $obj prolog.sch kernel.sch epilog.sch 4 4 > cgra_instructions.txt
+cp ~/CGRA/temp/livenode.txt ~/CGRA/temp/liveedge.txt ./
+liveedge="$(find ./ -name "*.txt" | grep -i live | grep -i edge)"
+livenode="$(find ./ -name "*.txt" | grep -i live | grep -i node)"
+echo $liveedge
+echo $livenode
+$opcodegen $finalnode $Regiedge $llvmnode $llvmedge $obj prolog.sch kernel.sch epilog.sch 4 4 $livenode $liveedge > cgra_instructions.txt
 
 
 #CGRA Gem5 Execution

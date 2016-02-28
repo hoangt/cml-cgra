@@ -22,6 +22,7 @@ echo $node
 echo $llfile
 echo $name
 
+#$regimap/REGIMap_2.2 -EDGE $edge -NODE $node -X 4 -Y 4 -R 2 -REGI -FlexibleRF > $schfile
 $regimap/REGIMap_2.2 -EDGE $edge -NODE $node -X 4 -Y 4 -R 8 -REGI > $schfile
 #$regimap/REGIMap_2.2 -EDGE $edge -X 4 -Y 4 -R 8 -REGI
 
