@@ -1,0 +1,1232 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AND	CGRAdefinitions.h	/^	AND,	\/\/3$/;"	e	enum:OPCode
+Add	CGRAdefinitions.h	/^	Add=0,	$/;"	e	enum:OPCode
+ArrayOperations	austin.cpp	/^int ArrayOperations = 0;  $/;"	v
+ArrayOperations	milestone6.cpp	/^int ArrayOperations = 0;  $/;"	v
+ArrayOperations	milestone6_test.cpp	/^int ArrayOperations = 0;  $/;"	v
+ArrayOperations	test1.cpp	/^int ArrayOperations = 0;  $/;"	v
+ArrayOperations	test2.cpp	/^int ArrayOperations = 0;  $/;"	v
+ArrayOperations	test3.cpp	/^int ArrayOperations = 0;  $/;"	v
+CGRAEXCEPTION_H_	CGRAException.h	9;"	d
+CGRAException	CGRAException.cpp	/^CGRAException::CGRAException(string message):exception() {$/;"	f	class:CGRAException
+CGRAException	CGRAException.h	/^class CGRAException:public std::exception {$/;"	c
+CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::CGRA_Instruction()$/;"	f	class:CGRA_Instruction
+CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::CGRA_Instruction(OPCode opc,int predic,PEInputMux LMuxSel,  PEInputMux RMuxSel, int RRegAdd1,int RRegAdd2, int WAdd, bool WE, int ImmVal, bool EDMAdd, bool DMData)$/;"	f	class:CGRA_Instruction
+CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::CGRA_Instruction(unsigned int Instructionword){$/;"	f	class:CGRA_Instruction
+CGRA_Instruction	CGRAInstruction.h	/^class CGRA_Instruction$/;"	c
+CGRA_MEMORY_READ	CGRAdefinitions.h	20;"	d
+CGRA_MEMORY_WRITE	CGRAdefinitions.h	21;"	d
+CGRA_XDim	CGRAdefinitions.h	17;"	d
+CGRA_YDim	CGRAdefinitions.h	18;"	d
+DEFINITIONS_H_	CGRAdefinitions.h	9;"	d
+DMEMSIZE	CGRAdefinitions.h	14;"	d
+DataBus	CGRAdefinitions.h	/^	DataBus,\/\/5$/;"	e	enum:PEInputMux
+DecodeInstruction	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::DecodeInstruction(CGRA_Instruction* Ins)$/;"	f	class:CGRA_Instruction
+Down	CGRAdefinitions.h	/^	Down,	\/\/4$/;"	e	enum:PEInputMux
+ENCODE_instruction	CGRAInstruction.cpp	/^void CGRA_Instruction::ENCODE_instruction()$/;"	f	class:CGRA_Instruction
+EQ	CGRAdefinitions.h	/^    EQ, \/\/==	\/\/c$/;"	e	enum:OPCode
+GT	CGRAdefinitions.h	/^    GT, \/\/>	\/\/e$/;"	e	enum:OPCode
+II	arraygeneration.cpp	/^int II;$/;"	v
+II	austin.cpp	/^int II;$/;"	v
+II	ins1.cpp	/^int II;$/;"	v
+II	ins2.cpp	/^int II;$/;"	v
+II	ins3.cpp	/^int II;$/;"	v
+II	insgen.cpp	/^int II;$/;"	v
+II	milestone6.cpp	/^int II;$/;"	v
+II	milestone6_test.cpp	/^int II;$/;"	v
+II	opcodegeneration.cpp	/^int II;$/;"	v
+II	test1.cpp	/^int II;$/;"	v
+II	test2.cpp	/^int II;$/;"	v
+II	test3.cpp	/^int II;$/;"	v
+IMEMSIZE	CGRAdefinitions.h	13;"	d
+INSTRUCTION_H_	CGRAInstruction.h	9;"	d
+INS_AB	CGRAdefinitions.h	55;"	d
+INS_DB	CGRAdefinitions.h	56;"	d
+INS_IMMEDIATE	CGRAdefinitions.h	57;"	d
+INS_LMUX	CGRAdefinitions.h	49;"	d
+INS_OPCODE	CGRAdefinitions.h	47;"	d
+INS_PREDICT	CGRAdefinitions.h	48;"	d
+INS_R1	CGRAdefinitions.h	51;"	d
+INS_R2	CGRAdefinitions.h	52;"	d
+INS_RMUX	CGRAdefinitions.h	50;"	d
+INS_RW	CGRAdefinitions.h	53;"	d
+INS_WE	CGRAdefinitions.h	54;"	d
+Immediate	CGRAdefinitions.h	/^	Immediate, \/\/6$/;"	e	enum:PEInputMux
+ImmediateValue	CGRAInstruction.h	/^	int ImmediateValue;$/;"	m	class:CGRA_Instruction
+InsWord	CGRAInstruction.h	/^	unsigned int InsWord;$/;"	m	class:CGRA_Instruction
+Instruction_Operation	CGRAdefinitions.h	/^enum Instruction_Operation$/;"	g
+Instruction_Operation	cgradef.h	/^enum Instruction_Operation$/;"	g
+LDMi	CGRAdefinitions.h	/^    LDMi,	\/\/a$/;"	e	enum:OPCode
+LDUi	CGRAdefinitions.h	/^    LDUi,	\/\/b$/;"	e	enum:OPCode
+LDi	CGRAdefinitions.h	/^    LDi,	\/\/9$/;"	e	enum:OPCode
+LT	CGRAdefinitions.h	/^    LT \/\/<	\/\/f$/;"	e	enum:OPCode
+Left	CGRAdefinitions.h	/^	Left,	\/\/1$/;"	e	enum:PEInputMux
+LeftMuxSelector	CGRAInstruction.h	/^	PEInputMux LeftMuxSelector;$/;"	m	class:CGRA_Instruction
+Mult	CGRAdefinitions.h	/^	Mult,	\/\/2$/;"	e	enum:OPCode
+NEQ	CGRAdefinitions.h	/^    NEQ, \/\/ !=	\/\/d$/;"	e	enum:OPCode
+NOOP	CGRAdefinitions.h	/^	NOOP,	\/\/7$/;"	e	enum:OPCode
+OPCode	CGRAdefinitions.h	/^enum OPCode$/;"	g
+OR	CGRAdefinitions.h	/^	OR,	\/\/4$/;"	e	enum:OPCode
+PEInputMux	CGRAdefinitions.h	/^enum PEInputMux$/;"	g
+Predicator	CGRAInstruction.h	/^	int Predicator;$/;"	m	class:CGRA_Instruction
+REGFILESIZE	CGRAdefinitions.h	15;"	d
+ReadRegAddress1	CGRAInstruction.h	/^	int ReadRegAddress1;$/;"	m	class:CGRA_Instruction
+ReadRegAddress2	CGRAInstruction.h	/^	int ReadRegAddress2;$/;"	m	class:CGRA_Instruction
+Register	CGRAdefinitions.h	/^	Register=0,$/;"	e	enum:PEInputMux
+Right	CGRAdefinitions.h	/^	Right,	\/\/2$/;"	e	enum:PEInputMux
+RightMuxSelector	CGRAInstruction.h	/^	PEInputMux RightMuxSelector;$/;"	m	class:CGRA_Instruction
+SHIFT_ABUS	CGRAdefinitions.h	43;"	d
+SHIFT_DBUS	CGRAdefinitions.h	44;"	d
+SHIFT_IMMEDIATE	CGRAdefinitions.h	45;"	d
+SHIFT_LMUX	CGRAdefinitions.h	37;"	d
+SHIFT_OPCODE	CGRAdefinitions.h	35;"	d
+SHIFT_PREDICT	CGRAdefinitions.h	36;"	d
+SHIFT_R1	CGRAdefinitions.h	39;"	d
+SHIFT_R2	CGRAdefinitions.h	40;"	d
+SHIFT_RMUX	CGRAdefinitions.h	38;"	d
+SHIFT_RW	CGRAdefinitions.h	41;"	d
+SHIFT_WE	CGRAdefinitions.h	42;"	d
+SelectDataMemoryAddressBus	CGRAInstruction.h	/^	bool SelectDataMemoryAddressBus;$/;"	m	class:CGRA_Instruction
+SelectDataMemoryDataBus	CGRAInstruction.h	/^	bool SelectDataMemoryDataBus;$/;"	m	class:CGRA_Instruction
+Self	CGRAdefinitions.h	/^	Self	\/\/7$/;"	e	enum:PEInputMux
+Sub	CGRAdefinitions.h	/^	Sub,	\/\/1$/;"	e	enum:OPCode
+Up	CGRAdefinitions.h	/^	Up,	\/\/3$/;"	e	enum:PEInputMux
+WIDTH_ENABLE	CGRAdefinitions.h	32;"	d
+WIDTH_IMMEDIATE	CGRAdefinitions.h	33;"	d
+WIDTH_MUX	CGRAdefinitions.h	30;"	d
+WIDTH_OPCODE	CGRAdefinitions.h	28;"	d
+WIDTH_PREDICT	CGRAdefinitions.h	29;"	d
+WIDTH_REGISTER	CGRAdefinitions.h	31;"	d
+WriteRegAddress	CGRAInstruction.h	/^	int WriteRegAddress;$/;"	m	class:CGRA_Instruction
+WriteRegisterEnable	CGRAInstruction.h	/^	bool WriteRegisterEnable;$/;"	m	class:CGRA_Instruction
+X	arraygeneration.cpp	/^int X,Y;$/;"	v
+X	austin.cpp	/^int X,Y;$/;"	v
+X	ins1.cpp	/^int X,Y;$/;"	v
+X	ins2.cpp	/^int X,Y;$/;"	v
+X	ins3.cpp	/^int X,Y;$/;"	v
+X	insgen.cpp	/^int X,Y;$/;"	v
+X	milestone6.cpp	/^int X,Y;$/;"	v
+X	milestone6_test.cpp	/^int X,Y;$/;"	v
+X	opcodegeneration.cpp	/^int X,Y;$/;"	v
+X	test1.cpp	/^int X,Y;$/;"	v
+X	test2.cpp	/^int X,Y;$/;"	v
+X	test3.cpp	/^int X,Y;$/;"	v
+XOR	CGRAdefinitions.h	/^	XOR,	\/\/5$/;"	e	enum:OPCode
+Y	arraygeneration.cpp	/^int X,Y;$/;"	v
+Y	austin.cpp	/^int X,Y;$/;"	v
+Y	ins1.cpp	/^int X,Y;$/;"	v
+Y	ins2.cpp	/^int X,Y;$/;"	v
+Y	ins3.cpp	/^int X,Y;$/;"	v
+Y	insgen.cpp	/^int X,Y;$/;"	v
+Y	milestone6.cpp	/^int X,Y;$/;"	v
+Y	milestone6_test.cpp	/^int X,Y;$/;"	v
+Y	opcodegeneration.cpp	/^int X,Y;$/;"	v
+Y	test1.cpp	/^int X,Y;$/;"	v
+Y	test2.cpp	/^int X,Y;$/;"	v
+Y	test3.cpp	/^int X,Y;$/;"	v
+add	CGRAdefinitions.h	/^	add,$/;"	e	enum:Instruction_Operation
+add	cgradef.h	/^		add,$/;"	e	enum:Instruction_Operation
+andop	CGRAdefinitions.h	/^	andop,$/;"	e	enum:Instruction_Operation
+andop	cgradef.h	/^		andop,$/;"	e	enum:Instruction_Operation
+cgraASL	CGRAdefinitions.h	/^	cgraASL,	\/\/8$/;"	e	enum:OPCode
+cgraASR	CGRAdefinitions.h	/^	cgraASR,	\/\/6	$/;"	e	enum:OPCode
+cgra_select	CGRAdefinitions.h	/^	cgra_select,$/;"	e	enum:Instruction_Operation
+cgra_select	cgradef.h	/^		cgra_select,$/;"	e	enum:Instruction_Operation
+cmpEQ	CGRAdefinitions.h	/^	cmpEQ,$/;"	e	enum:Instruction_Operation
+cmpEQ	cgradef.h	/^		cmpEQ,$/;"	e	enum:Instruction_Operation
+cmpNEQ	CGRAdefinitions.h	/^	cmpNEQ,$/;"	e	enum:Instruction_Operation
+cmpNEQ	cgradef.h	/^		cmpNEQ,$/;"	e	enum:Instruction_Operation
+cmpSGEQ	CGRAdefinitions.h	/^	cmpSGEQ,$/;"	e	enum:Instruction_Operation
+cmpSGEQ	cgradef.h	/^		cmpSGEQ,$/;"	e	enum:Instruction_Operation
+cmpSGT	CGRAdefinitions.h	/^	cmpSGT,$/;"	e	enum:Instruction_Operation
+cmpSGT	cgradef.h	/^		cmpSGT,$/;"	e	enum:Instruction_Operation
+cmpSLEQ	CGRAdefinitions.h	/^	cmpSLEQ,$/;"	e	enum:Instruction_Operation
+cmpSLEQ	cgradef.h	/^		cmpSLEQ,$/;"	e	enum:Instruction_Operation
+cmpSLT	CGRAdefinitions.h	/^	cmpSLT,$/;"	e	enum:Instruction_Operation
+cmpSLT	cgradef.h	/^		cmpSLT,$/;"	e	enum:Instruction_Operation
+cmpUGEQ	CGRAdefinitions.h	/^	cmpUGEQ,$/;"	e	enum:Instruction_Operation
+cmpUGEQ	cgradef.h	/^		cmpUGEQ,$/;"	e	enum:Instruction_Operation
+cmpUGT	CGRAdefinitions.h	/^	cmpUGT,$/;"	e	enum:Instruction_Operation
+cmpUGT	cgradef.h	/^		cmpUGT,$/;"	e	enum:Instruction_Operation
+cmpULEQ	CGRAdefinitions.h	/^	cmpULEQ,$/;"	e	enum:Instruction_Operation
+cmpULEQ	cgradef.h	/^		cmpULEQ,$/;"	e	enum:Instruction_Operation
+cmpULT	CGRAdefinitions.h	/^	cmpULT,$/;"	e	enum:Instruction_Operation
+cmpULT	cgradef.h	/^		cmpULT,$/;"	e	enum:Instruction_Operation
+constant	CGRAdefinitions.h	/^	constant,$/;"	e	enum:Instruction_Operation
+constant	cgradef.h	/^		constant,$/;"	e	enum:Instruction_Operation
+dumpEpilog	arraygeneration.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	austin.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	ins1.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	ins2.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	ins3.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	insgen.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	milestone6.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	milestone6_test.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	opcodegeneration.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	test1.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	test2.cpp	/^void dumpEpilog()$/;"	f
+dumpEpilog	test3.cpp	/^void dumpEpilog()$/;"	f
+dumpKernel	arraygeneration.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	austin.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	ins1.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	ins2.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	ins3.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	insgen.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	milestone6.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	milestone6_test.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	opcodegeneration.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	test1.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	test2.cpp	/^void dumpKernel()$/;"	f
+dumpKernel	test3.cpp	/^void dumpKernel()$/;"	f
+dumpProlog	arraygeneration.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	austin.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	ins1.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	ins2.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	ins3.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	insgen.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	milestone6.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	milestone6_test.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	opcodegeneration.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	test1.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	test2.cpp	/^void dumpProlog()$/;"	f
+dumpProlog	test3.cpp	/^void dumpProlog()$/;"	f
+epilog	arraygeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	austin.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	ins1.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	ins2.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	ins3.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	insgen.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	milestone6.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	milestone6_test.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	opcodegeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	test1.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	test2.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog	test3.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+epilog_map	arraygeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	austin.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	ins1.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	ins2.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	ins3.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	insgen.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	milestone6.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	milestone6_test.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	opcodegeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	test1.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	test2.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_map	test3.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+epilog_size	arraygeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	austin.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	ins1.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	ins2.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	ins3.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	insgen.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	milestone6.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	milestone6_test.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	opcodegeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	test1.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	test2.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+epilog_size	test3.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+exec_state	arraygeneration.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	austin.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	ins1.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	ins2.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	ins3.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	insgen.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	milestone6.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	milestone6_test.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	opcodegeneration.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	test1.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	test2.cpp	/^enum exec_state{$/;"	g	file:
+exec_state	test3.cpp	/^enum exec_state{$/;"	g	file:
+extractNumber	arraygeneration.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	austin.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	ins1.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	ins2.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	ins3.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	insgen.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	milestone6.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	milestone6_test.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	opcodegeneration.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	test1.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	test2.cpp	/^int extractNumber(string name)$/;"	f
+extractNumber	test3.cpp	/^int extractNumber(string name)$/;"	f
+extractlimit_from_node	austin.cpp	/^int extractlimit_from_node(int node)$/;"	f
+extractlimit_from_node	milestone6.cpp	/^int extractlimit_from_node(int node)$/;"	f
+extractlimit_from_node	milestone6_test.cpp	/^int extractlimit_from_node(int node)$/;"	f
+extractlimit_from_node	test1.cpp	/^int extractlimit_from_node(int node)$/;"	f
+extractlimit_from_node	test2.cpp	/^int extractlimit_from_node(int node)$/;"	f
+extractlimit_from_node	test3.cpp	/^int extractlimit_from_node(int node)$/;"	f
+final_epilog	arraygeneration.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	austin.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	ins1.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	ins2.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	ins3.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	insgen.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	milestone6.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	milestone6_test.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	opcodegeneration.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	test1.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	test2.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog	test3.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_epilog_size	arraygeneration.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	austin.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	ins1.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	ins2.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	ins3.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	insgen.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	milestone6.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	milestone6_test.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	opcodegeneration.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	test1.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	test2.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_epilog_size	test3.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel	arraygeneration.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	austin.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	ins1.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	ins2.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	ins3.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	insgen.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	milestone6.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	milestone6_test.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	opcodegeneration.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	test1.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	test2.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel	test3.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_kernel_size	arraygeneration.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	austin.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	ins1.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	ins2.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	ins3.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	insgen.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	milestone6.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	milestone6_test.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	opcodegeneration.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	test1.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	test2.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_kernel_size	test3.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog	arraygeneration.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	austin.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	ins1.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	ins2.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	ins3.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	insgen.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	milestone6.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	milestone6_test.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	opcodegeneration.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	test1.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	test2.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog	test3.cpp	/^unsigned int *final_prolog,*final_kernel,*final_epilog;$/;"	v
+final_prolog_size	arraygeneration.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	austin.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	ins1.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	ins2.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	ins3.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	insgen.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	milestone6.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	milestone6_test.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	opcodegeneration.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	test1.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	test2.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+final_prolog_size	test3.cpp	/^int final_prolog_size,final_kernel_size,final_epilog_size;$/;"	v
+generateEpilog	arraygeneration.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	austin.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	ins1.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	ins2.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	ins3.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	insgen.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	milestone6.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	milestone6_test.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	opcodegeneration.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	test1.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	test2.cpp	/^void generateEpilog()$/;"	f
+generateEpilog	test3.cpp	/^void generateEpilog()$/;"	f
+generateINITinstructions	arraygeneration.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	austin.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	ins1.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	ins2.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	ins3.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	insgen.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	milestone6.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	milestone6_test.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	opcodegeneration.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	test1.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	test2.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateINITinstructions	test3.cpp	/^void generateINITinstructions(char* objfile)$/;"	f
+generateInstructions	arraygeneration.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	austin.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	ins1.cpp	/^void generateInstructions(int node)$/;"	f
+generateInstructions	ins2.cpp	/^void generateInstructions(int node)$/;"	f
+generateInstructions	ins3.cpp	/^void generateInstructions(int node)$/;"	f
+generateInstructions	insgen.cpp	/^void generateInstructions(int node)$/;"	f
+generateInstructions	milestone6.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	milestone6_test.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	opcodegeneration.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	test1.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	test2.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateInstructions	test3.cpp	/^void generateInstructions(std::set<int> &nodes)$/;"	f
+generateKernel	arraygeneration.cpp	/^void generateKernel()$/;"	f
+generateKernel	austin.cpp	/^void generateKernel()$/;"	f
+generateKernel	ins1.cpp	/^void generateKernel()$/;"	f
+generateKernel	ins2.cpp	/^void generateKernel()$/;"	f
+generateKernel	ins3.cpp	/^void generateKernel()$/;"	f
+generateKernel	insgen.cpp	/^void generateKernel()$/;"	f
+generateKernel	milestone6.cpp	/^void generateKernel()$/;"	f
+generateKernel	milestone6_test.cpp	/^void generateKernel()$/;"	f
+generateKernel	opcodegeneration.cpp	/^void generateKernel()$/;"	f
+generateKernel	test1.cpp	/^void generateKernel()$/;"	f
+generateKernel	test2.cpp	/^void generateKernel()$/;"	f
+generateKernel	test3.cpp	/^void generateKernel()$/;"	f
+generateNOOP	arraygeneration.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	austin.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	ins1.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	ins2.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	ins3.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	insgen.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	milestone6.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	milestone6_test.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	opcodegeneration.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	test1.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	test2.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateNOOP	test3.cpp	/^CGRA_Instruction generateNOOP()$/;"	f
+generateProlog	arraygeneration.cpp	/^void generateProlog()$/;"	f
+generateProlog	austin.cpp	/^void generateProlog()$/;"	f
+generateProlog	ins1.cpp	/^void generateProlog()$/;"	f
+generateProlog	ins2.cpp	/^void generateProlog()$/;"	f
+generateProlog	ins3.cpp	/^void generateProlog()$/;"	f
+generateProlog	insgen.cpp	/^void generateProlog()$/;"	f
+generateProlog	milestone6.cpp	/^void generateProlog()$/;"	f
+generateProlog	milestone6_test.cpp	/^void generateProlog()$/;"	f
+generateProlog	opcodegeneration.cpp	/^void generateProlog()$/;"	f
+generateProlog	test1.cpp	/^void generateProlog()$/;"	f
+generateProlog	test2.cpp	/^void generateProlog()$/;"	f
+generateProlog	test3.cpp	/^void generateProlog()$/;"	f
+getArrayAddress	austin.cpp	/^void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)$/;"	f
+getArrayAddress	milestone6.cpp	/^void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)$/;"	f
+getArrayAddress	milestone6_test.cpp	/^void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)$/;"	f
+getArrayAddress	test1.cpp	/^void getArrayAddress(int pe, int addr_array, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)$/;"	f
+getArrayAddress	test2.cpp	/^void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)$/;"	f
+getArrayAddress	test3.cpp	/^void getArrayAddress(int pe, int addr, int node, int reg_num, int maxMemoryOperations, int num_mem_ops)$/;"	f
+getFreeRegister	arraygeneration.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	austin.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	ins1.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	ins2.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	ins3.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	insgen.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	milestone6.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	milestone6_test.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	opcodegeneration.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	test1.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	test2.cpp	/^int getFreeRegister(int pe)$/;"	f
+getFreeRegister	test3.cpp	/^int getFreeRegister(int pe)$/;"	f
+getImmediate	arraygeneration.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	austin.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	ins1.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	ins2.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	ins3.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	insgen.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	milestone6.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	milestone6_test.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	opcodegeneration.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	test1.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	test2.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediate	test3.cpp	/^int getImmediate(int nodeID)$/;"	f
+getImmediateValue	CGRAInstruction.cpp	/^int CGRA_Instruction::getImmediateValue()$/;"	f	class:CGRA_Instruction
+getImmediateValue_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getImmediateValue_DECODE()$/;"	f	class:CGRA_Instruction
+getLMuxSelector	arraygeneration.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	austin.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	ins1.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	ins2.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	ins3.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	insgen.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	milestone6.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	milestone6_test.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	opcodegeneration.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	test1.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	test2.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLMuxSelector	test3.cpp	/^PEInputMux getLMuxSelector(int nodeID, exec_state state)$/;"	f
+getLeftMuxSelector	CGRAInstruction.cpp	/^PEInputMux CGRA_Instruction::getLeftMuxSelector()$/;"	f	class:CGRA_Instruction
+getLeftMuxSelector_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getLeftMuxSelector_DECODE()$/;"	f	class:CGRA_Instruction
+getMappedPE	arraygeneration.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	austin.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	ins1.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	ins2.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	ins3.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	insgen.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	milestone6.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	milestone6_test.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	opcodegeneration.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	test1.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	test2.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedPE	test3.cpp	/^int getMappedPE(int id, exec_state state)$/;"	f
+getMappedTime	arraygeneration.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	austin.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	ins1.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	ins2.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	ins3.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	insgen.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	milestone6.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	milestone6_test.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	opcodegeneration.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	test1.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	test2.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMappedTime	test3.cpp	/^int getMappedTime(int id, exec_state state)$/;"	f
+getMemoryNodes	arraygeneration.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	austin.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	ins1.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	ins2.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	ins3.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	insgen.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	milestone6.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	milestone6_test.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	opcodegeneration.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	test1.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	test2.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getMemoryNodes	test3.cpp	/^vector<int> getMemoryNodes()$/;"	f
+getNodeType	arraygeneration.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	austin.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	ins1.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	ins2.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	ins3.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	insgen.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	milestone6.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	milestone6_test.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	opcodegeneration.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	test1.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	test2.cpp	/^int getNodeType(int id)$/;"	f
+getNodeType	test3.cpp	/^int getNodeType(int id)$/;"	f
+getOpCode	CGRAInstruction.cpp	/^OPCode CGRA_Instruction::getOpCode()$/;"	f	class:CGRA_Instruction
+getOpCode	arraygeneration.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	austin.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	ins1.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	ins2.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	ins3.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	insgen.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	milestone6.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	milestone6_test.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	opcodegeneration.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	test1.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	test2.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode	test3.cpp	/^OPCode getOpCode(int nodeID)$/;"	f
+getOpCode_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getOpCode_DECODE()$/;"	f	class:CGRA_Instruction
+getOperands	arraygeneration.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	austin.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	ins1.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	ins2.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	ins3.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	insgen.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	milestone6.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	milestone6_test.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	opcodegeneration.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	test1.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	test2.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOperands	test3.cpp	/^std::vector<int> getOperands(int nodeID)$/;"	f
+getOutputRegisterNumber	arraygeneration.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	austin.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	ins1.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	ins2.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	ins3.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	insgen.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	milestone6.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	milestone6_test.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	opcodegeneration.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	test1.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	test2.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getOutputRegisterNumber	test3.cpp	/^int getOutputRegisterNumber(int node)$/;"	f
+getPE	arraygeneration.cpp	/^int getPE(int i)$/;"	f
+getPE	austin.cpp	/^int getPE(int i)$/;"	f
+getPE	ins1.cpp	/^int getPE(int i)$/;"	f
+getPE	ins2.cpp	/^int getPE(int i)$/;"	f
+getPE	ins3.cpp	/^int getPE(int i)$/;"	f
+getPE	insgen.cpp	/^int getPE(int i)$/;"	f
+getPE	milestone6.cpp	/^int getPE(int i)$/;"	f
+getPE	milestone6_test.cpp	/^int getPE(int i)$/;"	f
+getPE	opcodegeneration.cpp	/^int getPE(int i)$/;"	f
+getPE	test1.cpp	/^int getPE(int i)$/;"	f
+getPE	test2.cpp	/^int getPE(int i)$/;"	f
+getPE	test3.cpp	/^int getPE(int i)$/;"	f
+getPredic	arraygeneration.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	austin.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	ins1.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	ins2.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	ins3.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	insgen.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	milestone6.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	milestone6_test.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	opcodegeneration.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	test1.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	test2.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredic	test3.cpp	/^int getPredic(int nodeID)$/;"	f
+getPredicator	CGRAInstruction.cpp	/^int CGRA_Instruction::getPredicator()$/;"	f	class:CGRA_Instruction
+getPredicator_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getPredicator_DECODE()$/;"	f	class:CGRA_Instruction
+getRMuxSelector	arraygeneration.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	austin.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	ins1.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	ins2.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	ins3.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	insgen.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	milestone6.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	milestone6_test.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	opcodegeneration.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	test1.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	test2.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getRMuxSelector	test3.cpp	/^PEInputMux getRMuxSelector(int nodeID,exec_state state)$/;"	f
+getReadRegAddress1	CGRAInstruction.cpp	/^int CGRA_Instruction::getReadRegAddress1()$/;"	f	class:CGRA_Instruction
+getReadRegAddress1_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getReadRegAddress1_DECODE()$/;"	f	class:CGRA_Instruction
+getReadRegAddress2	CGRAInstruction.cpp	/^int CGRA_Instruction::getReadRegAddress2()$/;"	f	class:CGRA_Instruction
+getReadRegAddress2_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getReadRegAddress2_DECODE()$/;"	f	class:CGRA_Instruction
+getReg1Address	arraygeneration.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	austin.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	ins1.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	ins2.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	ins3.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	insgen.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	milestone6.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	milestone6_test.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	opcodegeneration.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	test1.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	test2.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg1Address	test3.cpp	/^int getReg1Address(int nodeID,PEInputMux LMux,exec_state state)$/;"	f
+getReg2Address	arraygeneration.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	austin.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	ins1.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	ins2.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	ins3.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	insgen.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	milestone6.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	milestone6_test.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	opcodegeneration.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	test1.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	test2.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getReg2Address	test3.cpp	/^int getReg2Address(int nodeID,PEInputMux RMux,exec_state state)$/;"	f
+getRelativePosition	arraygeneration.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	austin.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	ins1.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	ins2.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	ins3.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	insgen.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	milestone6.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	milestone6_test.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	opcodegeneration.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	test1.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	test2.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRelativePosition	test3.cpp	/^PEInputMux getRelativePosition(int i, int j)$/;"	f
+getRightMuxSelector	CGRAInstruction.cpp	/^PEInputMux CGRA_Instruction::getRightMuxSelector()$/;"	f	class:CGRA_Instruction
+getRightMuxSelector_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getRightMuxSelector_DECODE()$/;"	f	class:CGRA_Instruction
+getRotatingRegNum	arraygeneration.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	austin.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	ins1.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	ins2.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	ins3.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	insgen.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	milestone6.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	milestone6_test.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	opcodegeneration.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	test1.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	test2.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRotatingRegNum	test3.cpp	/^int getRotatingRegNum(int regNum,int src,int dest, exec_state state)$/;"	f
+getRouteSrc	arraygeneration.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	austin.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	ins1.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	ins2.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	ins3.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	insgen.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	milestone6.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	milestone6_test.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	opcodegeneration.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	test1.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	test2.cpp	/^int getRouteSrc(int id)$/;"	f
+getRouteSrc	test3.cpp	/^int getRouteSrc(int id)$/;"	f
+getScheduledTime	arraygeneration.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	austin.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	ins1.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	ins2.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	ins3.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	insgen.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	milestone6.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	milestone6_test.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	opcodegeneration.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	test1.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	test2.cpp	/^int getScheduledTime(int id)$/;"	f
+getScheduledTime	test3.cpp	/^int getScheduledTime(int id)$/;"	f
+getSelectDataMemoryAddressBus	CGRAInstruction.cpp	/^bool CGRA_Instruction::getSelectDataMemoryAddressBus()$/;"	f	class:CGRA_Instruction
+getSelectDataMemoryAddressBus_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getSelectDataMemoryAddressBus_DECODE()$/;"	f	class:CGRA_Instruction
+getSelectDataMemoryDataBus	CGRAInstruction.cpp	/^bool CGRA_Instruction::getSelectDataMemoryDataBus()$/;"	f	class:CGRA_Instruction
+getSelectDataMemoryDataBus_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getSelectDataMemoryDataBus_DECODE()$/;"	f	class:CGRA_Instruction
+getTime	arraygeneration.cpp	/^int getTime(int i)$/;"	f
+getTime	austin.cpp	/^int getTime(int i)$/;"	f
+getTime	ins1.cpp	/^int getTime(int i)$/;"	f
+getTime	ins2.cpp	/^int getTime(int i)$/;"	f
+getTime	ins3.cpp	/^int getTime(int i)$/;"	f
+getTime	insgen.cpp	/^int getTime(int i)$/;"	f
+getTime	milestone6.cpp	/^int getTime(int i)$/;"	f
+getTime	milestone6_test.cpp	/^int getTime(int i)$/;"	f
+getTime	opcodegeneration.cpp	/^int getTime(int i)$/;"	f
+getTime	test1.cpp	/^int getTime(int i)$/;"	f
+getTime	test2.cpp	/^int getTime(int i)$/;"	f
+getTime	test3.cpp	/^int getTime(int i)$/;"	f
+getVariableAddress	arraygeneration.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	austin.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	ins1.cpp	/^int getVariableAddress(string var, string obj)$/;"	f
+getVariableAddress	ins2.cpp	/^int getVariableAddress(string var, string obj)$/;"	f
+getVariableAddress	ins3.cpp	/^int getVariableAddress(string var, string obj)$/;"	f
+getVariableAddress	insgen.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	milestone6.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	milestone6_test.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	opcodegeneration.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	test1.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	test2.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getVariableAddress	test3.cpp	/^int getVariableAddress(string var,string obj)$/;"	f
+getWriteRegAddress	CGRAInstruction.cpp	/^int CGRA_Instruction::getWriteRegAddress()$/;"	f	class:CGRA_Instruction
+getWriteRegAddress	arraygeneration.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	austin.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	ins1.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	ins2.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	ins3.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	insgen.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	milestone6.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	milestone6_test.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	opcodegeneration.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	test1.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	test2.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress	test3.cpp	/^int getWriteRegAddress(int nodeID,exec_state state)$/;"	f
+getWriteRegAddress_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getWriteRegAddress_DECODE()$/;"	f	class:CGRA_Instruction
+getWriteRegisterEnable	CGRAInstruction.cpp	/^bool CGRA_Instruction::getWriteRegisterEnable()$/;"	f	class:CGRA_Instruction
+getWriteRegisterEnable_DECODE	CGRAInstruction.cpp	/^unsigned int CGRA_Instruction::getWriteRegisterEnable_DECODE()$/;"	f	class:CGRA_Instruction
+getloadvarname	arraygeneration.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	austin.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	ins1.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	ins2.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	ins3.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	insgen.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	milestone6.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	milestone6_test.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	opcodegeneration.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	test1.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	test2.cpp	/^string getloadvarname(int id)$/;"	f
+getloadvarname	test3.cpp	/^string getloadvarname(int id)$/;"	f
+getstorevarname	arraygeneration.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	austin.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	ins1.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	ins2.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	ins3.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	insgen.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	milestone6.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	milestone6_test.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	opcodegeneration.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	test1.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	test2.cpp	/^string getstorevarname(int id)$/;"	f
+getstorevarname	test3.cpp	/^string getstorevarname(int id)$/;"	f
+in_edge	arraygeneration.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	austin.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	ins1.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	ins2.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	ins3.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	insgen.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	milestone6.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	milestone6_test.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	opcodegeneration.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	test1.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	test2.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+in_edge	test3.cpp	/^std::multimap<int,int> in_edge;$/;"	v
+initInstructions	arraygeneration.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	austin.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	ins1.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	ins2.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	ins3.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	insgen.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	milestone6.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	milestone6_test.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	opcodegeneration.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	test1.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	test2.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+initInstructions	test3.cpp	/^std::multimap<int, std::vector<CGRA_Instruction> > initInstructions;$/;"	v
+isAddressBusAssert	arraygeneration.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	austin.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	ins1.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	ins2.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	ins3.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	insgen.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	milestone6.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	milestone6_test.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	opcodegeneration.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	test1.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	test2.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isAddressBusAssert	test3.cpp	/^bool isAddressBusAssert(int nodeID)$/;"	f
+isDataBusAssert	arraygeneration.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	austin.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	ins1.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	ins2.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	ins3.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	insgen.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	milestone6.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	milestone6_test.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	opcodegeneration.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	test1.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	test2.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isDataBusAssert	test3.cpp	/^bool isDataBusAssert(int nodeID)$/;"	f
+isMappedMoreThanACycleApart	arraygeneration.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	austin.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	ins1.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	ins2.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	ins3.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	insgen.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	milestone6.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	milestone6_test.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	opcodegeneration.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	test1.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	test2.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isMappedMoreThanACycleApart	test3.cpp	/^bool isMappedMoreThanACycleApart(int node1,int node2,exec_state state)$/;"	f
+isScheduledMoreThanACycleApart	arraygeneration.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	austin.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	ins1.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	ins2.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	ins3.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	insgen.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	milestone6.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	milestone6_test.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	opcodegeneration.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	test1.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	test2.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isScheduledMoreThanACycleApart	test3.cpp	/^bool isScheduledMoreThanACycleApart(int node1,int node2)$/;"	f
+isWriteEnabled	arraygeneration.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	austin.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	ins1.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	ins2.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	ins3.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	insgen.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	milestone6.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	milestone6_test.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	opcodegeneration.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	test1.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	test2.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+isWriteEnabled	test3.cpp	/^bool isWriteEnabled(int nodeID)$/;"	f
+kernel	arraygeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	austin.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	ins1.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	ins2.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	ins3.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	insgen.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	milestone6.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	milestone6_test.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	opcodegeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	test1.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	test2.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel	test3.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+kernel_map	arraygeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	austin.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	ins1.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	ins2.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	ins3.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	insgen.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	milestone6.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	milestone6_test.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	opcodegeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	test1.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	test2.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_map	test3.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+kernel_size	arraygeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	austin.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	ins1.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	ins2.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	ins3.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	insgen.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	milestone6.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	milestone6_test.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	opcodegeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	test1.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	test2.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+kernel_size	test3.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+ld_add	CGRAdefinitions.h	/^	ld_add,$/;"	e	enum:Instruction_Operation
+ld_add	cgradef.h	/^		ld_add,$/;"	e	enum:Instruction_Operation
+ld_add_cond	CGRAdefinitions.h	/^	ld_add_cond,$/;"	e	enum:Instruction_Operation
+ld_add_cond	cgradef.h	/^		ld_add_cond,$/;"	e	enum:Instruction_Operation
+ld_data	CGRAdefinitions.h	/^	ld_data,$/;"	e	enum:Instruction_Operation
+ld_data	cgradef.h	/^		ld_data,$/;"	e	enum:Instruction_Operation
+ld_data_cond	CGRAdefinitions.h	/^	ld_data_cond,$/;"	e	enum:Instruction_Operation
+ld_data_cond	cgradef.h	/^		ld_data_cond,$/;"	e	enum:Instruction_Operation
+llvm_route	CGRAdefinitions.h	/^	llvm_route,$/;"	e	enum:Instruction_Operation
+llvm_route	cgradef.h	/^		llvm_route,$/;"	e	enum:Instruction_Operation
+loopctrl	CGRAdefinitions.h	/^	loopctrl,$/;"	e	enum:Instruction_Operation
+loopctrl	cgradef.h	/^		loopctrl,$/;"	e	enum:Instruction_Operation
+main	arraygeneration.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	austin.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	ins1.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	ins2.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	ins3.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	insgen.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	milestone6.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	milestone6_test.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	opcodegeneration.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	test1.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	test2.cpp	/^int main(int argc, char* argv[])$/;"	f
+main	test3.cpp	/^int main(int argc, char* argv[])$/;"	f
+maxArrayMem	austin.cpp	/^int maxArrayMem = 0;$/;"	v
+maxArrayMem	milestone6.cpp	/^int maxArrayMem = 0;$/;"	v
+maxArrayMem	milestone6_test.cpp	/^int maxArrayMem = 0;$/;"	v
+maxArrayMem	test1.cpp	/^int maxArrayMem = 0;$/;"	v
+maxArrayMem	test2.cpp	/^int maxArrayMem = 0;$/;"	v
+maxArrayMem	test3.cpp	/^int maxArrayMem = 0;$/;"	v
+maxMemoryOperations	arraygeneration.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	austin.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	ins1.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	ins2.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	ins3.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	insgen.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	milestone6.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	milestone6_test.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	opcodegeneration.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	test1.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	test2.cpp	/^int maxMemoryOperations = 0;$/;"	v
+maxMemoryOperations	test3.cpp	/^int maxMemoryOperations = 0;$/;"	v
+mem_node_regNum	arraygeneration.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	austin.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	ins1.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	ins2.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	ins3.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	insgen.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	milestone6.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	milestone6_test.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	opcodegeneration.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	test1.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	test2.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mem_node_regNum	test3.cpp	/^std::map<int,int> mem_node_regNum;$/;"	v
+mult	CGRAdefinitions.h	/^	mult,$/;"	e	enum:Instruction_Operation
+mult	cgradef.h	/^		mult,$/;"	e	enum:Instruction_Operation
+node_Output_Register	arraygeneration.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	austin.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	ins1.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	ins2.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	ins3.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	insgen.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	milestone6.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	milestone6_test.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	opcodegeneration.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	test1.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	test2.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_Output_Register	test3.cpp	/^std::map<int, int> node_Output_Register;$/;"	v
+node_schedule_time	arraygeneration.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	austin.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	ins1.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	ins2.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	ins3.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	insgen.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	milestone6.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	milestone6_test.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	opcodegeneration.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	test1.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	test2.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_schedule_time	test3.cpp	/^std::map<int,int> node_schedule_time;$/;"	v
+node_time_map_epilog	arraygeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	austin.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	ins1.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	ins2.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	ins3.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	insgen.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	milestone6.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	milestone6_test.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	opcodegeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	test1.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	test2.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_epilog	test3.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	arraygeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	austin.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	ins1.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	ins2.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	ins3.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	insgen.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	milestone6.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	milestone6_test.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	opcodegeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	test1.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	test2.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_kernel	test3.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	arraygeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	austin.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	ins1.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	ins2.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	ins3.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	insgen.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	milestone6.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	milestone6_test.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	opcodegeneration.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	test1.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	test2.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+node_time_map_prolog	test3.cpp	/^std::map<int,int> node_time_map_prolog,node_time_map_kernel,node_time_map_epilog;$/;"	v
+nodeid_instruction	arraygeneration.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	austin.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	ins1.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	ins2.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	ins3.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	insgen.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	milestone6.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	milestone6_test.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	opcodegeneration.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	test1.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	test2.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_instruction	test3.cpp	/^std::map<int,CGRA_Instruction> nodeid_instruction;$/;"	v
+nodeid_names	arraygeneration.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	austin.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	ins1.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	ins2.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	ins3.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	insgen.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	milestone6.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	milestone6_test.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	opcodegeneration.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	test1.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	test2.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodeid_names	test3.cpp	/^std::map<int,string> nodeid_names;$/;"	v
+nodesThatReadRotatingRF	arraygeneration.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	austin.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	ins1.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	ins2.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	ins3.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	insgen.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	milestone6.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	milestone6_test.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	opcodegeneration.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	test1.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	test2.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+nodesThatReadRotatingRF	test3.cpp	/^std::set<int> nodesThatReadRotatingRF;$/;"	v
+opCode	CGRAInstruction.h	/^	OPCode opCode;$/;"	m	class:CGRA_Instruction
+operand_order_map	arraygeneration.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	austin.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	ins1.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	ins2.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	ins3.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	insgen.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	milestone6.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	milestone6_test.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	opcodegeneration.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	test1.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	test2.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+operand_order_map	test3.cpp	/^std::map< std::pair<int,int>,int> operand_order_map;$/;"	v
+orop	CGRAdefinitions.h	/^	orop,$/;"	e	enum:Instruction_Operation
+orop	cgradef.h	/^		orop,$/;"	e	enum:Instruction_Operation
+out_edge	arraygeneration.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	austin.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	ins1.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	ins2.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	ins3.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	insgen.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	milestone6.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	milestone6_test.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	opcodegeneration.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	test1.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	test2.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+out_edge	test3.cpp	/^std::multimap<int,int> out_edge;$/;"	v
+pe_free_registers	arraygeneration.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	austin.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	ins1.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	ins2.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	ins3.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	insgen.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	milestone6.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	milestone6_test.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	opcodegeneration.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	test1.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	test2.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_free_registers	test3.cpp	/^std::map< int, std::set<int> > pe_free_registers;$/;"	v
+pe_mem_op_map	arraygeneration.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	austin.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	ins1.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	ins2.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	ins3.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	insgen.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	milestone6.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	milestone6_test.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	opcodegeneration.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	test1.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	test2.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_mem_op_map	test3.cpp	/^std::map<int,int> pe_mem_op_map;$/;"	v
+pe_time_Registers_map	arraygeneration.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	austin.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	ins1.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	ins2.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	ins3.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	insgen.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	milestone6.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	milestone6_test.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	opcodegeneration.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	test1.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	test2.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+pe_time_Registers_map	test3.cpp	/^std::map< std::pair<int,int>, int> pe_time_Registers_map;$/;"	v
+printSet	arraygeneration.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	austin.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	ins1.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	ins2.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	ins3.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	insgen.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	milestone6.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	milestone6_test.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	opcodegeneration.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	test1.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	test2.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printSet	test3.cpp	/^void printSet(std::set<int> &arg)$/;"	f
+printvalue	austin.cpp	/^void printvalue(string var,string obj)$/;"	f
+printvalue	milestone6.cpp	/^void printvalue(string var,string obj)$/;"	f
+printvalue	milestone6_test.cpp	/^void printvalue(string var,string obj)$/;"	f
+printvalue	opcodegeneration.cpp	/^void printvalue(string var,string obj)$/;"	f
+printvalue	test1.cpp	/^void printvalue(string var,string obj)$/;"	f
+printvalue	test2.cpp	/^void printvalue(string var,string obj)$/;"	f
+printvalue	test3.cpp	/^void printvalue(string var,string obj)$/;"	f
+prolog	arraygeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	austin.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	ins1.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	ins2.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	ins3.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	insgen.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	milestone6.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	milestone6_test.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	opcodegeneration.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	test1.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	test2.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog	test3.cpp	/^int *prolog,*kernel,*epilog;$/;"	v
+prolog_map	arraygeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	austin.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	ins1.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	ins2.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	ins3.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	insgen.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	milestone6.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	milestone6_test.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	opcodegeneration.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	test1.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	test2.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_map	test3.cpp	/^std::map<int,int> prolog_map,kernel_map,epilog_map;$/;"	v
+prolog_size	arraygeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	austin.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	ins1.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	ins2.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	ins3.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	insgen.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	milestone6.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	milestone6_test.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	opcodegeneration.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	test1.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	test2.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+prolog_size	test3.cpp	/^int prolog_size, kernel_size, epilog_size;$/;"	v
+regi_div	CGRAdefinitions.h	/^	regi_div,$/;"	e	enum:Instruction_Operation
+regi_div	cgradef.h	/^		regi_div,$/;"	e	enum:Instruction_Operation
+releaseRegisters	arraygeneration.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	austin.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	ins1.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	ins2.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	ins3.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	insgen.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	milestone6.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	milestone6_test.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	opcodegeneration.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	test1.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	test2.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+releaseRegisters	test3.cpp	/^void releaseRegisters(int nodeID,exec_state state)$/;"	f
+rest	CGRAdefinitions.h	/^	rest$/;"	e	enum:Instruction_Operation
+rest	cgradef.h	/^		rest$/;"	e	enum:Instruction_Operation
+route	CGRAdefinitions.h	/^	route,$/;"	e	enum:Instruction_Operation
+route	cgradef.h	/^		route,$/;"	e	enum:Instruction_Operation
+routingNodes	arraygeneration.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	austin.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	ins1.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	ins2.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	ins3.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	insgen.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	milestone6.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	milestone6_test.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	opcodegeneration.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	test1.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	test2.cpp	/^std::vector<int> routingNodes;$/;"	v
+routingNodes	test3.cpp	/^std::vector<int> routingNodes;$/;"	v
+schedule_time_nodes	arraygeneration.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	austin.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	ins1.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	ins2.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	ins3.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	insgen.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	milestone6.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	milestone6_test.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	opcodegeneration.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	test1.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	test2.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+schedule_time_nodes	test3.cpp	/^std::map<int, std::set<int> > schedule_time_nodes;$/;"	v
+shiftl	CGRAdefinitions.h	/^	shiftl,$/;"	e	enum:Instruction_Operation
+shiftl	cgradef.h	/^		shiftl,$/;"	e	enum:Instruction_Operation
+shiftr	CGRAdefinitions.h	/^	shiftr,$/;"	e	enum:Instruction_Operation
+shiftr	cgradef.h	/^		shiftr,$/;"	e	enum:Instruction_Operation
+st_add	CGRAdefinitions.h	/^	st_add,$/;"	e	enum:Instruction_Operation
+st_add	cgradef.h	/^		st_add,$/;"	e	enum:Instruction_Operation
+st_add_cond	CGRAdefinitions.h	/^	st_add_cond,$/;"	e	enum:Instruction_Operation
+st_add_cond	cgradef.h	/^		st_add_cond,$/;"	e	enum:Instruction_Operation
+st_data	CGRAdefinitions.h	/^	st_data,$/;"	e	enum:Instruction_Operation
+st_data	cgradef.h	/^		st_data,$/;"	e	enum:Instruction_Operation
+st_data_cond	CGRAdefinitions.h	/^	st_data_cond,$/;"	e	enum:Instruction_Operation
+st_data_cond	cgradef.h	/^		st_data_cond,$/;"	e	enum:Instruction_Operation
+state_epilog	arraygeneration.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	austin.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	ins1.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	ins2.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	ins3.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	insgen.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	milestone6.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	milestone6_test.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	opcodegeneration.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	test1.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	test2.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog	test3.cpp	/^  state_epilog$/;"	e	enum:exec_state	file:
+state_epilog_start	arraygeneration.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	austin.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	ins1.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	ins2.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	ins3.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	insgen.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	milestone6.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	milestone6_test.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	opcodegeneration.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	test1.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	test2.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_epilog_start	test3.cpp	/^  state_epilog_start,$/;"	e	enum:exec_state	file:
+state_kernel	arraygeneration.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	austin.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	ins1.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	ins2.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	ins3.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	insgen.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	milestone6.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	milestone6_test.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	opcodegeneration.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	test1.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	test2.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_kernel	test3.cpp	/^  state_kernel,$/;"	e	enum:exec_state	file:
+state_prolog	arraygeneration.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	austin.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	ins1.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	ins2.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	ins3.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	insgen.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	milestone6.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	milestone6_test.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	opcodegeneration.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	test1.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	test2.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+state_prolog	test3.cpp	/^  state_prolog,$/;"	e	enum:exec_state	file:
+sub	CGRAdefinitions.h	/^	sub,$/;"	e	enum:Instruction_Operation
+sub	cgradef.h	/^		sub,$/;"	e	enum:Instruction_Operation
+updateOperandOrder	arraygeneration.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	austin.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	ins1.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	ins2.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	ins3.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	insgen.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	milestone6.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	milestone6_test.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	opcodegeneration.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	test1.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	test2.cpp	/^void updateOperandOrder()$/;"	f
+updateOperandOrder	test3.cpp	/^void updateOperandOrder()$/;"	f
+xorop	CGRAdefinitions.h	/^	xorop,$/;"	e	enum:Instruction_Operation
+xorop	cgradef.h	/^		xorop,$/;"	e	enum:Instruction_Operation
+~CGRA_Instruction	CGRAInstruction.cpp	/^CGRA_Instruction::~CGRA_Instruction()$/;"	f	class:CGRA_Instruction

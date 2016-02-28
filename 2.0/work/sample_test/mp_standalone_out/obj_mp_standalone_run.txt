@@ -1,0 +1,26 @@
+gem5 Simulator System.  http://gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 compiled Feb 25 2016 21:24:16
+gem5 started Feb 27 2016 21:27:53
+gem5 executing on SPARC
+command line: ../../gem5/build/ARM/gem5.opt -d ./mp_standalone_out ../../gem5/configs/example/se.py --cpu-type timing -c ./obj_mp_standalone_run
+Global frequency set at 1000000000000 ticks per second
+
+MASTER system_port binds to SLAVE system.membus.slave[0]
+
+MASTER system.membus.master[0] binds to SLAVE system.mem_ctrls.port
+
+MASTER system.cpu.icache_port binds to SLAVE system.membus.slave[1]
+
+MASTER system.cpu.dcache_port binds to SLAVE system.membus.slave[2]
+
+MASTER system.cpu.dtb.walker.dma binds to SLAVE system.membus.slave[4]
+
+MASTER system.cpu.itb.walker.dma binds to SLAVE system.membus.slave[3]
+**** REAL SIMULATION ****
+info: Entering event queue @ 0.  Starting simulation...
+info: Increasing stack size by one page.
+
+i = 500	j = 1331098921 k = 309609579
+Exiting @ tick 946020000 because target called exit()

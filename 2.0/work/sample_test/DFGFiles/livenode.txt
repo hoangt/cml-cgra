@@ -1,0 +1,12 @@
+6	0	add2
+8	1	sub
+17	30	ConstInt500
+100	30	i
+101	30	k
+102	30	j
+118	21	st_add_i
+119	22	st_data_i
+120	21	st_add_k
+121	22	st_data_k
+122	21	st_add_j
+123	22	st_data_j

@@ -1,0 +1,13 @@
+#!/bin/bash
+echo $1
+
+cfile="$1"
+name=${cfile%.c}
+llfile="$name.ll"
+toolchain="$HOME/llvm/"
+
+
+llvmbin="$toolchain/llvm/build/Release+Asserts/bin"
+
+$llvmbin/clang -O0 -S -emit-llvm $cfile -o $llfile
+exit
