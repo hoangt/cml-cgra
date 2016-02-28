@@ -33,7 +33,7 @@ $script/modify_template.sh $cfile $templatefile
 
 
 #Compiler Pass - Clang + Opt
-$script/clang.sh ./loop.c 
+$script/clang.sh ./cgra_run_loop.c 
 llfile="$(find ./ -name "*.ll")"
 $script/opt.sh $llfile 
 llvmedge="$(find ./ -name "*.txt" | grep -i loop | grep -i edge)"
@@ -55,7 +55,7 @@ arm-linux-gnueabi-readelf -s $obj > elf
 
 
 #Instruction Generator
-cp ~/CGRA/temp/livenode.txt ~/CGRA/temp/liveedge.txt ./
+#cp ~/CGRA/temp/livenode.txt ~/CGRA/temp/liveedge.txt ./
 liveedge="$(find ./ -name "*.txt" | grep -i live | grep -i edge)"
 livenode="$(find ./ -name "*.txt" | grep -i live | grep -i node)"
 echo $liveedge
