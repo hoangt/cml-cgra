@@ -76,7 +76,7 @@
 #define HAVE_DLOPEN 1
 
 /* Define if the dot program is available */
-/* #undef HAVE_DOT */
+#define HAVE_DOT 1
 
 /* Define to 1 if you have the <errno.h> header file. */
 #define HAVE_ERRNO_H 1
@@ -461,7 +461,7 @@
 #define LLVM_BINDIR "/usr/local/bin"
 
 /* Time at which LLVM was configured */
-#define LLVM_CONFIGTIME "Fri Oct 31 15:31:10 MST 2014"
+#define LLVM_CONFIGTIME "Sat May  7 13:27:31 PDT 2016"
 
 /* Installation directory for data files */
 #define LLVM_DATADIR "/usr/local/share/llvm"
@@ -524,7 +524,7 @@
 /* #undef LLVM_ON_WIN32 */
 
 /* Define to path to dot program if found or 'echo dot' otherwise */
-/* #undef LLVM_PATH_DOT */
+#define LLVM_PATH_DOT "/usr/bin/dot"
 
 /* Installation prefix directory */
 #define LLVM_PREFIX "/usr/local"

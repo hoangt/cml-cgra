@@ -1,7 +1,7 @@
-/home/shail/llvm/build/lib/Transforms/MahdiLoop/Release+Asserts/MahdiLoop.o \
-  /home/shail/llvm/build/lib/Transforms/MahdiLoop/Release+Asserts/MahdiLoop.d: \
-  MahdiLoop.cpp \
-  /home/shail/llvm/build/lib/Transforms/MahdiLoop/REGIDFG.h \
+/home/shail/llvm/build/lib/Transforms/LoopConstantMem/Release+Asserts/REGIDFG.o \
+  /home/shail/llvm/build/lib/Transforms/LoopConstantMem/Release+Asserts/REGIDFG.d: \
+  REGIDFG.cpp \
+  /home/shail/llvm/build/lib/Transforms/LoopConstantMem/REGIDFG.h \
   /home/shail/llvm/include/llvm/IR/Instructions.h \
   /home/shail/llvm/include/llvm/ADT/ArrayRef.h \
   /home/shail/llvm/include/llvm/ADT/None.h \
@@ -44,39 +44,9 @@
   /home/shail/llvm/include/llvm/ADT/PointerIntPair.h \
   /home/shail/llvm/include/llvm/IR/Instruction.def \
   /home/shail/llvm/include/llvm/IR/OperandTraits.h \
-  /home/shail/llvm/include/llvm/ADT/Statistic.h \
-  /home/shail/llvm/include/llvm/Support/Atomic.h \
-  /home/shail/llvm/include/llvm/Support/Valgrind.h \
-  /home/shail/llvm/include/llvm/IR/Function.h \
-  /home/shail/llvm/include/llvm/IR/Argument.h \
-  /home/shail/llvm/include/llvm/IR/BasicBlock.h \
-  /home/shail/llvm/include/llvm/ADT/ilist.h \
-  /home/shail/llvm/include/llvm/IR/SymbolTableListTraits.h \
-  /home/shail/llvm/include/llvm/IR/GlobalObject.h \
-  /home/shail/llvm/include/llvm/IR/Constant.h \
-  /home/shail/llvm/include/llvm/IR/GlobalValue.h \
-  /home/shail/llvm/include/llvm/Analysis/LoopPass.h \
-  /home/shail/llvm/include/llvm/Analysis/LoopInfo.h \
-  /home/shail/llvm/include/llvm/ADT/DenseMap.h \
-  /home/shail/llvm/include/llvm/ADT/DenseMapInfo.h \
-  /home/shail/llvm/include/llvm/ADT/DenseSet.h \
-  /home/shail/llvm/include/llvm/ADT/GraphTraits.h \
-  /home/shail/llvm/include/llvm/IR/CFG.h \
-  /home/shail/llvm/include/llvm/Pass.h \
-  /home/shail/llvm/include/llvm/PassSupport.h \
-  /home/shail/llvm/include/llvm/InitializePasses.h \
-  /home/shail/llvm/include/llvm/PassInfo.h \
-  /home/shail/llvm/include/llvm/PassRegistry.h \
-  /home/shail/llvm/include/llvm/ADT/StringMap.h \
-  /home/shail/llvm/include/llvm/Support/RWMutex.h \
-  /home/shail/llvm/include/llvm/Support/Threading.h \
-  /home/shail/llvm/include/llvm/PassAnalysisSupport.h \
-  /home/shail/llvm/include/llvm/IR/LegacyPassManagers.h \
-  /home/shail/llvm/include/llvm/Support/PrettyStackTrace.h \
-  /home/shail/llvm/include/llvm/Support/raw_ostream.h \
-  /home/shail/llvm/include/llvm/IR/Constants.h
+  /home/shail/llvm/include/llvm/Support/raw_ostream.h
 
-/home/shail/llvm/build/lib/Transforms/MahdiLoop/REGIDFG.h:
+/home/shail/llvm/build/lib/Transforms/LoopConstantMem/REGIDFG.h:
 
 /home/shail/llvm/include/llvm/IR/Instructions.h:
 
@@ -162,64 +132,4 @@
 
 /home/shail/llvm/include/llvm/IR/OperandTraits.h:
 
-/home/shail/llvm/include/llvm/ADT/Statistic.h:
-
-/home/shail/llvm/include/llvm/Support/Atomic.h:
-
-/home/shail/llvm/include/llvm/Support/Valgrind.h:
-
-/home/shail/llvm/include/llvm/IR/Function.h:
-
-/home/shail/llvm/include/llvm/IR/Argument.h:
-
-/home/shail/llvm/include/llvm/IR/BasicBlock.h:
-
-/home/shail/llvm/include/llvm/ADT/ilist.h:
-
-/home/shail/llvm/include/llvm/IR/SymbolTableListTraits.h:
-
-/home/shail/llvm/include/llvm/IR/GlobalObject.h:
-
-/home/shail/llvm/include/llvm/IR/Constant.h:
-
-/home/shail/llvm/include/llvm/IR/GlobalValue.h:
-
-/home/shail/llvm/include/llvm/Analysis/LoopPass.h:
-
-/home/shail/llvm/include/llvm/Analysis/LoopInfo.h:
-
-/home/shail/llvm/include/llvm/ADT/DenseMap.h:
-
-/home/shail/llvm/include/llvm/ADT/DenseMapInfo.h:
-
-/home/shail/llvm/include/llvm/ADT/DenseSet.h:
-
-/home/shail/llvm/include/llvm/ADT/GraphTraits.h:
-
-/home/shail/llvm/include/llvm/IR/CFG.h:
-
-/home/shail/llvm/include/llvm/Pass.h:
-
-/home/shail/llvm/include/llvm/PassSupport.h:
-
-/home/shail/llvm/include/llvm/InitializePasses.h:
-
-/home/shail/llvm/include/llvm/PassInfo.h:
-
-/home/shail/llvm/include/llvm/PassRegistry.h:
-
-/home/shail/llvm/include/llvm/ADT/StringMap.h:
-
-/home/shail/llvm/include/llvm/Support/RWMutex.h:
-
-/home/shail/llvm/include/llvm/Support/Threading.h:
-
-/home/shail/llvm/include/llvm/PassAnalysisSupport.h:
-
-/home/shail/llvm/include/llvm/IR/LegacyPassManagers.h:
-
-/home/shail/llvm/include/llvm/Support/PrettyStackTrace.h:
-
 /home/shail/llvm/include/llvm/Support/raw_ostream.h:
-
-/home/shail/llvm/include/llvm/IR/Constants.h:

@@ -12,7 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#define DEBUG_TYPE "mahdiloop"
+#define DEBUG_TYPE "loopconstantmem"
 
 #include "REGIDFG.h"
 #include "llvm/ADT/Statistic.h"
@@ -26,6 +26,10 @@
 #include "llvm/Support/raw_ostream.h"
 #include "llvm/IR/Constants.h"
 #include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <vector>
+
 using namespace llvm;
 
 STATISTIC(MahdiNodeID, "Counts number of loops greeted");
@@ -39,11 +43,11 @@ STATISTIC(CONDITIONALLOOPS, "Counts number of loops greeted");
 namespace llvm
 {
   // Hello - The first implementation, without getAnalysisUsage.
-  struct MahdiLoop: public LoopPass
+  struct LoopConstantMem: public LoopPass
   {
     static char ID;        // Pass identification, replacement for typeid
     int phiCounter;
-    MahdiLoop() :
+    LoopConstantMem() :
       LoopPass(ID)
     {
 
@@ -197,11 +201,12 @@ namespace llvm
       REGI_NODE* node;
       REGI_NODE* node1; 
       REGI_NODE* node2;
-      //REGI_NODE* node3;
+      REGI_NODE* node3;
       bool retVal = false;
       std::string name="";
       //errs() << " Name is " << BI->getName() <<"\n";
-
+      std::ofstream tempfile;
+  
       switch (BI->getOpcode())
       {
         case Instruction::Ret:
@@ -308,22 +313,8 @@ namespace llvm
           return false;
         case Instruction::GetElementPtr:
 	  node = new REGI_NODE(add, 1, MahdiNodeID++, BI->getName().str(),BI);
-          /*node2 = new REGI_NODE(constant, 1, MahdiNodeID++, "ConstInt4", NULL);
-          myDFG->insert_Node(node);
-          myDFG->insert_Node(node2);
-	  myDFG->make_Arc(node2, node, MahdiEdgeID++, 0, TrueDep);  */
-	 myDFG->insert_Node(node); 
-          /*node = new REGI_NODE(add, 1, MahdiNodeID++, BI->getName().str(), BI);
-	  myDFG->insert_Node(node);*/
-         /* for (int i=0; i< BI->getNumOperands(); i++) {
-	  node = new REGI_NODE(llvm_route, 1, MahdiNodeID++, BI->getOperand(i)->getName(), BI);}
-          node2 = new REGI_NODE(constant, 1, MahdiNodeID++, "ConstInt4", NULL);
-          node3 = new REGI_NODE(add,1, MahdiNodeID++, BI->getName().str(), BI); 
-          myDFG->insert_Node(node);
-          myDFG->insert_Node(node2);
-	  myDFG->insert_Node(node3); 
-          myDFG->make_Arc(node2, node, MahdiEdgeID++, 0, TrueDep);
-          myDFG->make_Arc(node, node3, MahdiEdgeID++,0, TrueDep);*/     
+  	  myDFG->insert_Node(node);          
+
           retVal = true;
           return retVal;
 
@@ -439,7 +430,6 @@ namespace llvm
           retVal = false;
           return retVal;
       }
-
       return retVal;
     }
 
@@ -627,7 +617,7 @@ namespace llvm
       //myDFG->insert_Node(node_const4);
     //  REGI_NODE* node3 = new REGI_NODE(add, 1,  MahdiNodeID++, "idxprom", NULL);
       REGI_ARC* arc1;
-   
+      
       DataDepType dep = TrueDep;
   
 
@@ -772,6 +762,10 @@ namespace llvm
         {
           std::ostringstream os;
           os << dyn_cast<llvm::ConstantInt>((BI)->getOperand(j))->getSExtValue();
+                    
+          long int constantnode = std::stol(os.str(),nullptr,10); 
+
+          /* No Direct Constants Are Allowed */ /*
           std::string name = "ConstInt" + os.str();
           if (myDFG->get_Node((BI)->getOperand(j)) == NULL)
           {
@@ -780,8 +774,44 @@ namespace llvm
           }
           node1 = myDFG->get_Node((BI)->getOperand(j));
           node2 = myDFG->get_Node(BI);
-          myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);
+          myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);/*
+          */
 
+          if(constantnode < 4096)
+          {
+            std::string name = "ConstInt" + os.str();
+            if (myDFG->get_Node((BI)->getOperand(j)) == NULL)
+            {
+              node1 = new REGI_NODE(constant, 1, MahdiNodeID++, name, (BI)->getOperand(j));
+              myDFG->insert_Node(node1);
+            }
+            node1 = myDFG->get_Node((BI)->getOperand(j));
+            node2 = myDFG->get_Node(BI);
+            myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);
+       	  }
+          else
+          {
+
+            std::string name = "ConstInt" + os.str();
+            if (myDFG->get_Node((BI)->getOperand(j)) == NULL)
+            {
+              node1 = new REGI_NODE(constant, 1, MahdiNodeID++, name, (BI)->getOperand(j));
+              myDFG->insert_Node(node1);
+            }
+            node1 = myDFG->get_Node((BI)->getOperand(j));
+            node2 = myDFG->get_Node(BI);
+            //myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);
+
+            node = new REGI_NODE(ld_add, 1, MahdiNodeID++, std::to_string(MahdiNodeID-1), BI);
+            node3 = new REGI_NODE(ld_data, 1, MahdiNodeID++, std::to_string(MahdiNodeID-1), BI);
+            node->set_Load_Data_Bus_Read(node3);
+            node3->set_Load_Address_Generator(node);
+            myDFG->insert_Node(node);
+            myDFG->insert_Node(node3);
+
+            myDFG->make_Arc(node1, node3, MahdiEdgeID++, 0, dep,j);
+            myDFG->make_Arc(node3, node2, MahdiEdgeID++, 0, dep,j);
+	  }
           continue;
 
         }
@@ -1006,6 +1036,7 @@ namespace llvm
 
 
 //Mahesh.entry : inclusion for -O3 array idxprom calculation. 
+  std::ofstream tempfile;
 
  if(BI->getOpcode() == Instruction::GetElementPtr) 
   {
@@ -1031,9 +1062,37 @@ namespace llvm
 	arc1 = myDFG->get_Arc(node2, node1); 
 	myDFG->Remove_Arc(arc1); 
      }
+
   }
+
+     std::vector<REGI_NODE*> nextnodes = myDFG->get_Node(BI)->Get_Prev_Nodes();
+     for(int i = 0; i < nextnodes.size(); i++)
+     {
+        node1 = nextnodes[i];
+	if((node1->get_Instruction() == constant) & (myDFG->get_Node(BI->getOperand(i))->get_Name().find("ConstInt") == std::string::npos))
+	{
+	  node = myDFG->get_Node(BI->getOperand(i));
+	  node2 = new REGI_NODE(ld_add, 1, MahdiNodeID++, std::to_string(MahdiNodeID-1), BI);
+          node3 = new REGI_NODE(ld_data, 1, MahdiNodeID++, std::to_string(MahdiNodeID-1), BI);
+          node2->set_Load_Data_Bus_Read(node3);
+          node3->set_Load_Address_Generator(node2);
+          myDFG->insert_Node(node2);
+          myDFG->insert_Node(node3);
+
+	  REGI_NODE* temp_node = myDFG->get_Node(BI);
+	  arc1 = myDFG->get_Arc(node1, temp_node); 
+	  int temp_op_order = arc1->GetOperandOrder();
+	  myDFG->Remove_Arc(arc1); 
+
+	  myDFG->make_Arc(node1, node3, MahdiEdgeID++, 0, TrueDep, 0);
+	  myDFG->make_Arc(node3, temp_node, MahdiEdgeID++, 0, TrueDep, temp_op_order);
+
+	}
+     }
+
 }
 
+  tempfile.close();
 /*
  if(BI->getOpcode() == Instruction::PHI)
   {
@@ -1315,6 +1374,6 @@ namespace llvm
 
 }
 
-char MahdiLoop::ID = 0;
-static RegisterPass<MahdiLoop> X("MahdiLoop", "Mahdi Loop Pass");
+char LoopConstantMem::ID = 0;
+static RegisterPass<LoopConstantMem> X("LoopConstantMem", "Loop For Constant Memory Pass");
 

@@ -12,7 +12,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-#define DEBUG_TYPE "mahdiloop"
+#define DEBUG_TYPE "loopconstantmem"
 
 #include "REGIDFG.h"
 #include "llvm/ADT/Statistic.h"
@@ -39,11 +39,11 @@ STATISTIC(CONDITIONALLOOPS, "Counts number of loops greeted");
 namespace llvm
 {
   // Hello - The first implementation, without getAnalysisUsage.
-  struct MahdiLoop: public LoopPass
+  struct LoopConstantMem: public LoopPass
   {
     static char ID;        // Pass identification, replacement for typeid
     int phiCounter;
-    MahdiLoop() :
+    LoopConstantMem() :
       LoopPass(ID)
     {
 
@@ -772,6 +772,7 @@ namespace llvm
         {
           std::ostringstream os;
           os << dyn_cast<llvm::ConstantInt>((BI)->getOperand(j))->getSExtValue();
+          /* No Direct Constants Are Allowed*/
           std::string name = "ConstInt" + os.str();
           if (myDFG->get_Node((BI)->getOperand(j)) == NULL)
           {
@@ -780,8 +781,31 @@ namespace llvm
           }
           node1 = myDFG->get_Node((BI)->getOperand(j));
           node2 = myDFG->get_Node(BI);
-          myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);
-
+          myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);/*
+          */
+/*
+          int constantnode = atoi(os.str()); 
+          if(constantnode < 4096)
+          {
+            std::string name = "ConstInt" + os.str();
+            if (myDFG->get_Node((BI)->getOperand(j)) == NULL)
+            {
+              node1 = new REGI_NODE(constant, 1, MahdiNodeID++, name, (BI)->getOperand(j));
+              myDFG->insert_Node(node1);
+            }
+            node1 = myDFG->get_Node((BI)->getOperand(j));
+            node2 = myDFG->get_Node(BI);
+            myDFG->make_Arc(node1, node2, MahdiEdgeID++, 0, dep,j);
+       	  }
+          else
+          {
+            node = new REGI_NODE(ld_add, 1, MahdiNodeID++, BI->getName().str(), BI);
+            node2 = new REGI_NODE(ld_data, 1, MahdiNodeID++, BI->getName().str(), BI);
+            node->set_Load_Data_Bus_Read(node2);
+            node2->set_Load_Address_Generator(node);
+            myDFG->insert_Node(node);
+            myDFG->insert_Node(node2);
+	  }*/
           continue;
 
         }
@@ -1315,6 +1339,6 @@ namespace llvm
 
 }
 
-char MahdiLoop::ID = 0;
-static RegisterPass<MahdiLoop> X("MahdiLoop", "Mahdi Loop Pass");
+char LoopConstantMem::ID = 0;
+static RegisterPass<LoopConstantMem> X("LoopConstantMem", "Loop For Constant Memory Pass");
 

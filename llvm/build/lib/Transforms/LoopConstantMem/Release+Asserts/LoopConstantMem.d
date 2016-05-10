@@ -1,7 +1,7 @@
-/home/shail/llvm/build/lib/Transforms/MahdiLoop/Release+Asserts/MahdiLoop.o \
-  /home/shail/llvm/build/lib/Transforms/MahdiLoop/Release+Asserts/MahdiLoop.d: \
-  MahdiLoop.cpp \
-  /home/shail/llvm/build/lib/Transforms/MahdiLoop/REGIDFG.h \
+/home/shail/llvm/build/lib/Transforms/LoopConstantMem/Release+Asserts/LoopConstantMem.o \
+  /home/shail/llvm/build/lib/Transforms/LoopConstantMem/Release+Asserts/LoopConstantMem.d: \
+  LoopConstantMem.cpp \
+  /home/shail/llvm/build/lib/Transforms/LoopConstantMem/REGIDFG.h \
   /home/shail/llvm/include/llvm/IR/Instructions.h \
   /home/shail/llvm/include/llvm/ADT/ArrayRef.h \
   /home/shail/llvm/include/llvm/ADT/None.h \
@@ -76,7 +76,7 @@
   /home/shail/llvm/include/llvm/Support/raw_ostream.h \
   /home/shail/llvm/include/llvm/IR/Constants.h
 
-/home/shail/llvm/build/lib/Transforms/MahdiLoop/REGIDFG.h:
+/home/shail/llvm/build/lib/Transforms/LoopConstantMem/REGIDFG.h:
 
 /home/shail/llvm/include/llvm/IR/Instructions.h:
 
