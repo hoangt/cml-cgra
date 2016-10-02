@@ -67,3 +67,9 @@ Currently, This Version Does Not Support
 5. Working with other than FOR Loops 
 6. Floating Point Implementation
 7. Loops Incurring Function Calls
+
+# Contact Us
+
+For any questions or comments on SMRA development, please email us at cmlasu@gmail.com
+
+CML's CGRA Webpage - http://aviral.lab.asu.edu/coarse-grain-reconfigurable-arrays/
