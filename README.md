@@ -31,19 +31,18 @@ Work-flow of SMRA implementation is as follows:
 
 # Setting-Up The Infrastructure
 
-1) Automated steps: 
-
+1) Automated Install: 
 Give execution access to install and dependencies. 
 
 $ ./depedencies
 
-This installs all the dependencies packages required for LLVM and gem5. This script currently works only for Ubuntu (Tested in 14.04 version). If your Linux is different please install the dependencies manually (Use 2. Manual steps to install packages.)
+This installs all the dependencies packages required for LLVM and gem5. This script currently works only for Ubuntu (Tested in 14.04 version). If your Linux is different please install the dependencies manually (Use 2. Manual Install to install packages.)
 
 $ ./install 
 
-This script automatically builds, LLVM base, CGRALoopPass, REGIMap, Instruction Generator and gem5 with SMRA. 
+This script automatically builds base LLVM + CGRALoopPass, REGIMap, Instruction Generator and gem5 + SMRA. 
 
-2) Manual steps: 
+2) Manual Install: 
 Firstly, you need to download (or pull) this repository. Afterwards, you need to install the dependencies for gem5 and LLVM tools. Afterwards, you need to build the LLVM and gem5 tools, respectively. These can be done by following commands. 
 
 cd /home/cmlasu/cml-cgra/2.0/gem5/
