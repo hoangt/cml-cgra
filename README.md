@@ -37,7 +37,7 @@ Give execution access to install and dependencies.
 
 $ ./depedencies
 
-This installs all the dependencies packages required for LLVM and gem5. This script currently works only for Ubuntu (Tested in 14.04 version). If your Linux is different please install the depencies manually (Use 2. Manual steps to install packages.)
+This installs all the dependencies packages required for LLVM and gem5. This script currently works only for Ubuntu (Tested in 14.04 version). If your Linux is different please install the dependencies manually (Use 2. Manual steps to install packages.)
 
 $ ./install 
 
