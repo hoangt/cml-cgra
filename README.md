@@ -40,7 +40,7 @@ This installs all the dependencies packages required for LLVM and gem5. This scr
 
 $ ./install 
 
-This script automatically builds base LLVM + CGRALoopPass, REGIMap, Instruction Generator and gem5 with SMRA. 
+This script automatically builds base LLVM + CGRALoopPass, REGIMap, Instruction Generator and gem5 + SMRA. 
 
 2) Manual Install: 
 Firstly, you need to download (or pull) this repository. Afterwards, you need to install the dependencies for gem5 and LLVM tools. Afterwards, you need to build the LLVM and gem5 tools, respectively. These can be done by following commands. 
