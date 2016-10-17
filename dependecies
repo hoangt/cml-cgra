@@ -1,0 +1,58 @@
+#!/bin/bash
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	sudo apt-get update
+	sudo apt-get upgrade
+
+	if [ $(dpkg-query -W -f='${Status}' m4 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install m4;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' python 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install python;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' python-dev 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install python-dev;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' libgoogle-perftools-dev 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+ 	 	sudo apt-get install libgoogle-perftools-dev;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' mercurial 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install mercurial;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' scons 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install scons;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' swig 2>/dev/null | grep -c "ok installed") -eq 0 ];
+then
+  		sudo apt-get install swig;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' zlib1g-dev 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install zlib1g-dev;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' gcc 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install gcc;
+	fi
+
+	if [ $(dpkg-query -W -f='${Status}' g++ 2>/dev/null | grep -c "ok installed") -eq 0 ];
+	then
+  		sudo apt-get install g++;
+	fi
+
+fi #end OS linux-gnu
+

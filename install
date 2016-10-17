@@ -1,0 +1,50 @@
+#!/bin/bash
+
+#./dependecies
+
+#This script install all the frameworks required for CGRA execution.
+
+#=============================================================
+
+#build Instruction Generator
+cd 2.0/InstructionGenerator
+g++ -static insgen.cpp -o insgen 
+cd ../
+
+#=============================================================
+
+#Enter REGIMap to build it. 
+cd REGIMap/REGIMap_2.8/Release/
+make
+cd ../../../
+
+#===========================================================
+
+#Enter gem5 to build. 
+cd gem5
+scons build/ARM/gem5.opt
+cp ../Dependencies/ARM build/variables/ 
+scons build/ARM/gem5.opt
+cd ../../
+
+#===========================================================
+
+#Enter llvm directory to build llvm
+cd llvm
+mkdir build
+cd build
+../configure
+cmake -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../
+make
+cp Makefile.config Makefile.config.in
+cp ../Makefile.rules .
+cd ../../
+
+#==========================================================
+
+#Making CGRA-Loop recognition LLVM Pass. 
+cp -r 2.0/MahdiLoop llvm/build/lib/Transfoms/ 
+cd llvm/build/lib/Transforms/MahdiLoop/
+make
+
+#==========================================================
