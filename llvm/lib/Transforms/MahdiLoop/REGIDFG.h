@@ -314,6 +314,7 @@ namespace llvm
 			//Set dependency type
 			void Set_Dependency_Type(DataDepType dep);
 
+			void SetOperandOrder(int i);
 			//Get dependency type
 			DataDepType Get_Dependency_Type();
 
@@ -326,7 +327,7 @@ namespace llvm
 			//Return edge distance
 			int Get_Inter_Iteration_Distance();
 			//Return operand order
-            int GetOperandOrder();
+	                int GetOperandOrder();
 
 			REGI_ARC* Copy();
 

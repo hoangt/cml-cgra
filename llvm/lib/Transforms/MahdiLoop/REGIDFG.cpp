@@ -261,6 +261,11 @@ int REGI_ARC::GetOperandOrder()
 	return operandOrder;
 }
 
+void REGI_ARC::SetOperandOrder(int i)
+{
+	operandOrder = i;
+}
+
 REGI_ARC* REGI_ARC::Copy()
 {
 	REGI_ARC* new_ARC = new REGI_ARC(ID, Inter_Iteration_Distance);
