@@ -1,4 +1,0 @@
-TARGET_ISA = 'arm'
-CPU_MODELS = 'AtomicSimpleCPU,O3CPU,TimingCGRA,TimingSimpleCPU'
-USE_KVM = False
-PROTOCOL = 'MI_example'
