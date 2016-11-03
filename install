@@ -34,11 +34,11 @@ cd llvm
 rm -rf build
 mkdir build
 cd build
-../configure
-cmake -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../
-make
+../configure ENABLE_OPTIMIZED=1
+#cmake -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../
 cp Makefile.config Makefile.config.in
 cp ../Makefile.rules .
+make
 cd ../../
 
 #==========================================================
