@@ -4,7 +4,7 @@ echo $1
 cfile="$1"
 name=${cfile%.c}
 llfile="$name.ll"
-toolchain="$HOME"
+toolchain="../../"
 
 
 llvmbin="$toolchain/llvm/build/Release+Asserts/bin"

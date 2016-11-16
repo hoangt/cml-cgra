@@ -5,7 +5,7 @@ name=${cfile%.ll}
 llfile="$name.ll"
 dfgfile="$name.dfg"
 
-toolchain="$HOME"
+toolchain="../../"
 llvmbin="$toolchain/llvm/build/Release+Asserts/bin"
 llvmlib="$toolchain/llvm/build/Release+Asserts/lib"
 

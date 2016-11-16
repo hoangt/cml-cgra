@@ -6,7 +6,7 @@ llfile="$name.ll"
 dfgfile="$name.dfg"
 schfile="$name.sch"
 
-toolchain="$HOME/CGRA"
+toolchain="../"
 
 regiver="REGIMap_2.8"
 regimap="$toolchain/REGIMap/$regiver/Release"
